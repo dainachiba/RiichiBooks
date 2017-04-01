@@ -1,0 +1,189 @@
+\contentsline {chapter}{Preface}{iv}{chapter*.1}
+\contentsline {part}{I\hspace {1em}Playing Riichi Online}{1}{part.1}
+\contentsline {chapter}{\numberline {1}Introduction to {\scshape tenhou} (天鳳)}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Why play online?}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Setting up an account}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}The main page}{12}{section.1.3}
+\contentsline {section}{\numberline {1.4}Playing a game}{16}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Calling / melding}{18}{subsection.1.4.1}
+\contentsline {subsubsection}{1. リーチ {\scshape riichi} {\fontencoding {T3}\selectfont [r\'\textsci \textlengthmark t\textesh ]}}{18}{subsection.1.4.1}
+\contentsline {subsubsection}{2. ロン {\scshape ron} {\fontencoding {T3}\selectfont [r\'\textopeno \ng ]}}{19}{subsection.1.4.1}
+\contentsline {subsubsection}{3. パス Pass (do nothing)}{20}{subsection.1.4.1}
+\contentsline {subsubsection}{4. ツモ {\scshape tsumo} {\fontencoding {T3}\selectfont [ts\'umo]}}{20}{subsection.1.4.1}
+\contentsline {subsubsection}{5. ポン {\scshape pon} {\fontencoding {T3}\selectfont [p\'\textopeno \ng ]}}{20}{subsection.1.4.1}
+\contentsline {subsubsection}{6. チー {\scshape chii} {\fontencoding {T3}\selectfont [t\textesh \'\textsci \textlengthmark ]}}{21}{subsection.1.4.1}
+\contentsline {subsubsection}{7. カン {\scshape kan} {\fontencoding {T3}\selectfont [k\'\textturnv \ng ]}}{22}{subsection.1.4.1}
+\contentsline {subsubsection}{8. 九種九牌 {\scshape Kyushu Kyuhai}}{22}{subsection.1.4.1}
+\contentsline {subsubsection}{Multiple boxes}{23}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Buttons}{24}{subsection.1.4.2}
+\contentsline {subsubsection}{自動和了 (Auto-call win)}{24}{subsection.1.4.2}
+\contentsline {subsubsection}{ツモ切り (Auto discard draw)}{24}{subsection.1.4.2}
+\contentsline {subsubsection}{鳴かない (No call)}{25}{subsection.1.4.2}
+\contentsline {subsubsection}{画 (Picture) and 音 (Sound effect)}{25}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Scoring}{26}{subsection.1.4.3}
+\contentsline {subsection}{\numberline {1.4.4}Indicators}{27}{subsection.1.4.4}
+\contentsline {subsection}{\numberline {1.4.5}Ending of a game}{29}{subsection.1.4.5}
+\contentsline {section}{\numberline {1.5}Troubleshooting}{34}{section.1.5}
+\contentsline {section}{\numberline {1.6}Rules}{35}{section.1.6}
+\contentsline {chapter}{\numberline {2}Advanced features of {\scshape tenhou}}{40}{chapter.2}
+\contentsline {section}{\numberline {2.1}Rank and rating}{40}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}{\scshape kyu / dan} rank}{41}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Rate (R)}{45}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Four rooms}{47}{section.2.2}
+\contentsline {section}{\numberline {2.3}Reading the statistics}{50}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Overall statistics}{51}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Monthly statistics}{57}{subsection.2.3.2}
+\contentsline {section}{\numberline {2.4}Viewing the games}{60}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Replaying the games (牌譜)}{60}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Spectating the games (観戦)}{62}{subsection.2.4.2}
+\contentsline {part}{II\hspace {1em}Basic Tile Efficiency}{63}{part.2}
+\contentsline {chapter}{\numberline {3}Riichi Mahjong basics}{65}{chapter.3}
+\contentsline {section}{\numberline {3.1}Learning strategies}{65}{section.3.1}
+\contentsline {section}{\numberline {3.2}Basic building blocks}{68}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Tiles}{68}{subsection.3.2.1}
+\contentsline {subsubsection}{Number tiles}{68}{subsection.3.2.1}
+\contentsline {subsubsection}{Honor tiles}{69}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Melds ({\scshape mentsu})}{70}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Ready and $n$-away}{71}{subsection.3.2.3}
+\contentsline {subsubsection}{Tile acceptance shrinkage}{73}{subsection.3.2.3}
+\contentsline {subsubsection}{Advancing your hand}{74}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Protoruns ({\scshape taatsu})}{75}{subsection.3.2.4}
+\contentsline {subsubsection}{Tile versatility}{77}{table.caption.12}
+\contentsline {subsection}{\numberline {3.2.5}Pairs ({\scshape toitsu})}{79}{subsection.3.2.5}
+\contentsline {subsubsection}{Building the head}{79}{subsection.3.2.5}
+\contentsline {subsection}{\numberline {3.2.6}Pairs and sets}{80}{subsection.3.2.6}
+\contentsline {subsubsection}{Open hand}{83}{subsection.3.2.6}
+\contentsline {subsection}{\numberline {3.2.7}Perfect $n$-away}{84}{subsection.3.2.7}
+\contentsline {subsubsection}{Perfect 1-away}{84}{subsection.3.2.7}
+\contentsline {subsubsection}{Perfect 2-away}{85}{subsection.3.2.7}
+\contentsline {subsection}{\numberline {3.2.8}Putting things all together: an example}{86}{subsection.3.2.8}
+\contentsline {section}{\numberline {3.3}Complex forms}{89}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Three-tile complex forms}{90}{subsection.3.3.1}
+\contentsline {subsubsection}{Double closed ({\scshape ryankan}) block}{90}{subsection.3.3.1}
+\contentsline {subsubsection}{Protorun plus one}{93}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Four-tile complex forms}{96}{subsection.3.3.2}
+\contentsline {subsubsection}{Stretched single ({\scshape nobetan}) block}{96}{subsection.3.3.2}
+\contentsline {subsubsection}{Bulging float ({\scshape nakabukure}) block}{100}{table.caption.14}
+\contentsline {subsubsection}{Skipping block}{101}{table.caption.14}
+\contentsline {section}{\numberline {3.4}Waits}{103}{section.3.4}
+\contentsline {subsubsection}{Stretched single wait and semi side wait}{104}{table.caption.16}
+\contentsline {subsubsection}{3-way side wait}{107}{table.caption.17}
+\contentsline {subsubsection}{Complex waits}{109}{table.caption.19}
+\contentsline {section}{\numberline {3.5}Glossary}{111}{section.3.5}
+\contentsline {chapter}{\numberline {4}The five-block method}{113}{chapter.4}
+\contentsline {section}{\numberline {4.1}Finding a redundant tile}{114}{section.4.1}
+\contentsline {section}{\numberline {4.2}Alternative configurations}{118}{section.4.2}
+\contentsline {section}{\numberline {4.3}Selecting tile blocks}{129}{section.4.3}
+\contentsline {section}{\numberline {4.4}Building a block}{137}{section.4.4}
+\contentsline {chapter}{\numberline {5}Pursuing {\scshape yaku}}{144}{chapter.5}
+\contentsline {section}{\numberline {5.1}How to get {\scshape sanshoku}}{146}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Floating}{147}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Switching}{149}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Double closed block}{151}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Stretched single}{152}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Lining pairs}{153}{subsection.5.1.5}
+\contentsline {subsection}{\numberline {5.1.6}Golden}{155}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Crashing a meld}{156}{subsection.5.1.7}
+\contentsline {section}{\numberline {5.2}How to get {\scshape ittsu}}{157}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Two non-overlapping runs}{157}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Six-tile block with intervals}{159}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Run + side-wait protorun}{161}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}{\scshape Ittsu} vs. side wait}{163}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}How to get {\scshape pinfu}}{164}{section.5.3}
+\contentsline {subsubsection}{Building the head}{167}{section.5.3}
+\contentsline {section}{\numberline {5.4}How to get {\scshape honitsu}}{168}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Conditions to go for {\scshape honitsu}}{168}{subsection.5.4.1}
+\contentsline {subsubsection}{1. Five-block potential}{168}{subsection.5.4.1}
+\contentsline {subsubsection}{2. Hand value}{170}{equation.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Discard}{172}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Melding}{173}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5}How to get {\scshape toitoi} / {\scshape chiitoitsu}}{175}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}{\scshape Toitoi} vs. {\scshape chiitoitsu}}{175}{subsection.5.5.1}
+\contentsline {subsection}{\numberline {5.5.2}Standard hand vs. {\scshape chiitoitsu}}{178}{subsection.5.5.2}
+\contentsline {part}{III\hspace {1em}Strategy Principles}{181}{part.3}
+\contentsline {chapter}{\numberline {6}Scoring}{183}{chapter.6}
+\contentsline {section}{\numberline {6.1}Three steps in score calculation}{184}{section.6.1}
+\contentsline {section}{\numberline {6.2}Basic scoring}{186}{section.6.2}
+\contentsline {subsubsection}{Scores for limit hands}{187}{section.6.2}
+\contentsline {subsubsection}{What do we mean by ``almost always''?}{191}{figure.caption.24}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {30 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax }{193}{figure.caption.24}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {40 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax }{195}{table.caption.25}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {20 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax {\scshape (pinfu tsumo)}}{196}{table.caption.26}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {25 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax {\scshape (chiitoitsu)}}{198}{table.caption.27}
+\contentsline {subsubsection}{Practice, practice, practice}{199}{table.caption.28}
+\contentsline {section}{\numberline {6.3}Advanced scoring}{202}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Minipoint calculation}{202}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Scores for 50 minipoints or above}{204}{subsection.6.3.2}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {50 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax }{205}{subsection.6.3.2}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {70 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax }{205}{table.caption.30}
+\contentsline {subsubsection}{\unhbox \voidb@x \setbox \@tempboxa \hbox {\color@begingroup \kern \fboxsep {110 minipoints}\kern \fboxsep \endgraf \endgroup }\XC@frameb@x \relax }{206}{table.caption.31}
+\contentsline {subsection}{\numberline {6.3.3}Examples}{208}{subsection.6.3.3}
+\contentsline {section}{\numberline {6.4}Scoring tables}{213}{section.6.4}
+\contentsline {chapter}{\numberline {7}{\scshape Riichi} judgement}{215}{chapter.7}
+\contentsline {section}{\numberline {7.1}To {\scshape riichi} or not to {\scshape riichi}?}{215}{section.7.1}
+\contentsline {section}{\numberline {7.2}Insta-{\scshape riichi}}{218}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Examples of insta-{\scshape riichi}}{219}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Good wait vs. high scores}{222}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}{\scshape Chiitoitsu} waiting for {\scshape dora}}{227}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}{\scshape Chiitoitsu} not waiting for {\scshape dora}}{228}{subsection.7.2.4}
+\contentsline {section}{\numberline {7.3}When \emph {not} to {\scshape riichi}}{233}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Bad wait}{234}{subsection.7.3.1}
+\contentsline {subsubsection}{1. The number of winning tiles left}{234}{Item.15}
+\contentsline {subsubsection}{2. Cheap / expensive waits}{236}{table.caption.35}
+\contentsline {subsubsection}{3. Trap waits}{237}{table.caption.35}
+\contentsline {subsection}{\numberline {7.3.2}In the lead}{239}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}{\scshape Genbutsu} wait}{240}{subsection.7.3.3}
+\contentsline {subsection}{\numberline {7.3.4}High scoring hand}{242}{subsection.7.3.4}
+\contentsline {subsection}{\numberline {7.3.5}Many possibilities of improving the hand}{246}{subsection.7.3.5}
+\contentsline {section}{\numberline {7.4}Glossary}{252}{section.7.4}
+\contentsline {chapter}{\numberline {8}Defense judgement}{253}{chapter.8}
+\contentsline {section}{\numberline {8.1}To push or to fold?}{253}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}A simple principle}{253}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Guessing if an opponent has a ready hand}{255}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}Three conditions to push/fold}{256}{subsection.8.1.3}
+\contentsline {section}{\numberline {8.2}Defense basics}{259}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}{\scshape Genbutsu} and other absolutely safe tiles}{259}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Understanding {\scshape suji}}{262}{subsection.8.2.2}
+\contentsline {subsubsection}{No chance}{267}{table.caption.37}
+\contentsline {subsection}{\numberline {8.2.3}Safety ranking}{272}{subsection.8.2.3}
+\contentsline {section}{\numberline {8.3}Defense against {\scshape riichi}}{275}{section.8.3}
+\contentsline {subsection}{\numberline {8.3.1}What to discard when you get stuck}{276}{subsection.8.3.1}
+\contentsline {subsection}{\numberline {8.3.2}Miscellaneous}{277}{subsection.8.3.2}
+\contentsline {section}{\numberline {8.4}Defense against melded hands}{281}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}Guessing if an opponent has a ready hand}{281}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Estimating the value of an opponent's hand}{282}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Identifying dangerous tiles against melded hands}{284}{subsection.8.4.3}
+\contentsline {subsection}{\numberline {8.4.4}Discard upon {\scshape chii}}{287}{subsection.8.4.4}
+\contentsline {section}{\numberline {8.5}Glossary}{291}{section.8.5}
+\contentsline {chapter}{\numberline {9}Melding judgement}{293}{chapter.9}
+\contentsline {section}{\numberline {9.1}To meld or not to meld?}{293}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}When not to meld 1: cheap and slow}{294}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}When not to meld 2: big gap in hand values}{296}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Melding choice: examples}{298}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Eliminating bad waits}{298}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Improving the wait}{300}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Confirming {\scshape yaku}}{301}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Concealed set of value tiles}{302}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}When it is OK to meld with cheap \& slow hands}{304}{subsection.9.2.5}
+\contentsline {section}{\numberline {9.3}Calling {\scshape kan}}{305}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Concealed quad ({\scshape ankan})}{305}{subsection.9.3.1}
+\contentsline {subsubsection}{When not to make a concealed quad}{307}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Melded quad ({\scshape daiminkan})}{309}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}From a melded set to a melded quad ({\scshape kakan})}{311}{subsection.9.3.3}
+\contentsline {section}{\numberline {9.4}Miscellaneous tips for melding}{313}{section.9.4}
+\contentsline {subsection}{\numberline {9.4.1}Think ahead}{313}{subsection.9.4.1}
+\contentsline {subsection}{\numberline {9.4.2}Be ready for {\scshape dora}}{315}{subsection.9.4.2}
+\contentsline {subsection}{\numberline {9.4.3}Be mindful of the seating}{316}{subsection.9.4.3}
+\contentsline {chapter}{\numberline {10}Grand strategies}{319}{chapter.10}
+\contentsline {section}{\numberline {10.1}What do do in South-4}{319}{section.10.1}
+\contentsline {section}{\numberline {10.2}What to do by South-3}{334}{section.10.2}
+\contentsline {section}{\numberline {10.3}Tables for induced point differences}{337}{section.10.3}
+\contentsline {chapter}{Appendices}{}{section*.45}
+\contentsline {chapter}{\numberline {A}Manners for offline playing}{340}{Appendix.1.A}
+\contentsline {section}{\numberline {A.1}Dealing tiles}{340}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}Drawing and discarding}{344}{section.1.A.2}
+\contentsline {section}{\numberline {A.3}Calling}{346}{section.1.A.3}
+\contentsline {section}{\numberline {A.4}Winning a hand}{347}{section.1.A.4}
+\contentsline {chapter}{\numberline {B}Further readings}{354}{Appendix.1.B}
+\contentsline {section}{\numberline {B.1}Books on Riichi Mahjong}{354}{section.1.B.1}
+\contentsline {section}{\numberline {B.2}Online resources}{357}{section.1.B.2}

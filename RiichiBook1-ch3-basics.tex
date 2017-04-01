@@ -1,0 +1,949 @@
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Riichi Book 1, Chapter 3: Basics
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\chapter{Riichi Mahjong basics}\label{ch:basic}
+
+\section{Learning strategies}
+
+Mahjong is a game of skill and luck. 
+There is a set of strategy principles you can learn to improve your skills, but acquiring skills is neither necessary nor sufficient to win a game. On the contrary, with luck, an unskilled player can easily defeat strong players in mahjong. At least in the short run, game outcomes are governed more by luck than by skills.\footnote{An interesting question would be: how short is the ``short'' run here. That is, how many games do we need in order to discern a strong player from weak players? Studies show that we would need at least 100 games or so to have a reliable estimate of our skill levels. Given that EMA tournaments usually have only 8 games, winning at these tournaments requires quite a bit of luck.\index{european@EMA}}
+However, learning strategy principles is crucial to improve your performance in the long run. Moreover, you will be able to enjoy the game in greater depth once you understand these principles. 
+
+\bigskip
+Because of the probabilistic nature of the game, making the best choice does not always lead to the best outcome. The best choices are those that lead to the best outcome, \emph{on average}. An evaluation of our choices thus requires a \emph{probabilistic} (i.e., statistical) assessment of different options. For example, consider the following hand. 
+\vspace{5pt}
+\begin{screen}
+\bp
+\wan{4}\wan{4}\tong{6}\tong{6}\tong{7}\suo{1}\suo{2}\suo{3}\suo{6}\suo{7}\suo{8}
+\fa\fa\rfa
+\ep
+\vspace{-10pt}What would you discard? \vspace{-5pt}
+\end{screen}
+
+\bigskip
+\noindent
+This hand becomes ready to win if you discard a {\large\tong{6}} or the {\large\tong{7}}. Let's compare the two choices.
+\bi\itemsep.1pt
+\i Discard a {\large\tong{6}} \hfill $\Rightarrow$ you wait for {\large\tong{5} \tong{8}} (2 kinds--8 tiles)
+\i Discard the {\large\tong{7}} \hfill $\Rightarrow$ you wait for {\large\wan{4}} {\large\tong{6}} (2 kinds--4 tiles)
+\ei
+Which discard choice is better? Although both of the two choices yield a 2-way wait, waiting for {\large\tong{5} \tong{8}} is much better than waiting for {\large\wan{4}} {\large\tong{6}}, probabilistically speaking. With the {\large\tong{5} \tong{8}} wait, there are four tiles of {\large\tong{5}} and another four tiles of {\large\tong{8}} to win on, leaving at most eight winning tiles.\footnote{Of course, the number of winning tiles could be smaller than eight if some of them have already been discarded.} 
+With the {\large\wan{4}} {\large\tong{6}} wait, on the other hand, you have already used up two tiles of {\large\wan{4}} and two tiles of {\large\tong{6}} yourself, leaving at most four winning tiles. It is clearly better to choose the {\large\tong{5} \tong{8}} wait over the {\large\wan{4}} {\large\tong{6}} wait, because that will give you a higher probability of winning this hand. 
+
+\bigskip
+It is possible that, after you decided on the {\large\tong{5} \tong{8}} wait, your opponents end up not discarding {\large\tong{5}} or {\large\tong{8}} at all, while discarding lots of {\large\wan{4} \tong{6}}. This is the kind of things that will happen often in mahjong (or in any game of luck, for that matter). When things like this happen, do not think that you made a bad call; you didn't. You made the right choice, but you were just unlucky. When we experience this kind of bad luck, we just need to keep calm and carry on. 
+
+\bigskip
+Before discussing a practical method of maximizing tile efficiency in the next chapter, I will discuss some basic principles of tile efficiency in this chapter. In doing so, I introduce several key terms we use in later chapters. I will also provide the original Japanese term for each (shown in {\jap this font}). I do so because you may find these Japanese terms used in some online strategy discussions in English.
+
+\section{Basic building blocks}
+
+\subsection{Tiles}
+
+Mahjong tiles can be classified into two categories --- number tiles and honor tiles.
+
+\subsubsection{Number tiles}
+
+
+\begin{itembox}[c]{Number tiles}
+\centering
+\begin{tabular}{l c c}
+{\small Cracks (characters)} & {\small\jap Manzu} & {\LARGE\wan{1}\wan{2}\wan{3}\wan{4}\wan{5}\wan{6}\wan{7}\wan{8}\wan{9}}\\ [\sep]
+{\small Dots (circles)} & {\small\jap Pinzu} & {\LARGE \tong{1}\tong{2}\tong{3}\tong{4}\tong{5}\tong{6}\tong{7}\tong{8}\tong{9}}\\ [\sep]
+{\small Bamboos} & {\small\jap Souzu} & {\LARGE\suo{1}\suo{2}\suo{3}\suo{4}\suo{5}\suo{6}\suo{7}\suo{8}\suo{9}}\\
+\end{tabular}
+
+\end{itembox}
+
+\bigskip \noindent
+We further distinguish number tiles into {\bf simples} ({\jap tanyao hai}; tiles between 2 and 8) and {\bf terminals} (1s and 9s). They are differentiated because they serve different {\jap yaku} and generate different minipoints ({\jap fu}). 
+	\index{simple tiles ({\jap tanyao hai})} \index{tanyao@{\jap tanyao hai} (simple tiles)}
+	\index{terminal tiles}
+	\index{fu@{\jap fu} (minipoint)} \index{minipoint ({\jap fu})}
+
+\bigskip
+It has become quite common to include some red five tiles. For example, most games on {\jap tenhou} have one red five tile in each suit, {\large \rfw~\rfd~\rfs}. These tiles are included in place of regular fives; we have three regular fives and one red five in each suit. Red fives are treated as {\jap dora} regardless of the {\jap dora} indicator. When a 4 in a given suit is the {\jap dora} indicator, the red five in that suit will be a double {\jap dora} tile. 
+
+\subsubsection{Honor tiles}
+\index{honor tiles ({\jap jihai})} \index{jihai@{\jap jihai} (honor tiles)}
+
+\begin{itembox}[c]{Honor tiles}
+\centering \footnotesize
+\begin{tabular}{l c c c c}
+Dragon tiles & {\LARGE\bai} & {\LARGE\fa} & {\LARGE\zhong}\\
+& White ({\jap haku}) & Green ({\jap hatsu}) & Red ({\jap chun})\\ \\
+Wind tiles &{\LARGE\dong} &{\LARGE\nan}& {\LARGE\xi}& {\LARGE\bei}\\
+& East ({\jap ton}) &South ({\jap nan}) & West ({\jap sha}) &North ({\jap pei})\\
+\end{tabular}
+\end{itembox}
+
+	\index{value tiles ({\jap fanpai; yakuhai})}
+	\index{fanpai@{\jap fanpai} ({\jap yakuhai}; value tiles)}
+	\index{yakuhai@{\jap yakuhai} ({\jap fanpai}; value tiles)}
+	\index{valueless wind@valueless Wind ({\jap otakaze})}
+	\index{otakaze@{\jap otakaze} (valueless Wind)}
+\noindent Some honor tiles are {\bf value tiles} ({\jap fanpai / yakuhai}); we get one {\jap fan} if we collect three identical value tiles. All Dragon tiles are value tiles regardless of the round and seating. On the other hand, the value status of Wind tiles depends on the round and the seating. East tiles are value tiles for everyone during the East round, and South tiles are value tiles for everyone during the South round. In addition, each player gets their own seating Wind as a value tile. For example, West tiles are value tiles only for the West player, but they are valueless Wind tiles ({\jap otakaze}) for other players.
+
+
+\subsection{Melds ({\jap mentsu})}
+\index{run ({\jap shuntsu}; chow)}
+\index{chow ({\jap shuntsu}; run)}
+\index{shuntsu@{\jap shuntsu} (run; chow)}
+\index{set ({\jap kotsu}; pung)}
+\index{pung ({\jap kotsu}; set)}
+\index{kotsu@{\jap kotsu} (set; pung)}
+\index{mentsu@{\jap mentsu} (meld)}
+\index{meld ({\jap mentsu})}
+\index{kan@{\jap kan} (kong)} \index{kantsu@{\jap kantsu} (quad)}
+\index{quad@quad ({\jap kantsu})}
+
+One of the major goals in playing mahjong is to win a hand.\footnote{Another important goal is not to deal into an opponent's hand. See Chapter \ref{ch:defense} for discussions of defense strategies. However, the most important goal of all is to win a game. Winning a hand and playing defense are merely two means to this end. See Chapter \ref{ch:grand} for more discussions of this.}
+To win a standard hand, we need to complete four melds ({\jap mentsu}) and one head ({\jap atama}; final pair).\footnote{There are three exceptions to this; {\jap chiitoitsu} (Seven Pairs), {\jap kokushi musou} (Thirteen Orphans), and {\jap nagashi mangan} (All Terminals and Honors Discard) do not require four melds and one head.} 
+Melds can be grouped into two kinds --- {\bf run} and {\bf set}.\footnote{EMA rules refer to run as ``chow'' and set as ``pung.'' I realize that my use of different terminology here might be confusing at first, but I hope you will get used to it soon.}
+\bi
+\i Run ({\jap shuntsu}; chow) is a set of three consecutive number tiles: e.g., {\large \wan{7}\wan{8}\wan{9}}, {\large \suo{3}\suo{4}\suo{5}}. 
+\i Set ({\jap kotsu}; pung) is a set of three identical tiles: e.g., {\large \wan{2}\wan{2}\wan{2}}, {\large \fa\fa\fa}.\footnote{Technically speaking, there is a third type of melds, namely quad ({\jap kantsu}; kong), a set of four identical tiles. We treat quads as a variant of sets. See Section \ref{sec:kong} for discussions on this.} 
+\ei
+ 
+
+\subsection{Ready and $n$-away}
+	\index{ready ({\jap tenpai})} \index{tenpai@{\jap tenpai} (ready)}
+	\index{1-away (1-{\jap shanten})}
+	\index{2-away (2-{\jap shanten})}
+	\index{3-away (3-{\jap shanten})}
+	\index{ukeire@{\jap ukeire} (tile acceptance)} 
+	\index{tile acceptance ({\jap ukeire})}
+We say a hand is {\bf ready} ({\jap tenpai}) when the hand can be complete with one more tile. For example, the following hand is ready. 
+\bigskip
+\begin{itembox}[r]{Ready hand}
+\bp
+\tong{3}\tong{4}\tong{5}\tong{8}\tong{8}\suo{2}\suo{3}\suo{6}\suo{7}\suo{8}\zhong\zhong\zhong
+\ep
+\end{itembox}
+This hand becomes complete with either a {\large\suo{1}} or a {\large\suo{4}}. We say that this hand waits for {\large\suo{1} \suo{4}}.
+
+\bigskip
+
+We say a hand is {\bf 1-away from ready} (1-{\jap shanten}) when the hand can become ready with one more tile. For example, the following hand is 1-away from ready. 
+\bigskip
+\begin{itembox}[r]{1-away hand}
+\bp
+\tong{3}\tong{5}\tong{5}\tong{8}\tong{8}\suo{2}\suo{3}\suo{6}\suo{7}\suo{8}\zhong\zhong\zhong
+\ep
+\end{itembox}
+This hand becomes ready if you draw any of {\large\tong{4}\tong{5}\tong{8}\suo{1}\suo{4}}. We say this hand accepts {\large\tong{4}\tong{5}\tong{8}\suo{1}\suo{4}} (5 kinds--16 tiles) as any of them can make this hand advance from 1-away to ready. {\bf Tile acceptance} ({\jap ukeire}) refers to the kinds and the number of tiles a hand can accept. Other things being equal, having a 1-away hand with greater tile acceptance is better than having one with smaller tile acceptance. 
+
+\bigskip
+More generally, we say a hand is $n$-away from ready ($n$-{\jap shanten}) when the hand can be ready with $n$ more steps. For example, the following hand is 2-away from ready. 
+\bigskip
+\begin{itembox}[r]{2-away hand}
+\bp
+\tong{3}\tong{5}\tong{5}\tong{8}\tong{8}\suo{2}\suo{3}\suo{6}\suo{7}\suo{7}\zhong\zhong\zhong
+\ep
+\end{itembox} \vspace{5pt}
+\noindent
+This hand accepts all the tiles that the 1-away hand above accepts ({\large\tong{4}\tong{5}\tong{8}\suo{1}\suo{4}}), plus seven additional kinds of tiles {\large\tong{3}\suo{2}\suo{3}\suo{5}\suo{6}\suo{7}\suo{8}}.\footnote{\tong{3}\suo{2}\suo{3}\suo{6} will make this hand 1-away for {\jap chiitoitsu} (Seven Pairs).} 
+The hand will become 1-away if any of these tiles gets drawn. 
+
+\bigskip
+A hand can also be 3-away, 4-away, 5-away, or 6-away from ready.\footnote{6-away happens when a hand has no pair, in which case it takes 6 more tiles to make it ready for {\jap chiitoitsu}.}  
+In practice, however, there is not much point in distinguishing 3-away hands from 4-away (or worse) hands. You thus need to be able to distinguish between four kinds of hands --- ready hands, 1-away hands, 2-away hands, and 3-away or worse hands. 
+
+\subsubsection{Tile acceptance shrinkage} 
+As $n$ gets smaller and the hand gets closer to completion, the kinds and the number of tiles it can accept will necessarily get smaller. Consider the three stages of a hand we have seen above.
+\bi
+\i When 2-away, it accepts: {\large\tong{3}\tong{4}\tong{5}\tong{8}\suo{1}\suo{2}\suo{3}\suo{4}\suo{5}\suo{6}\suo{7}\suo{8}}
+\i When 1-away, it accepts: {\large\tong{4}\tong{5}\tong{8}\suo{1}\suo{4}}
+\i When ready, it waits for: {\large\suo{1}\suo{4}}
+\ei
+Tile acceptance is minimized when the hand is ready. Note also that it is \emph{virtually} minimized when it is 1-away. This is because with a ready hand you can utilize not only the tiles you draw but also the tiles discarded by others to complete the hand. With $n$-away hands, however, you have to rely (almost) solely on the tiles you draw yourself to advance your hand.\footnote{Melding (calling {\jap pon} / {\jap chii}) is not always possible. For example, the 2-away hand above can accept a \suo{3} only if you draw one.} 
+Therefore, in choosing a discard from a 2-away hand, we should try not to make for a 1-away hand with too small tile acceptance.
+
+\subsubsection{Advancing your hand}
+
+To win a hand, we need to advance our hand by reducing the $n$ of an $n$-away hand until it is ready.
+When a hand is 2-away, we should aim to make the hand 1-away. 
+When a hand is 1-away, we should aim to make the hand ready. 
+For example, consider the following hand. 
+\begin{itembox}[r]{2-away vs. 1-away}
+\bp
+\wan{5}\wan{6}\wan{7}\wan{7}\tong{3}\tong{4}\suo{4}\suo{5}\suo{5}\suo{7}\suo{9}\fa\fa\fa
+\ep
+\vspace{-10pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+Discarding the {\large\suo{9}} makes the hand 2-away, whereas discarding either a {\large\wan{7}} or the {\large\suo{4}} makes the hand 1-away. You should thus discard a {\large\wan{7}} or the {\large\suo{4}} to make the hand 1-away. 
+Reverting a 1-away hand to 2-away makes sense only in some exceptional cases where tile acceptance at 1-away becomes unbearably small (i.e., less than 2 kinds).
+With this hand, the hand will be able to accept {\large\tong{2}\tong{5}\suo{8}} (3 kinds--12 tiles) when it becomes 1-away.
+
+\subsection{Protoruns ({\jap taatsu})} \label{sec:protorun}
+	\index{protorun ({\jap taatsu})} \index{taatsu@{\jap taatsu} (protorun)}
+	\index{waits!side wait} \index{waits!closed wait} \index{waits!edge wait}
+
+Of the two kinds of melds, it is easier to complete a run than to complete a set. There are only four tiles of the same character, and completing a set requires that you collect three out of the four identical tiles. 
+Therefore, we usually prioritize runs over sets in advancing a hand. 
+
+\bigskip
+A pair of tiles that can become a run with one more tile is called a {\bf protorun} ({\jap taatsu}). There are three types of protoruns, summarized in Table \ref{tbl:proto}. 
+\bigskip
+
+{\begin{table}[h!]\centering \small \captionsetup{font=footnotesize}
+\caption{Types of protoruns} \label{tbl:proto}
+\begin{tabular}{l l c c l} 
+\toprule
+Name & Japanese & Example & Wait & Acceptance\\ 
+\midrule 
+side wait & {\jap ryanmen} & {\LARGE \wan{3}\wan{4}} & {\LARGE \wan{2}-\wan{5}} & 2 kinds--8 tiles\\ [\sep]
+closed wait & {\jap kanchan} & {\LARGE \tong{2}\tong{4}} & {\LARGE \tong{3}} & 1 kind--4 tiles\\ [\sep]
+edge wait & {\jap penchan} & {\LARGE \suo{8}\suo{9}} & {\LARGE \suo{7}} & 1 kind--4 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+As we can see in the table, a {\bf side-wait} ({\jap ryanmen}) protorun can accept twice as many tiles as a {\bf closed-wait} ({\jap kanchan}) protorun or an {\bf edge-wait} ({\jap penchan}) protorun can. Therefore, building side-wait protoruns is the key to advancing a hand. Winning tiles of side-wait protoruns are often denoted with a hyphen in the middle, such as {\large \suo{1}-\suo{4}} or {\large \tong{5}-\tong{8}}.
+
+\bigskip
+\subsubsection*{Closed wait vs. edge wait}
+There is no difference in the kinds and the number of tiles accepted by closed-wait and edge-wait protoruns; they both accept 1 kind--4 tiles. However, closed-wait protoruns are superior to edge-wait ones because they can more easily evolve into a side-wait protorun. 
+
+\bigskip
+A closed-wait protorun can evolve into a side-wait protorun in just one step. For example, a protorun {\large\tong{1}\tong{3}} can become a side-wait one if you draw a {\large\tong{4}} and discard the {\large\tong{1}}. 
+\begin{center}
+{\LARGE \tong{1}\tong{3} ~~$\Rightarrow$~~ \tong{3}\tong{4}}\\
+draw a \tong{4}
+\end{center}
+On the other hand, it requires two steps for an edge-wait protorun to evolve into a side-wait protorun. For example, a protorun {\large\tong{8}\tong{9}} can become a side-wait one if you draw a {\large\tong{6}} first and then a {\large\tong{5}}. 
+\begin{center}
+{\LARGE \tong{8}\tong{9} ~~$\Rightarrow$~~ \tong{6}\tong{8} ~~ $\Rightarrow$ ~~ 
+\tong{5}\tong{6}}\\
+draw a \tong{6} ~~~~~~~~~~~~ draw a \tong{5}
+\end{center}
+
+\bigskip
+
+\begin{itembox}[c]{Value ranking of protoruns}
+\centering
+side wait > closed wait > edge wait
+\end{itembox}
+
+\bigskip
+
+\subsubsection{Tile versatility} \label{sec:versatility}
+
+Some tiles are more versatile than others. 
+For example, number tiles are more versatile than honor tiles because honor tiles can never form a run. Moreover, we can rank order the versatility of number tiles based on the types of protoruns they can form.
+
+\bigskip
+Number tiles between 3 and 7 are the most versatile. This is because each of them can form a protorun with four kinds of number tiles. For example, {\large\tong{3}} can form a protorun with {\large\tong{1}}, {\large\tong{2}}, {\large\tong{4}}, and {\large\tong{5}}. Two out of the four possible protoruns will be side wait.
+
+\bigskip
+2s and 8s are less versatile. They can form a protorun with only three kinds of number tiles. For example, {\large\tong{2}} can form a protorun with {\large\tong{1}}, {\large\tong{3}}, and {\large\tong{4}}. Only one out of the three possible protoruns is side wait. 
+
+\bigskip
+Terminals (1s and 9s) are the least versatile. They can form protoruns with only two kinds of tiles. For example, {\large\tong{1}} can form a protorun only with {\large\tong{2}} and {\large\tong{3}}. None of the two possible protoruns is side wait. 
+
+\begin{itembox}[c]{Versatility ranking of tiles}
+\centering
+3--7 tiles > 2, 8 tiles > 1, 9 tiles > honor tiles
+\end{itembox}
+
+\bigskip
+Applying the same logic, we can also rank order the versatility of closed-wait protoruns. 
+For example, a closed-wait protorun {\large\tong{1}\tong{3}} can become a side-wait one only if we draw a {\large\tong{4}}. Likewise, a closed-wait protorun {\large\tong{2}\tong{4}} can become a side-wait one only if we draw a {\large\tong{5}}. However, a closed-wait protorun {\large\tong{3}\tong{5}} can become a side-wait one if we draw a {\large\tong{2}} or a {\large\tong{6}}. Clearly, {\large\tong{3}\tong{5}} is more versatile than {\large\tong{1}\tong{3}} or {\large\tong{2}\tong{4}}. 
+
+\begin{itembox}[c]{Versatility ranking of closed-wait protoruns}
+\centering
+35, 46, 57 > 13, 24, 68, 79
+\end{itembox} 
+
+\bigskip
+
+\subsection{Pairs ({\jap toitsu})}\label{sec:closevers}
+\index{pair ({\jap toitsu})} \index{toitsu@{\jap toitsu} (pair)}
+
+A set of two identical tiles is called a {\bf pair} ({\jap toitsu}). 
+Pairs can perform several different roles. A pair can be the head (final pair) of a hand, a protoset (a candidate for a set), or a component of {\jap chiitoitsu} (Seven Pairs). 
+
+\bigskip
+\subsubsection{Building the head}
+Any hand --- including Thirteen Orphans and Seven Pairs --- requires the head to be complete. Since building the head is much easier than building a meld, we usually don't worry too much about the head. For example, consider the following hand. 
+\bigskip
+\begin{itembox}[r]{Hand with no head}
+\bp
+\wan{7}\wan{8}\wan{9}\tong{2}\tong{3}\tong{4}\tong{5}\tong{6}\tong{7}\suo{3}\suo{4}\suo{5}\suo{7}
+\ep
+\end{itembox}
+This hand currently lacks the head and the wait is not very good. The hand is complete only with {\large\suo{7}} (1 kind--3 tiles).
+However, if we draw any of {\large\wan{6}\wan{9}\tong{1}\tong{2}\tong{4}\tong{5}\tong{7}\tong{8}\suo{2}\suo{3}\suo{5}\suo{6}} (12 kinds--41 tiles), the wait will be significantly improved. 
+For example, if we draw a {\large\tong{5}} and discard the {\large\suo{7}}, the hand becomes:
+\bp
+\wan{7}\wan{8}\wan{9}\tong{2}\tong{3}\tong{4}\tong{5}\tong{5}\tong{6}\tong{7}\suo{3}\suo{4}\suo{5}
+\ep
+This hand is now waiting for {\large\tong{2} \tong{5}-\tong{8}} (3 kinds--9 tiles). 
+When a hand is missing the head, it is often the case that the wait gets significantly improved quite easily. 
+
+\subsection{Pairs and sets} \label{sec:2pairs}
+Another important role a pair can play is to work as a candidate for a set. 
+Especially when a hand has two pairs, we can count on one of the two pairs to become the head when the other becomes a set. In other words, the value of pairs is maximized when there are two (and only two) pairs in a hand. Let's see why this is the case by comparing hands with one, two, and three pairs. 
+
+%\newpage
+\begin{itembox}[r]{1. Hand with one pair}
+\bp
+\wan{1}\wan{3}\wan{5}\tong{5}\tong{6}\tong{7}\tong{8}\tong{9}\suo{2}\suo{2}\suo{6}\suo{7}\bei
+\ep
+\end{itembox}
+\noindent
+This 2-away hand has one pair: {\large\suo{2}\suo{2}}. This pair is not very useful as a candidate for a set for two reasons. First, if we draw another {\large\suo{2}}, we will complete a set but then we will lose the head at the same time. The hand will still be 2-away from ready after all. Second, the probability of drawing another {\large\suo{2}} is not very high because there are only two tiles left. 
+
+\bigskip
+What if a hand has two pairs? Suppose we drew a {\large\wan{1}} and discarded the {\large\bei}, as follows.
+
+\bigskip
+\begin{itembox}[r]{2. Hand with two pairs}
+\bp
+\wan{1}\wan{1}\wan{3}\wan{5}\tong{5}\tong{6}\tong{7}\tong{8}\tong{9}\suo{2}\suo{2}\suo{6}\suo{7}
+\ep
+\end{itembox}
+\noindent This hand is also 2-away, but it has two pairs: {\large\wan{1}\wan{1}} and {\large\suo{2}\suo{2}}. 
+Each of these pairs is now functioning as an effective candidate for a set. Whenever one pair becomes a set, the other pair becomes the head. Drawing a {\large\wan{1}} or a {\large\suo{2}} will advance this hand from 2-away to 1-away. 
+
+\bigskip
+Moreover, whereas the hand with one pair was able to accept two tiles of {\large\suo{2}}, the hand with two pairs can accept four tiles (two of {\large\suo{2}} and two of {\large\wan{1}}). The probability of drawing any one of four tiles is obviously higher than the probability of drawing any one of two tiles. 
+In general, for each additional pair in a hand, tile acceptance increases by two. 
+
+\bigskip
+What if a hand has three pairs? Suppose we draw a {\large\suo{6}}, as follows. 
+
+\bigskip
+\begin{itembox}[r]{3. Hand with three pairs}
+\bp
+\wan{1}\wan{1}\wan{3}\wan{5}\tong{5}\tong{6}\tong{7}\tong{8}\tong{9}\suo{2}\suo{2}\suo{6}\suo{7}~\suo{6}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\end{itembox}
+\noindent If we keep the second {\large\suo{6}} and discard the {\large\suo{7}} or the {\large\wan{5}}, the hand has three pairs. However, keeping three pairs in a hand is inefficient. Recall that each additional pair increases tile acceptance by two tiles. In this case, keeping a pair of {\large\suo{6}} means that the hand can accept two additional tiles of {\large\suo{6}}. However, doing so comes with a cost. Keeping three pairs by discarding the {\large\suo{7}} means the hand can no longer accept {\large\suo{5} \suo{8}} (2 kinds--8 tiles). The net tile acceptance gain will be negative ($2-8 = -6$). Similarly, keeping three pairs by discarding the {\large\wan{5}} means the hand can no longer accept {\large\wan{4}} (4 tiles). 
+%Again, the net tile acceptance gain is negative. 
+Therefore, discarding a {\large\suo{6}} to maintain two pairs is the most efficient. 
+
+\bigskip
+What we have seen so far is generalizable beyond the current examples. As long as we intend to keep the hand closed (i.e., not calling {\jap pon} or {\jap chii}), we should avoid having three pairs in a hand. Having three pairs makes for the weakest form, whereas having two pairs makes for the strongest form.\footnote{What if there are four or more pairs? Whenever a hand has four pairs, it is 2-away from ready for {\jap chiitoitsu} (Seven Pairs). It may be faster to pursue {\jap chiitoitsu} than pursuing a standard hand in such cases.}
+
+\bigskip
+
+\begin{itembox}[c]{Value of pairs: closed hand}
+\centering
+2 pairs > 1 pair, 4 pairs > 3 pairs
+\end{itembox}
+
+\bigskip
+
+\subsubsection{Open hand}
+
+There is an important caveat to the above rule. 
+When we intend to call {\jap pon}, having three pairs is actually better than having two pairs. This is because the hand will become a two-pair hand after we call {\jap pon} once.
+For example, consider the following hand. 
+\begin{itembox}[r]{Two Pairs vs. three Pairs}
+\bp
+\wan{1}\wan{1}\wan{3}\wan{5}\tong{4}\tong{5}\suo{2}\suo{4}\suo{4}\suo{7}\suo{8}\suo{9}\zhong\zhong~\zhong\\
+\hspace{310pt}\footnotesize{{\jap Dora}}
+\ep
+\vspace{-17pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+We would definitely intend to call {\jap pon} on a {\large\zhong}. Anticipating that, we should discard the {\large\wan{5}} in this case to have three pairs rather than discarding a {\large\wan{1}} to have two pairs. After calling {\jap pon} on a {\large\zhong}, we will have a choice between discarding the {\large\wan{3}} or the {\large\suo{2}}.
+\bp
+\wan{1}\wan{1}\tong{4}\tong{5}\suo{2}\suo{4}\suo{4}\suo{7}\suo{8}\suo{9}~\zhong\rzhong\zhong\\
+\wan{1}\wan{1}\wan{3}\tong{4}\tong{5}\suo{4}\suo{4}\suo{7}\suo{8}\suo{9}~\zhong\rzhong\zhong
+\ep
+In either case, the hand will have two pairs after calling {\jap pon}. 
+
+\bigskip
+
+\begin{itembox}[c]{Value of Pairs: open hand}
+\centering
+3 pairs > 2 pairs
+\end{itembox}
+
+\bigskip
+
+\subsection{Perfect $n$-away}\label{sec:perfect}
+
+\subsubsection{Perfect 1-away} 
+	\index{1-away (1-{\jap shanten})!perfect 1-away}
+When a 1-away hand has two side-wait protoruns and two pairs, it is called {\bf perfect 1-away}. 
+\bigskip
+\begin{itembox}[r]{Perfect 1-away}
+\bp
+\wan{2}\wan{3}\wan{3}\tong{1}\tong{2}\tong{3}\tong{6}\tong{6}\suo{6}\suo{7}\bai\bai\bai\\
+\ep
+\end{itembox}
+The hand above is an example of perfect 1-away. It is called ``perfect'' because this hand can become ready either by calling {\jap chii}, calling {\jap pon}, or drawing a tile to complete a run or a set, and no matter how a hand becomes ready, the final wait can \emph{always} be side wait. 
+
+\subsubsection{Perfect 2-away}
+	\index{2-away (2-{\jap shanten})!perfect 2-away}
+One step prior to achieving perfect 1-away, we may get a perfect 2-away hand. Perfect 2-away is made up with three side-wait protoruns and three pairs, as follows.
+\bigskip
+\begin{itembox}[r]{Perfect 2-away}
+\bp
+\wan{2}\wan{3}\wan{3}\tong{2}\tong{3}\tong{6}\tong{6}\suo{6}\suo{7}\suo{7}\bai\bai\bai\\
+\ep
+\end{itembox}
+When a perfect 2-away hand becomes 1-away, it can always be perfect 1-away (unless you choose not to, for some reason). However, not all perfect 1-away hands evolve from a perfect 2-away hand. 
+
+\newpage
+\subsection{Putting things all together: an example}\label{sec:ptat}
+
+Let's see some hand examples that illustrate how we can apply the tile efficiency logics we have learned so far. Consider the following 2-away hand. 
+\begin{itembox}[r]{Advancing a hand 1}
+\bp
+\wan{5}\wan{5}\wan{7}\suo{2}\suo{4}\suo{8}\suo{8}\suo{9}\tong{2}\tong{3}\tong{7}\tong{8}\tong{9}~\suo{2}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-17pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+The hand now has three pairs, and we should avoid it. In order to reduce the number of pairs in this hand from three to two, our discard candidates should be {\large\wan{5}}, {\large\suo{2}}, or {\large\suo{8}}. Which one should we choose? 
+
+\bigskip
+Recall that a closed-wait protorun of 57 is stronger than a closed-wait protorun of 24 or an edge-wait protorun of 89. Therefore, it is OK to cut down the {\large\wan{5}\wan{5}\wan{7}} part to {\large\wan{5}\wan{7}} by discarding a {\large\wan{5}}. This is because {\large\wan{5}\wan{7}} can become a side-wait protorun relatively easily. On the other hand, the {\large\suo{2}\suo{2}\suo{4}} part and the {\large\suo{8}\suo{8}\suo{9}} part are both weak; the first can become a side-wait protorun only if we draw a {\large\suo{5}}, and the second one will never become a side-wait protorun in one step. Therefore, both {\large\suo{2}\suo{2}\suo{4}} and {\large\suo{8}\suo{8}\suo{9}} should be kept as a candidate for the head or a meld rather than making them into weak closed-wait protoruns.
+
+\bigskip
+Let's say we discard a {\large\wan{5}}, and then we draw a {\large\wan{8}}, resulting in the following hand. 
+\begin{itembox}[r]{Advancing a hand 2}
+\bp
+\wan{5}\wan{7}\suo{2}\suo{2}\suo{4}\suo{8}\suo{8}\suo{9}\tong{2}\tong{3}\tong{7}\tong{8}\tong{9}~\wan{8}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-17pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+Now that we have a side-wait protorun {\large\wan{7}\wan{8}}, we should discard the {\large\wan{5}}. 
+
+\bigskip
+Let's say we draw a {\large\suo{7}}, resulting in the following hand. 
+\begin{itembox}[r]{Advancing a hand 3}
+\bp
+\wan{7}\wan{8}\suo{2}\suo{2}\suo{4}\suo{8}\suo{8}\suo{9}\tong{2}\tong{3}\tong{7}\tong{8}\tong{9}~\suo{7}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-17pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+This hand is now 1-away from ready, and our discard choice is between {\large\suo{4}} and {\large\suo{8}}. Both tiles are equally useless from our perspective, and so we will eventually discard them both. The question is which one we should discard first. Recall that a 4 is more versatile than an 8. This means that the {\large\suo{4}} in this hand may later become dangerous for the opponents; we should thus discard the {\large\suo{4}} now rather than later. 
+
+\bigskip
+Let's say we draw a {\large\tong{4}} after that, resulting in the following hand.
+\begin{itembox}[r]{Advancing a hand 4}
+\bp
+\wan{7}\wan{8}\suo{2}\suo{2}\suo{7}\suo{8}\suo{8}\suo{9}\tong{2}\tong{3}\tong{7}\tong{8}\tong{9}~\tong{4}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-17pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+The hand is now ready. We should discard a {\large\suo{8}} and call {\jap riichi}. If we win on a {\large\wan{9}}, we can claim {\jap riichi}, {\jap pinfu}, and {\jap sanshoku} (Mixed Triple Chow), giving us 7700 points.\footnote{We will discuss scoring and {\jap yaku} more extensively in later chapters.}
+
+\newpage
+\section{Complex forms}
+The three basic types of tile blocks we have covered so far --- melds (runs and sets), protoruns (side wait, closed wait, and edge wait), and pairs --- form the basis of any standard mahjong hands.\footnote{Standard hands are those with four melds and one head. Non-standard hands are {\jap chiitoitsu} (Seven Pairs) and {\jap kokushi musou} (Thirteen Orphans).}  
+When a hand has some tiles that do not belong to any of these three forms, we treat them as {\bf floating tiles}. For example, the {\large\wan{5}} and the {\large\suo{6}} in the following hand are both floating tiles. 
+\bigskip
+\begin{itembox}[r]{Hand with floating tiles}
+\bp
+\wan{5}\wan{8}\wan{9}\tong{2}\tong{3}\tong{4}\tong{5}\tong{6}\tong{7}\suo{1}\suo{2}\suo{3}\suo{6}
+\ep
+\end{itembox}
+
+\bigskip
+In addition to these basic blocks, we often come across complex forms that are made up of two or more melds, protoruns, pairs, and floating tiles combined. It is useful to comprehend such complex forms as they are rather than breaking them down into smaller parts. We will discuss three-tile complex forms and four-tile complex forms in turn. 
+
+\subsection{Three-tile complex forms} 
+
+There are two kinds of three-tile complex forms --- double closed block and protorun plus one.
+
+\subsubsection{Double closed ({\jap ryankan}) block} \label{sec:ryankan}
+	\index{double closed block@double closed ({\jap ryankan}) block} 
+	\index{ryankan@{\jap ryankan} (double closed) block}
+When two closed-wait protoruns are combined, we have a {\bf double closed} ({\jap ryankan}) block. 
+There are five different patterns in each suit, as follows.
+\bp
+\suo{1}\suo{3}\suo{5}~~\suo{2}\suo{4}\suo{6}~~\suo{3}\suo{5}\suo{7}\\
+\suo{4}\suo{6}\suo{8}~~\suo{5}\suo{7}\suo{9}
+\ep
+Each block accepts as many as 2 kinds--8 tiles. For example, {\large\suo{1}\suo{3}\suo{5}} accepts {\large\suo{2}} (4 tiles) and {\large\suo{4}} (4 tiles). This is twice as many as the number of tiles an isolated closed-wait protorun can accept. 
+
+\bigskip
+Sometimes a double closed block is embedded within a tile block, making it difficult to detect it. 
+For example, consider the following 1-away hand. 
+\begin{itembox}[r]{Hand with a double closed block}
+\vspace{-5pt}
+\bp
+\hspace{-245pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-18pt}
+\wan{4}\rfw\wan{5}\wan{7}\wan{8}\wan{9}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}\suo{7}\suo{7}~\tong{2}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-15pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+Before drawing the {\large\tong{2}}, the hand was already in a very good shape. It was perfect 1-away, accepting any of \\{\large\wan{3}\wan{5}\wan{6}\tong{5}\tong{8}\suo{7}} (6 kinds--19 tiles). The question now is whether we should keep the {\large\tong{2}} and discard the {\large\wan{5}} instead. \index{1-away (1-{\jap shanten})!perfect 1-away}
+
+\bigskip
+Notice that, if we keep the {\large\tong{2}}, we have a double closed block {\large\tong{2}\tong{4}\tong{6}}. This is because the block {\large\tong{2}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}} can be split into {\large\tong{2}\tong{4}\tong{6}} and {\large\tong{5}\tong{6}\tong{7}}. 
+If we keep the {\large\tong{2}} and discard the {\large\wan{5}}, the hand is still 1-away from ready, accepting {\large\wan{3}\wan{6}\tong{3}\tong{5}\tong{8}} (5 kinds--19 tiles). The benefit of discarding the {\large\wan{5}} to keep the double closed form is that the hand can \emph{always} be {\jap pinfu} when it is ready. On the other hand, discarding the {\large\tong{2}} means that the hand may become a {\jap yaku}-less hand when drawing a {\large\wan{5}} or a {\large\suo{7}}.
+
+\bigskip
+Double closed blocks are particularly useful when a hand is relatively far from ready (2-away or worse). As a hand advances, however, its usefulness diminishes because this block requires \underline{three} (not two) tiles even though it is not a complete meld. 
+Moreover, it will ultimately become a single closed-wait protorun when this block remains incomplete when the hand is ready. 
+Therefore, we should not rely too much on a double closed block. 
+For example, consider the following two hands. 
+\bp
+\wan{1}\wan{1}\wan{3}\wan{4}\wan{5}\tong{6}\tong{7}\tong{8}\suo{2}\suo{4}\suo{6}\zhong\zhong~\wan{2}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep 
+\vspace{-35pt}
+\bp
+\wan{3}\wan{4}\wan{7}\wan{8}\wan{9}\tong{3}\tong{4}\tong{5}\tong{8}\tong{8}\suo{2}\suo{4}\suo{6}~\tong{7}\\
+\hspace{290pt}\footnotesize{Draw}\\
+\ep
+\vspace{-10pt}
+Both are 1-away from ready and both hands contain a double closed block in Bamboos. Maintaining the double closed form in these cases will not be ideal. 
+It is true that, if the hand becomes ready by drawing a {\large\suo{3}} or a {\large\suo{5}} first, each of the hands makes for a good-wait ready hand. However, if the first hand becomes ready by calling {\jap pon} on a {\large\zhong} or the second hand becomes ready by drawing a {\large\wan{2}} or a {\large\wan{5}} first, they only make for a closed-wait ready hand. 
+
+\bigskip
+Therefore, when we draw a tile next to the head, creating a side-wait protorun, we should keep it and break the double closed form instead. In the first example above, as we draw a {\large\wan{2}} that creates a side-wait protorun {\large\wan{4}\wan{5}}, we should keep it and discard the {\large\suo{2}} instead. In the second example above, as we draw a {\large\tong{7}} that creates a side-wait protorun {\large\tong{7}\tong{8}}, we should keep it and discard the {\large\suo{2}} instead. 
+
+\subsubsection{Protorun plus one}
+
+As we saw with the first example in Section \ref{sec:ptat}, we often come across a tile combination such as {\large\wan{5}\wan{5}\wan{7}} that is made up with one protorun plus one floating tile ({\large\wan{5}\wan{7}} + {\large\wan{5}}).\footnote{Alternatively, we can think of these combinations as a Pair plus one {\wan{5}\wan{5} + \wan{7}}.}
+Depending on the type of protoruns, we can classify protorun plus one forms into three groups, as summarized in Table \ref{tbl:protoone}. 
+
+\bigskip
+
+{\begin{table}[h!]\centering\small \captionsetup{font=footnotesize}
+\caption{Types of protorun plus one forms} \label{tbl:protoone}
+\begin{tabular}{l c c c}
+\toprule
+Name & Example & Wait & Acceptance\\
+\midrule
+side wait +1 & {\LARGE \wan{3}\wan{3}\wan{4}} & {\LARGE \wan{2}-\wan{5} \wan{3}} & 3 kinds--10 tiles\\ [\sep]
+closed wait +1 & {\LARGE \tong{2}\tong{2}\tong{4}} & {\LARGE \tong{2} \tong{3}} & 2 kinds--6 tiles\\ [\sep]
+edge wait +1 & {\LARGE \suo{8}\suo{8}\suo{9}} & {\LARGE \suo{7} \suo{8}} & 2 kinds--6 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+A protorun plus one can accept two additional tiles that an isolated protorun cannot. This is because these blocks can now be a candidate for a set as well as for a run. 
+
+\bigskip
+Breaking a protorun plus one can be inefficient. For example, if we break a closed wait plus one form into an isolated pair (i.e., discard the {\large\tong{4}} from {\large \tong{2}\tong{2}\tong{4}}), the tile acceptance decreases from 6 to 2; it can accept only {\large\tong{2}} (1 kind--2 tiles). Similarly, if we break it into an isolated protorun (i.e., discard a {\large\tong{2}} from {\large \tong{2}\tong{2}\tong{4}}), the tile acceptance decreases from 6 to 4; it can accept only {\large\tong{3}} (1 kind--4 tiles). With this in mind, consider the following hand.
+
+\begin{itembox}[r]{Protorun plus one}
+\bp
+\wan{1}\wan{1}\wan{5}\wan{7}\tong{5}\suo{1}\suo{2}\suo{3}\suo{4}\suo{7}\suo{8}\suo{9}\suo{9}~\wan{5}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-15pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+Discarding a {\large\wan{5}} or the {\large\wan{7}} to break the protorun plus one {\large\wan{5}\wan{5}\wan{7}} is inefficient with this hand. Discarding a {\large\wan{5}} decreases tile acceptance by two, and discarding the {\large\wan{7}} decreases tile acceptance by four. Moreover, discarding the {\large\wan{7}} leaves three pairs in this hand, which should be avoided. Discarding a {\large\suo{9}} is much more efficient. 
+
+\bigskip
+
+Sometimes we have to make a choice between multiple protorun plus one forms, just like we did with examples in Section \ref{sec:ptat}. 
+Consider the following hand. What would you discard?
+\begin{itembox}[r]{Multiple protoruns plus one}
+\bp
+\wan{4}\wan{4}\wan{6}\tong{3}\tong{3}\tong{4}\suo{1}\suo{2}\suo{3}\suo{4}\suo{6}\suo{8}\bei\bei
+\ep
+\vspace{-10pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+There are two protorun plus one forms in this hand: {\large\wan{4}\wan{4}\wan{6}} and {\large\tong{3}\tong{3}\tong{4}}. We have to break one of the two into either an isolated Pair or an isolated protorun, because the other parts of this hand are more or less self-sufficient. Which one should we choose?
+
+\bigskip
+When choosing between which protoruns plus one to break, priority should be given to the weaker one. Since the side-wait protorun {\large\tong{3}\tong{4}} is much stronger than the closed-wait protorun {\large\wan{4}\wan{6}}, we should prioritize the latter and maintain {\large\wan{4}\wan{4}\wan{6}}. In other words, the side-wait protorun {\large\tong{3}\tong{4}} is so strong that we do not need to provide a cover by maintaining the ``plus one'' tile {\large\tong{3}}. On the other hand, the closed-wait protorun {\large\wan{4}\wan{6}} is weaker so we should cover it by keeping another {\large\wan{4}} as a back-up. You should thus discard a {\large\tong{3}}. 
+
+\subsection{Four-tile complex forms} 
+Among several different kinds of four-tile complex forms, we will focus on those that are made up of one meld and one floating tile. There are three variants of this kind --- stretched single, bulging float, and skipping. 
+
+\subsubsection{Stretched single ({\jap nobetan}) block} \label{sec:nobetan}
+	\index{stretched single block@stretched single ({\jap nobetan}) block} 
+	\index{nobetan@{\jap nobetan} (stretched single) block}
+A set of four consecutive tiles such as {\large\tong{2}\tong{3}\tong{4}\tong{5}} is called a {\bf stretched single} ({\jap nobetan}) block. Stretched single blocks are very useful both when a hand is ready and when a hand is 1-away or worse. 
+
+\bigskip
+When a stretched single block is in a ready hand, that part forms the wait of the hand. For example, the following hand is ready, waiting for {\large\wan{1} \wan{4}}.
+\bigskip
+\begin{itembox}[r]{Ready hand with a stretched single block}
+\bp
+\wan{1}\wan{2}\wan{3}\wan{4}\tong{2}\tong{3}\tong{4}\suo{2}\suo{3}\suo{4}\zhong\zhong\zhong
+\ep 
+\end{itembox}
+In a ready hand, the stretched single block can be thought of as a candidate for the head ({\large\wan{1}} or {\large\wan{4}}) and a candidate for a run ({\large\wan{2}\wan{3}\wan{4}} or {\large\wan{1}\wan{2}\wan{3}}). For example, if we win this hand on a {\large\wan{1}}, the {\large\wan{1}} becomes the head, and {\large\wan{2}\wan{3}\wan{4}} becomes a run. 
+
+\bigskip
+
+Another important role that a stretched single block can play is to work as a candidate for two runs. When a hand is 1-away or worse, we usually count on a stretched single block to produce two runs. 
+For example, consider a stretched single block {\large\tong{3}\tong{4}\tong{5}\tong{6}}. 
+If we draw a {\large\tong{4}}, we will have a side-wait protorun {\large\tong{3}\tong{4}} in addition to a complete run {\large\tong{4}\tong{5}\tong{6}}. Similarly, if we draw a {\large\tong{5}}, we will have a side-wait protorun {\large\tong{5}\tong{6}} in addition to a complete run {\large\tong{3}\tong{4}\tong{5}}. Moreover, if we draw a {\large\tong{2}} or a {\large\tong{7}}, we will have a 3-way side-wait block {\large\tong{2}\tong{3}\tong{4}\tong{5}\tong{6}} (waiting for {\large\tong{1}-\tong{4}-\tong{7}}) or {\large\tong{3}\tong{4}\tong{5}\tong{6}\tong{7}} (waiting for {\large\tong{2}-\tong{5}-\tong{8}}). 
+
+\bigskip
+There are six patterns of stretched single blocks, from 1234 through 6789. Table \ref{tbl:nobetan} summarizes the tiles each block can accept to produce various waits. 
+
+{\begin{table}[h!]\centering\small\captionsetup{font=footnotesize}
+\caption{Types of stretched single blocks} \label{tbl:nobetan}
+\begin{tabular}{l llll c}
+\toprule
+Form & 3-way & 2-way & 1-way & Pair & Acceptance\\
+\midrule
+{\large\wan{1}\wan{2}\wan{3}\wan{4}}
+	&
+	& {\large \wan{3} \wan{5}}
+	& {\large \wan{2} \wan{6}}
+	& {\large \wan{1} \wan{4}}
+	& 6 kinds--20 tiles\\ [\sep]
+{\large\wan{2}\wan{3}\wan{4}\wan{5}}
+	& {\large\wan{6}}
+	& {\large \wan{1} \wan{3} \wan{4}}
+	& {\large \wan{7}}
+	& {\large \wan{2} \wan{5}}
+	& 7 kinds--24 tiles\\ [\sep]
+{\large\wan{3}\wan{4}\wan{5}\wan{6}}
+	& {\large\wan{2} \wan{7}}
+	& {\large \wan{4} \wan{5}}
+	& {\large \wan{1} \wan{8}}
+	& {\large \wan{3} \wan{6}}
+	& 8 kinds--28 tiles\\ [\sep]
+{\large\wan{4}\wan{5}\wan{6}\wan{7}}
+	& {\large\wan{3} \wan{8}}
+	& {\large \wan{5} \wan{6}}
+	& {\large \wan{2} \wan{9}}
+	& {\large \wan{4} \wan{7}}
+	& 8 kinds--28 tiles\\ [\sep]
+{\large\wan{5}\wan{6}\wan{7}\wan{8}}
+	& {\large\wan{4}}
+	& {\large \wan{6} \wan{7} \wan{9}}
+	& {\large \wan{3}}
+	& {\large \wan{5} \wan{8}}
+	& 7 kinds--24 tiles\\ [\sep]
+{\large\wan{6}\wan{7}\wan{8}\wan{9}}
+	&
+	& {\large \wan{5} \wan{7}}
+	& {\large \wan{4} \wan{8}}
+	& {\large \wan{6} \wan{9}}
+	& 6 kinds--20 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+\bigskip
+As we can see, the middle two ones --- 3456 and 4567 --- are the most versatile. They can accept two different tiles to produce a 3-way wait (27 or 38), two different tiles to produce a 2-way side wait (45 or 56), and two different tiles to produce a 1-way wait (18 or 29 to produce a closed wait). The 3456 and 4567 blocks are the most valuable of all four-tile blocks, and we should not lightly break such blocks when a hand is far away from ready. With this in mind, consider the following 2-away hand. 
+\bigskip
+\begin{itembox}[r]{2-away hand with a stretched single block}
+\bp
+\wan{3}\wan{4}\wan{5}\wan{6}\tong{1}\tong{1}\tong{3}\tong{5}\suo{1}\suo{2}\suo{6}\suo{6}\suo{7}\suo{9}
+\ep
+\vspace{-10pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+
+\bigskip 
+\noindent
+It is true that discarding the {\large\wan{3}} or the {\large\wan{6}} would lead to the greatest tile acceptance (7 kinds--24 tiles) temporarily. However, doing so is too myopic. If we do that, all the remaining protoruns will be closed-wait or edge-wait ones. We should rather discard the {\large\suo{9}} to keep the 3456 block, which we can expect to produce a side-wait protorun later. The resulting tile acceptance (6 kinds--20 tiles) is not much smaller, either. 
+
+\bigskip
+
+\begin{itembox}[c]{Four-tile complex forms}
+Try to keep a stretched single block if a hand has one. In particular, 3456 and 4567 should be kept until the hand becomes ready or 1-away from ready. 
+\end{itembox}
+
+\bigskip
+
+
+\subsubsection{Bulging float ({\jap nakabukure}) block}
+	\index{bulging@bulging float ({\jap nakabukure})} 
+	\index{nakabukure@{\jap nakabukure} (bulging float)}
+
+When we have a floating tile in the middle of a run (e.g., {\large\wan{3}\wan{4}\wan{4}\wan{5}}), we have a {\bf bulging float} ({\jap nakabukure}) block. 
+Bulging float blocks are quite good at producing side-wait protoruns. Any bulging float blocks from 2334 \\through 6778 can accept four kinds of tiles to produce a side-wait protorun and a complete run. Take {\large\wan{3}\wan{4}\wan{4}\wan{5}}, for example. It can produce a side-wait protorun and a complete run if we draw any of {\large\wan{2}\wan{3}\wan{5}\wan{6}}. 
+With this in mind, consider the following 2-away hand.
+\bigskip
+\begin{itembox}[r]{Hand with a bulging float block}
+\bp
+\wan{3}\wan{4}\wan{4}\wan{5}\tong{4}\tong{6}\tong{8}\tong{8}\suo{1}\suo{3}\suo{5}\suo{5}\suo{6}\suo{8}
+\ep
+\vspace{-10pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+Discarding a {\large\wan{4}} to break the bulging float block is not ideal. Although doing so increases tile acceptance temporarily, the hand will be filled with closed-wait protoruns. Alternatively, you should discard the {\large\suo{8}} to maintain the bulging float block. 
+
+\bigskip
+That being said, when this block remains incomplete when a hand is ready, it does not make for a good wait. For example, consider the following ready hand. 
+\begin{itembox}[r]{Ready hand with a bulging float block}
+\bp
+\wan{3}\wan{4}\wan{4}\wan{5}\tong{2}\tong{3}\suo{2}\suo{3}\suo{4}\bei\zhong\zhong\zhong~\tong{4}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep 
+\vspace{-15pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+Discarding the {\large\bei} to keep the bulging float block {\large\wan{3}\wan{4}\wan{4}\wan{5}} makes the wait of this hand pretty bad. It is waiting for a {\large\wan{4}}, but we are already using two of it in the hand, leaving only two winning tiles. We should rather discard a {\large\wan{4}} to wait for a {\large\bei}. 
+
+
+\begin{itembox}[c]{Four-tile complex forms}
+Try to keep a bulging float block until a hand becomes 1-away.
+\end{itembox}
+
+\subsubsection{Skipping block}
+\index{skipping block}
+When we have a floating tile two tiles away from a run, we have a {\bf skipping block}. For example, in a block {\large\wan{3}\wan{5}\wan{6}\wan{7}}, the {\large\wan{3}} is floating next next to a run {\large\wan{5}\wan{6}\wan{7}}. The {\large\wan{3}} in a skipping block is more valuable than an isolated {\large\wan{3}}, because it increases the kinds of tiles the block can accept to produce a protorun or a 3-way side-wait block. Table \ref{tbl:skipping} summarizes all the skipping blocks and the tiles each form can accept. 
+
+{\begin{table}[h!]\centering\small\captionsetup{font=footnotesize}
+\caption{Types of skipping blocks} \label{tbl:skipping}
+\begin{tabular}{l llll c}
+\toprule
+Form & 3-way & 2-way & 1-way & Pair & Acceptance\\
+\midrule
+{\Large\wan{1}\wan{3}\wan{4}\wan{5}}
+	&
+	& {\Large \wan{2}}
+	& {\Large \wan{3} \wan{6}}
+	& {\Large \wan{1}}
+	& 4 kinds--14 tiles\\ [\sep]
+{\Large\wan{2}\wan{4}\wan{5}\wan{6}}
+	& {\Large\wan{3}}
+	& 
+	& {\Large \wan{1} \wan{4} \wan{7}}
+	& {\Large \wan{2}}
+	& 5 kinds--18 tiles\\ [\sep]
+{\Large\wan{3}\wan{5}\wan{6}\wan{7}}
+	& {\Large\wan{4}}
+	& {\Large\wan{2}}
+	& {\Large \wan{1} \wan{5} \wan{8}}
+	& {\Large \wan{3}}
+	& 6 kinds--22 tiles\\ [\sep]
+{\Large\wan{4}\wan{6}\wan{7}\wan{8}}
+	& {\Large\wan{5}}
+	& {\Large\wan{3}}
+	& {\Large \wan{2} \wan{6} \wan{9}}
+	& {\Large \wan{4}}
+	& 6 kinds--22 tiles\\ [\sep]
+{\Large\wan{5}\wan{7}\wan{8}\wan{9}}
+	& 
+	& {\Large\wan{4} \wan{6}}
+	& {\Large\wan{3} \wan{7}}
+	& {\Large \wan{5}}
+	& 5 kinds--18 tiles\\ [\sep]
+{\Large\wan{1}\wan{2}\wan{3}\wan{5}}
+	& 
+	& {\Large \wan{4} \wan{6}}
+	& {\Large \wan{3} \wan{7}}
+	& {\Large \wan{5}}
+	& 5 kinds--18 tiles\\ [\sep]
+{\Large\wan{2}\wan{3}\wan{4}\wan{6}}
+	& {\Large\wan{5}}
+	& {\Large\wan{7}}
+	& {\Large \wan{1} \wan{8}}
+	& {\Large \wan{6}}
+	& 6 kinds--22 tiles\\ [\sep]
+{\Large\wan{3}\wan{4}\wan{5}\wan{7}}
+	& {\Large\wan{6}}
+	& {\Large\wan{8}}
+	& {\Large \wan{2} \wan{5} \wan{9}}
+	& {\Large \wan{7}}
+	& 6 kinds--22 tiles\\ [\sep]
+{\Large\wan{4}\wan{5}\wan{6}\wan{8}}
+	& {\Large\wan{7}}
+	& 
+	& {\Large \wan{3} \wan{6} \wan{9}}
+	& {\Large \wan{8}}
+	& 5 kinds--18 tiles\\ [\sep]
+{\Large\wan{5}\wan{6}\wan{7}\wan{9}}
+	&
+	& {\Large \wan{8}}
+	& {\Large \wan{4} \wan{7}}
+	& {\Large \wan{9}}
+	& 4 kinds--14 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+\bigskip
+Bearing in mind that the {\large\wan{3}} of {\large\wan{3}\wan{5}\wan{6}\wan{7}} is more valuable than an isolated {\large\wan{3}}, consider the following hand. 
+\begin{itembox}[r]{Hand with a skipping block}
+\bp
+\wan{3}\wan{7}\wan{8}\tong{5}\tong{6}\tong{7}\suo{2}\suo{4}\suo{6}\suo{7}\zhong\zhong\zhong~\tong{3}\\
+\hspace{290pt}\footnotesize{Draw}
+\ep
+\vspace{-15pt}What would you discard? \vspace{-5pt}
+\end{itembox}
+\noindent
+We should keep the {\large\tong{3}} we drew and discard the {\large\wan{3}} instead. This is because the {\large\tong{3}} is a part of a skipping block {\large\tong{3}\tong{5}\tong{6}\tong{7}}, but {\large\wan{3}} is an isolated floating tile. 
+
+\bigskip
+As we can see in Table \ref{tbl:skipping}, skipping blocks with a terminal tile (1345 and 5679) are also valuable. The 1 of 1345 and the 9 of 5679 can accept more tiles than an isolated 2 or 8 (let alone than an isolated 1 or 9). 
+
+\section{Waits} \label{sec:waits}
+	\index{waits}
+	\index{waits!side wait} \index{waits!closed wait} 
+	\index{waits!pair wait} \index{waits!edge wait} \index{waits!single wait} 
+
+There are five basic wait patterns, as summarized in Table \ref{tbl:waits}. More complicated wait patterns can emerge when some of these five basic patterns are combined. 
+
+{\begin{table}[h!]\centering\small\captionsetup{font=footnotesize}
+\caption{Five basic waits} \label{tbl:waits}
+\begin{tabular}{l l c c c}
+\toprule
+Name & Japanese & Example & Wait & Acceptance\\
+\midrule
+side wait & {\jap ryanmen} & {\Large \wan{3}\wan{4}} & {\Large \wan{2}-\wan{5}} & 2 kinds--8 tiles\\ [\sep]
+pair wait & {\jap shabo} & {\Large \suo{3}\suo{3}\tong{5}\tong{5}}& {\Large \suo{3} \tong{5}} & 2 kinds--4 tiles\\ [\sep]
+closed wait & {\jap kanchan} & {\Large \suo{6}\suo{8}} & {\Large \suo{7}} & 1 kind--4 tiles\\ [\sep]
+edge wait & {\jap penchan} & {\Large \tong{1}\tong{2}} & {\Large \tong{3}} & 1 kind--4 tiles\\ [\sep]
+single wait & {\jap tanki} & {\Large \wan{2}} & {\Large \wan{2}} & 1 kind--3 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+\bigskip
+As we can see in the table, side wait is the strongest of all the basic waits in terms of the kinds and the number of tiles to win on. 
+Single wait appears to be much worse than others, but single-wait hands tend to have many possibilities of improving the wait and/or scores further. Moreover, single wait of an honor tile has a relatively high chance of winning it by {\jap ron}.
+
+\subsubsection{Stretched single wait and semi side wait}
+	\index{waits!stretched single wait} 
+	\index{waits!semi side wait} 
+Table \ref{tbl:waits2} summarizes two wait patterns, each of which can be thought of as a combination of some basic wait patterns. 
+As I mentioned before, a stretched single block in a ready hand forms a 2-way single wait. It is a decent wait pattern, as the number of tiles to win on (2 kinds--6 tiles) is twice as big as a regular single wait. 
+
+{\begin{table}[h!]\centering\small\captionsetup{font=footnotesize}
+\caption{Stretched single wait and semi side wait} \label{tbl:waits2}
+\begin{tabular}{l c c c}
+\toprule
+Name & Example & Waits & Acceptance\\
+\midrule
+stretched single wait & {\Large \wan{2}\wan{3}\wan{4}\wan{5}} & {\Large \wan{2} \wan{5}} & 2 kinds--6 tiles\\ [\sep]
+semi side wait & {\Large \suo{3}\suo{3}\suo{4}\suo{5}}& {\Large \suo{3}-\suo{6}} & 2 kinds--6 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+\bigskip
+However, stretched single wait should not be confused with side wait for a few reasons. First, the number of tiles a 2-way stretched-single-wait hand can win on is at most 6, whereas it is 8 for a 2-way side-wait hand. The difference between 6 and 8 is a noticeable one. Second, stretched single wait is still a variant of single wait, which means two things. On the one hand, we cannot claim {\jap pinfu} when the wait is stretched-single wait. For example, the following hand has no {\jap yaku} and hence we cannot win it by {\jap ron} without calling {\jap riichi}.  
+\bp
+\wan{4}\wan{5}\wan{6}\tong{1}\tong{2}\tong{3}\tong{4}\suo{1}\suo{2}\suo{3}\suo{4}\suo{5}\suo{6}
+\ep \index{fu@{\jap fu} (minipoint)} \index{minipoint ({\jap fu})}
+On the other hand, we get 2 minipoints ({\jap fu}) with a stretched single wait. 
+For example, if we win the following hand by drawing a {\large\tong{1}}, we get 40 minipoints (20 base minipoints + 8 for a concealed set of honor tiles + 2 for self-draw + 2 for single wait = 32, rounded up to 40).\footnote{We will cover methods of scoring and minipoints calculations extensively in Chapter \ref{ch:scores}.}
+\bp
+\wan{4}\wan{5}\wan{6}\tong{1}\tong{2}\tong{3}\tong{4}\suo{1}\suo{2}\suo{3}\zhong\zhong\zhong
+\ep
+
+When we have a side-wait protorun right next to a pair (e.g., 1123, 2234, 7899, etc.), we call it semi side wait. We distinguish this from regular side wait for two reasons. First, the number of tiles to win on is smaller (6 rather than 8) because we are already using 2 of the 8 winning tiles in our hand. Second, we can treat this wait pattern either as single wait or as side wait, depending on which interpretation gives us a greater score. For example, consider the following hand. 
+\bp
+\wan{4}\wan{5}\wan{6}\tong{1}\tong{1}\tong{2}\tong{3}\suo{1}\suo{2}\suo{3}\suo{4}\suo{5}\suo{6}
+\ep
+We will treat the wait in this hand as side wait because that will give us {\jap pinfu}.
+However, consider the following hand that has the exact same wait pattern: {\large\tong{1}\tong{1}\tong{2}\tong{3}}. 
+\bp
+\wan{4}\wan{5}\wan{6}\tong{1}\tong{1}\tong{2}\tong{3}\suo{1}\suo{2}\suo{3}\zhong\zhong\zhong
+\ep
+If we win this hand by drawing a {\large\tong{1}}, we will treat the wait as single wait: {\large\tong{1}} + {\large\tong{1}\tong{2}\tong{3}}, which will give us 40 minipoints. If we treated the wait as side wait: {\large\tong{1}\tong{1}} + {\large\tong{2}\tong{3}}, we would get only 30 minipoints.
+Of course, if we win this hand on a {\large\tong{4}}, we cannot think of the wait as side wait (because it is not). Similarly, if we win it by {\jap ron}, it does not make a difference if it is side wait or single wait (either way we get 40 minipoints). 
+
+
+\subsubsection{3-way side wait}
+{\begin{table}[h!]\centering\captionsetup{font=footnotesize}\small
+\caption{Regular 3-way side wait} \label{tbl:waits3}
+\begin{tabular}{l c c}
+\toprule
+Example & Wait & Acceptance\\
+\midrule
+{\LARGE \wan{2}\wan{3}\wan{4}\wan{5}\wan{6}} & {\LARGE \wan{1}-\wan{4}-\wan{7}} & 3 kinds--11 tiles\\ [\sep]
+{\LARGE \tong{3}\tong{4}\tong{5}\tong{6}\tong{7}} & {\LARGE \tong{2}-\tong{5}-\tong{8}} & 3 kinds--11 tiles\\ [\sep]
+{\LARGE \suo{4}\suo{5}\suo{6}\suo{7}\suo{8}} & {\LARGE \suo{3}-\suo{6}-\suo{9}} & 3 kinds--11 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+When a side-wait protorun is combined with an adjacent run, we get a regular 3-way side-wait pattern. There are only three of this kind, summarized in Table \ref{tbl:waits3}.
+
+
+\bigskip
+When we have a stretched single block or semi side-wait block combined with an adjacent run, we also get a 3-way wait pattern. Table \ref{tbl:waits4} summarizes some examples. 
+
+{\begin{table}[t!]\centering\captionsetup{font=footnotesize}\small
+\caption{Some irregular 3-way waits} \label{tbl:waits4}
+\begin{tabular}{l c c}
+\toprule
+Example & Wait & Acceptance\\
+\midrule
+{\LARGE \wan{1}\wan{2}\wan{3}\wan{4}\wan{5}\wan{6}\wan{7}} & {\LARGE \wan{1} \wan{4} \wan{7}} & 3 kinds--9 tiles\\ [\sep]
+{\LARGE \tong{2}\tong{3}\tong{4}\tong{5}\tong{5}\tong{6}\tong{7}} & {\LARGE \tong{2} \tong{5}-\tong{8}} & 3 kinds--9 tiles\\ [\sep]
+{\LARGE \suo{4}\suo{5}\suo{6}\suo{7}\suo{8}\suo{9}\suo{9}} & {\LARGE \suo{3}-\suo{6}-\suo{9}} & 3 kinds--9 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+
+\bigskip
+Notice that the number of tiles to win on in each pattern is smaller than those for the regular 3-way side waits, although the kinds of tiles to win on are the same (either 1-4-7, 2-5-8, or 3-6-9). This is because we are already using some of the winning tiles within the hand. 
+
+\bigskip
+Notice also that not all the wait patterns qualify as side wait, so claiming {\jap pinfu} is not always possible (similarly, claiming single wait is not always possible). For example, the first pattern in Table \ref{tbl:waits4} is essentially a 3-way stretched single block; none of the waits embedded in this block qualifies as side wait. In the second pattern, if we win on a {\large\tong{2}}, the wait must be interpreted as single wait; if we win on a {\large\tong{8}}, the wait must be interpreted as side wait; and if we win on a {\large\tong{5}}, we adopt whichever interpretation that generates the higher score. In the third pattern, winning on a {\large\suo{9}} allows us to claim single wait if dong so gives us the higher score. 
+
+\subsubsection{Complex waits}
+{\begin{table}[t!]\centering \small\captionsetup{font=footnotesize}
+\caption{Some irregular waits (set and a floating tile)} \label{tbl:waits5}
+\begin{tabular}{l c c c}
+\toprule
+Example & Combination & Wait & Acceptance\\
+\midrule
+{\Large \wan{1}\wan{2}\wan{2}\wan{2}} & single and edge & {\Large \wan{1} \wan{3}} & 2 kinds--7 tiles\\ [\sep]
+{\Large \tong{1}\tong{3}\tong{3}\tong{3}} & single and closed & {\Large \tong{1} \tong{2}} & 2 kinds--7 tiles\\ [\sep]
+{\Large \suo{2}\suo{3}\suo{3}\suo{3}} & single and side & {\Large \suo{2} \suo{1}-\suo{4}} & 3 kinds--11 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\end{table}}
+When a set is combined with a floating tile nearby, we get some complex wait patterns with multiple waits. Table \ref{tbl:waits5} summarizes a few examples of irregular waits that involve a set and a floating tile. 
+
+
+\bigskip
+When a set is combined with a protorun, pair, or four-tile block, we get even more complicated waits. Table \ref{tbl:waits6} summarizes only a few representative examples. 
+
+{\begin{table}[t!]\centering \small \captionsetup{font=footnotesize}
+\caption{Some irregular waits (set and a protorun, pair, or a four-tile block)} \begin{tabular}{l c c}
+\toprule
+Example & Wait & Acceptance\\
+\midrule
+{\Large \wan{1}\wan{1}\wan{2}\wan{2}\wan{2}\wan{3}\wan{3}} & {\Large \wan{1} \wan{2} \wan{3}} & 3 kinds--5 tiles\\ [\sep]
+{\Large \tong{1}\tong{1}\tong{2}\tong{2}\tong{3}\tong{3}\tong{3}} & {\Large \tong{1} \tong{2} \tong{3}} & 3 kinds--5 tiles\\ [\sep]
+{\Large \suo{1}\suo{1}\suo{2}\suo{2}\suo{3}\suo{3}\suo{4}\suo{4}\bei\bei} & {\Large \suo{1} \suo{4} \bei} & 3 kinds--6 tiles\\ [\sep]
+{\Large \wan{5}\wan{5}\wan{5}\wan{6}\wan{7}\nan\nan} & {\Large \wan{5}-\wan{8} \nan} & 3 kinds--7 tiles\\ [\sep]
+{\Large \tong{6}\tong{7}\tong{8}\tong{8}\tong{9}\tong{9}\tong{9}} & {\Large \tong{5}-\tong{8} \tong{7}} & 3 kinds--9 tiles\\ [\sep]
+{\Large \suo{2}\suo{2}\suo{2}\suo{3}\suo{4}\suo{4}\suo{5}} & {\Large \suo{3}-\suo{6} \suo{4}} & 3 kinds--9 tiles\\ [\sep]
+{\Large \wan{3}\wan{3}\wan{3}\wan{5}\wan{6}\wan{7}\wan{8}} & {\Large \wan{4} \wan{5} \wan{8}} & 3 kinds--10 tiles\\ [\sep]
+{\Large \tong{1}\tong{1}\tong{1}\tong{3}\tong{5}\tong{5}\tong{5}} & {\Large \tong{2} \tong{3} \tong{4}} & 3 kinds--11 tiles\\ [\sep]
+\bottomrule
+\end{tabular}
+\label{tbl:waits6}
+\end{table}}
+
+
+\clearpage
+
+\section{Glossary}
+
+\begin{description}
+\item[Simple tiles ({\jap tanyao hai})] are tiles between 2 and 8.
+\item[Terminal tiles] are 1s and 9s.
+\item[Honor tiles ({\jap jihai})] are non-number tiles (Dragon tiles and Wind tiles).
+\item[Value tiles ({\jap fanpai} / {\jap yakuhai})] include Dragon tiles, seat Wind tiles, and prevailing Wind tiles. We get one {\jap fan} for a set of value tiles. 
+\item[Valueless Wind tiles ({\jap otakaze hai})] are Wind tiles that are neither a prevailing Wind tile nor a seat Wind tile.
+\item[Run (chow; {\jap shuntsu})] is a set of three consecutive number tiles.
+\item[Set (pung; {\jap kotsu})] is a set of three identical tiles. 
+\item[Quad (kong; {\jap kantsu})] is a set of four identical tiles. 
+\item[Protorun ({\jap taatsu})] is a set of two tiles in the same suit that can become a run when one more tile is added. 
+\item[Pair ({\jap toitsu})] is a set of two identical tiles. 
+\item[Ready ({\jap tenpai})] is when a hand is ready to win. 
+\item[1-away ({\jap 1-shanten})] is when a hand can be ready with one more tile. 
+\item[Perfect 1-away] is when a 1-away hand has two side-wait protoruns and two pairs.
+\item[Tile acceptance ({\jap ukeire})] refers to the kinds and the number of tiles a hand can accept.
+\item[Stretched single ({\jap nobetan}) block] is a set of four consecutive number tiles. 
+\item[Bulging float ({\jap nakabukure}) block] is a four-tile block that is made up with a run and one floating tile in the middle of the run.
+\item[Skipping block] is a four-tile block made up with a run and one floating tile located at two tiles away from the run.
+\end{description}

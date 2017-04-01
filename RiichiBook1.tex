@@ -1,0 +1,239 @@
+%Preamble ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\documentclass{book}
+\makeindex  %mendex RiichiBook1.idx
+% Font
+\usepackage{pie2e}  % Printing mahjong tiles (from the piemf package)
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext,tgpagella,textcomp,amsmath,tipa,lipsum,eurosym}
+% graphic commands
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx, graphics,color,wrapfig,tikz} 
+\usepackage[abs]{overpic}
+\usepackage[dvipdfmx]{pict2e}
+\usepackage[dvipdfmx,colorlinks=true, urlcolor={blue!50!blue}, citecolor={blue!50!blue}, linkcolor={MyBlue}]{hyperref}
+
+% To remove page numbers from TOC
+%\let\Contentsline\contentsline
+%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+%\makeatletter
+%\renewcommand{\@dotsep}{10000} 
+\makeatother
+
+% Space, Header, section structure
+\setcounter{tocdepth}{1} %\setcounter{secnumdepth}{1}
+\usepackage{fancyhdr}
+\usepackage[hang,bottom]{footmisc}
+\usepackage{setspace,placeins,sectsty,appendix,makeidx,psfrag,lscape,bxascmac,verbatim,multicol}
+\setlength{\footskip}{30pt}
+%Adjust the paper size to Kindle
+\usepackage[14pt]{extsizes}
+\usepackage[paperwidth=13.5cm, paperheight=17.25cm, top=0.5cm, bottom = .5cm, left=0.5cm, right = 0.5cm]{geometry}
+\special{papersize=13.5cm,17.25cm}
+% customizing section titles
+\usepackage{titlesec}
+\partfont{\raggedright\mdseries\scshape}
+\titleformat{\chapter}[display]{\bf\LARGE}{\vspace{-50pt}Chapter \thechapter}{.1em}{}
+\titlespacing{\chapter}{0pt}{10pt}{20pt}
+\titleformat{\section}[block]{\large\bfseries\filcenter}{\fbox{\thesection}}{1em}{}
+\titlespacing{\section}{0pt}{10pt}{10pt}
+\titleformat{\subsection}{\bf}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{10pt}{2pt}
+\titleformat{\subsubsection}{\bf\it}{}{0em}{}
+\titlespacing{\subsubsection}{0pt}{10pt}{5pt}
+% Table & figure
+\usepackage{tabularx, tabulary, booktabs, dcolumn, threeparttable, longtable, multirow,colortbl,wallpaper,floatflt,caption}
+%\usepackage{float} \floatstyle{plaintop} \restylefloat{table}
+% Define Colors
+\definecolor{MyBlue}{RGB}{5,113,176} \definecolor{MyRed}{RGB}{202,0,32}
+\definecolor{MyGreen}{RGB}{77,175,74}
+% Font for Japanese terms
+\newcommand{\jap}{\scshape}
+% Mahjong tile display
+\newenvironment{pierei}{\center \huge }{\endcenter}
+\newcommand{\bp}{\begin{pierei}}
+\newcommand{\ep}{\end{pierei}}
+\newenvironment{mj}[1]{\begin{equation} #1}{\end{equation}}
+\newcommand{\bmj}{\begin{mj}{\text}}
+\newcommand{\emj}{\end{mj}}
+% Red Five
+\def\rfs{{\color{red!75!black} \chiwusuo}} \def\rfd{{\color{red!75!black} \chiwutong}} \def\rfw{{\color{red!75!black} \chiwuwan}}
+% List styles
+\newcommand{\be}{\begin{enumerate}} \newcommand{\ee}{\end{enumerate}}
+\newcommand{\bq}{\begin{quote}} \newcommand{\eq}{\end{quote}}
+\newcommand{\bd}{\begin{description}} \newcommand{\ed}{\end{description}}
+\newcommand{\bi}{\begin{itemize}} \newcommand{\ei}{\end{itemize}}
+\newcommand{\bii}{\begin{itemize}\itemsep1.25em}
+\newcommand{\bit}{\begin{itemize}\itemsep2.5em}
+\def\i{\item} \def\sep{0.5em}
+% Space
+\def\vspl{\vspace{20pt}} \def\vsp{\vspace{10pt}} \def\vsps{\vspace{5pt}}
+\def\vsptile{\vspace{-18pt}} 
+% Document information
+\title{Riichi Book}
+\author{Daina Chiba}
+\newcommand{\thetitle}{Riichi Book I: A Mahjong Strategy Primer for European Players}
+\newcommand{\theversion}{3.0}
+\newcommand{\thedate}{\today}
+
+
+
+%Text from here ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{document}
+
+% Front Matter ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\frontmatter
+\pagenumbering{roman}
+
+% Cover Page 1 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\thispagestyle{empty}
+\ThisULCornerWallPaper{1}{coverphotos/cover6.jpg} %2m
+
+\newgeometry{left=.5cm,bottom=0.1cm,right=1cm}
+
+\begin{flushleft}
+
+\vspace*{.27\paperheight}
+
+\begin{spacing}{2.5}
+\textcolor{White}{\fontsize{1.9cm}{3.6em}\scshape Riichi Book I}\\
+{\large A Mahjong Strategy Primer\\for European Players}
+\end{spacing}
+
+\vspace*{.08\paperheight}
+\hfill {\large Daina Chiba}
+
+\end{flushleft}
+
+\restoregeometry
+
+% Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\pagebreak
+\onehalfspacing
+
+\begin{flushright}
+
+\vspace*{.18\paperheight}
+
+\begin{spacing}{3}
+{\LARGE Riichi Book I}\\
+{\normalsize A Mahjong Strategy Primer for European Players}
+\end{spacing}
+
+\vspace*{.11\textheight} 
+
+%Version \theversion\\
+Version {\large\wan{5}}\\
+
+\vspace*{.07\textheight} 
+
+{\large
+Daina Chiba\\
+}
+
+\vfill
+
+\end{flushright}
+
+\pagebreak
+
+% Copyright ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\pagebreak
+\thispagestyle{empty}
+
+\noindent
+{\small
+Copyright \copyright ~2016 Daina Chiba.\\
+Permission is granted to copy, distribute, and/or modify this document
+under the terms of the Creative Commons Attribution NonCommercial 3.0 Unported License, available at \url{http://goo.gl/R9sy}.
+
+\vspace{.2in}
+\noindent
+Cover photo \copyright ~2015 Katar\'{i}na M\'{o}zov\'{a}, Courtesy of Riichi Mahjong Slovakia. 
+
+\vspace{.2in}
+
+\noindent
+The original form of this book is \LaTeX\ source code.  Compiling this
+\LaTeX\ source has the effect of generating a device-independent
+representation of a manuscript. The \LaTeX\ source for this book is available from 
+\url{http://riichi.dynaman.net/}.
+
+\vfill
+\noindent
+{\large\bf About the Author}\\
+
+\noindent
+{\bf Daina (pronounced like ``diner'') Chiba} is a political scientist and an applied statistician working as a lecturer at University of Essex in England. 
+He has been playing Riichi Mahjong for almost 20 years. 
+He can be reached at \href{mailto:daina.chiba@gmail.com}{\tt daina.chiba@gmail.com}.
+} % end small
+
+
+% Preface ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\pagebreak
+
+\let\cleardoublepage\clearpage
+\input{RiichiBook1-ch0-preface}
+
+
+% Table of Contents ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+{\hypersetup{linkcolor={black}}
+	\tableofcontents
+	%\listoftables
+}
+
+\newpage
+
+\pagenumbering{arabic}
+\mainmatter
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%			Part 1: online
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\part{Playing Riichi Online} \label{part:online}
+
+\input{RiichiBook1-ch1-tenhou1}
+\input{RiichiBook1-ch2-tenhou2}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%			Part 2: tile efficiency
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\part{Basic Tile Efficiency} \label{part:tile}
+
+\input{RiichiBook1-ch3-basics}
+\input{RiichiBook1-ch4-five}
+\input{RiichiBook1-ch5-yaku}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%			Part 3: strategies
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\part{Strategy Principles} \label{part:strat}
+
+\input{RiichiBook1-ch6-scores}
+\input{RiichiBook1-ch7-riichi}
+\input{RiichiBook1-ch8-defense}
+\input{RiichiBook1-ch9-call}
+\input{RiichiBook1-ch10-grand}
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+%			Appendix
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+\begin{appendices}
+\appendixpage \noappendicestocpagenum \addappheadtotoc
+
+\input{RiichiBook1-ch11-offline}
+\input{RiichiBook1-ch12-appendix}
+
+\end{appendices}
+
+{\small \printindex}
+
+\end{document}
+
