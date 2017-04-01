@@ -5,6 +5,11 @@
 *.log
 *.out
 *.synctex.gz
+*.idx
+*.ilg
+*.ind
+*.lot
+*.toc
 
 # R history
 .Rapp.history
