@@ -1,6 +1,7 @@
 %Preamble ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 \documentclass{book}
 \makeindex  %mendex RiichiBook1.idx
+	% Put "\thispagestyle{empty}" in RiichiBook1.ind
 % Font
 \usepackage{pie2e}  % Printing mahjong tiles (from the piemf package)
 \usepackage[T1]{fontenc}
@@ -26,10 +27,10 @@
 \usepackage[hang,bottom]{footmisc}
 \usepackage{setspace,placeins,sectsty,appendix,makeidx,psfrag,lscape,bxascmac,verbatim,multicol}
 \setlength{\footskip}{30pt}
-%Adjust the paper size to Kindle
-\usepackage[14pt]{extsizes}
-\usepackage[paperwidth=13.5cm, paperheight=17.25cm, top=0.5cm, bottom = .5cm, left=0.5cm, right = 0.5cm]{geometry}
-\special{papersize=13.5cm,17.25cm}
+%Paper size: A5
+\usepackage[11pt]{extsizes}
+\usepackage[paperwidth=148mm, paperheight=210mm, top=15mm, bottom = 15mm, inner=18mm, outer = 15mm]{geometry}
+\special{papersize=148mm,210mm}
 % customizing section titles
 \usepackage{titlesec}
 \partfont{\raggedright\mdseries\scshape}
@@ -50,7 +51,7 @@
 % Font for Japanese terms
 \newcommand{\jap}{\tt}
 % Mahjong tile display
-\newenvironment{pierei}{\center \huge }{\endcenter}
+\newenvironment{pierei}{\center \Huge }{\endcenter}
 \newcommand{\bp}{\begin{pierei}}
 \newcommand{\ep}{\end{pierei}}
 \newenvironment{mj}[1]{\begin{equation} #1}{\end{equation}}
@@ -90,25 +91,31 @@
 \thispagestyle{empty}
 \ThisULCornerWallPaper{1}{figs/cover6.jpg} %2m
 
-\newgeometry{left=.5cm,bottom=0.1cm,right=1cm}
+\newgeometry{left=11mm,bottom=0.1cm,right=15mm}
 
 \begin{flushleft}
 
-\vspace*{.27\paperheight}
+\vspace*{.24\paperheight}
 
 \begin{spacing}{2.5}
-\textcolor{White}{\fontsize{1.9cm}{3.6em}\scshape Riichi Book I}\\
-{\large A Mahjong Strategy Primer\\for European Players}
+\textcolor{White}{\fontsize{2.1cm}{3.6em}\scshape Riichi Book I}\\
+{\LARGE A Mahjong Strategy Primer\\for European Players}
 \end{spacing}
 
 \vspace*{.08\paperheight}
-\hfill {\large Daina Chiba}
+\hfill {\LARGE Daina Chiba}
 
 \end{flushleft}
 
 \restoregeometry
 
+
+\thispagestyle{empty}
+\mbox{}\newpage
+
 % Title Page ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+\thispagestyle{empty}
+\setcounter{page}{1}
 \pagebreak
 \onehalfspacing
 
@@ -117,18 +124,18 @@
 \vspace*{.18\paperheight}
 
 \begin{spacing}{3}
-{\LARGE Riichi Book I}\\
-{\normalsize A Mahjong Strategy Primer for European Players}
+{\Huge Riichi Book I}\\
+{\Large A Mahjong Strategy Primer for European Players}
 \end{spacing}
 
 \vspace*{.11\textheight} 
 
 %Version \theversion\\
-Version {\large\wan{6}}\\
+{\Large Version \wan{6}}\\
 
 \vspace*{.07\textheight} 
 
-{\large
+{\Large
 Daina Chiba\\
 }
 

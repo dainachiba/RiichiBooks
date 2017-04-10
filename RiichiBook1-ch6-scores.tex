@@ -1,14 +1,14 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% {\jap riichi} Book 1, Chapter 6: Scoring
+% riichi Book 1, Chapter 6: Scoring
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \chapter{Scoring}\label{ch:scores}
-\thispagestyle{fancy}
+\thispagestyle{empty}
 
 The scoring system in mahjong is quite complex. Getting proficiency in score calculation requires a lot of practice. The good news is that scoring is automatically done once you win a hand when you play online. Even when you play offline, you can usually count on your fellow players to help you get the correct score once you win a hand. 
 
 \bigskip
-However, you often need to calculate the (potential) scores of your hand \emph{before} you win the hand. This is because a lot of important judgements you make during the game --- {\jap riichi} judgement, defense judgement, and melding judgement, among others --- depend on the potential scores of your hand. Therefore, developing ability to calculate the scores correctly and quickly without any help of others is of utmost importance. I introduce some efficient methods of score calculation in this chapter before we discuss {\jap riichi}, defense, and melding judgements in the subsequent chapters. 
+However, you often need to calculate the (potential) scores of your hand \emph{before} you win the hand. This is because a lot of important judgements you make during the game --- riichi judgement, defense judgement, and melding judgement, among others --- depend on the potential scores of your hand. Therefore, developing ability to calculate the scores correctly and quickly without any help of others is of utmost importance. I introduce some efficient methods of score calculation in this chapter before we discuss riichi, defense, and melding judgements in the subsequent chapters. 
 
 \section{Three steps in score calculation}
 
@@ -16,18 +16,18 @@ Every rule book of mahjong has comprehensive scoring tables (similar to Tables \
 
 \bigskip
 A more practical approach would be to focus on a small number of frequently observed patterns of scoring and memorize them correctly, while ignoring other, less important ones. Before introducing some shortcuts to do efficient scoring, let's first review the three required steps in score calculation, summarized in a box on the next page.
-\newpage
+\bigskip
 
 \begin{itembox}[c]{Three steps in score calculation}
 \begin{description}
-\i[Step 1:] {\bf Count the number of {\jap fan}.}\\ 
-First, you need to figure out how many {\jap fan} a hand has. If a hand has five or more {\jap fan}, skip Step 2 and go directly to Step 3. If not, proceed to Step 2. 
+\i[Step 1:] {\bf Count the number of {\jap han}.}\\ 
+First, you need to figure out how many {\jap han} a hand has. If a hand has five or more {\jap han}, skip Step 2 and go directly to Step 3. If not, proceed to Step 2. 
 
 \i[Step 2:] {\bf Figure out the minipoints.}\\ 
-When a hand has four or less {\jap fan}, you then need to know the hand's minipoints. This does not mean, however, that you always need to do some maths to get the correct minipoints. We will discuss some practical shortcuts below.
+When a hand has four or less {\jap han}, you then need to know the hand's minipoints. This does not mean, however, that you always need to do some maths to get the correct minipoints. We will discuss some practical shortcuts below.
 
 \i[Step 3:] {\bf Get the score.}\\
-Based on the number of {\jap fan} (and possibly minipoints), you get the score. You will have to memorize some score patterns.
+Based on the number of {\jap han} (and possibly minipoints), you get the score. You will have to memorize some score patterns.
 \end{description}
 \end{itembox}
 
@@ -37,22 +37,22 @@ In the remainder of this chapter, I will first introduce basic methods of score 
 
 \section{Basic scoring}\label{sec:scores1}
 
-\subsection*{1. Counting the number of {\jap fan}}
-Step 1 in score calculation is counting the number of {\jap fan} in a hand. This is the most important part in score calculation, and there is no useful shortcut here. You need to be able to identify all the {\jap yaku} in a hand as well as the associated {\jap fan} counts for each. 
+\subsection*{1. Counting the number of {\jap han}}
+Step 1 in score calculation is counting the number of {\jap han} in a hand. This is the most important part in score calculation, and there is no useful shortcut here. You need to be able to identify all the {\jap yaku} in a hand as well as the associated {\jap han} counts for each. 
 
 \bigskip
 
-A good way to practice this is to try to beat the automatic score counting on {\jap tenhou}. Whenever someone wins a hand, {\jap tenhou} displays all the {\jap yaku} and the associated {\jap fan} counts one after another in a few seconds. Try to identify all the {\jap yaku} of your opponent's hand before they get displayed automatically. 
+A good way to practice this is to try to beat the automatic score counting on {\jap Tenhou}. Whenever someone wins a hand, {\jap Tenhou} displays all the {\jap yaku} and the associated {\jap han} counts one after another in a few seconds. Try to identify all the {\jap yaku} of your opponent's hand before they get displayed automatically. 
 
 \subsubsection{Scores for limit hands} 
-When a hand has five or more {\jap fan}, the hand is a limit hand. Scores of limit hands do not depend on minipoints so we can go directly to Step 3. To get the score for a given {\jap fan} count, we utilize Table \ref{tbl:limithands}. This is something you need to memorize. 
+When a hand has five or more {\jap han}, the hand is a limit hand. Scores of limit hands do not depend on minipoints so we can go directly to Step 3. To get the score for a given {\jap han} count, we utilize Table \ref{tbl:limithands}. This is something you need to memorize. 
 
 {\begin{table}[h!]
 \centering\small \captionsetup{font=small}
 \caption{Scores for limit hands} \label{tbl:limithands}
 \begin{tabular}{llrrrr}
 \toprule
-{\jap fan} & Name & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & Name & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 5 & {\jap mangan} & {\bf 8000} & 12000  & 2000-4000 & 4000-all\\ [\sep]
@@ -61,7 +61,7 @@ When a hand has five or more {\jap fan}, the hand is a limit hand. Scores of lim
 11--12 & {\jap sanbaiman} & 24000 & 36000  & 6000-12000 & 12000-all\\ [\sep]
 13+$^*$ & {\jap yakuman} & 32000 & 48000  & 8000-16000 & 16000-all\\
 \bottomrule
-\multicolumn{6}{l}{\footnotesize $^*$ A hand with 13+ {\jap fan} is scored as a {\jap sanbaiman} with the revised EMA rules.}
+\multicolumn{6}{l}{\footnotesize $^*$ A hand with 13+ {\jap han} is scored as a {\jap sanbaiman} with the revised EMA rules.}
 \end{tabular}
 \end{table}}
 As you can see, there are some regularities and redundancies that make it relatively easy to memorize this table. The most important score of all is 8000 ({\jap mangan ron} for non-dealer). This is the basis of all the other scores in this table. For example, {\jap haneman} scores are 1.5 times {\jap mangan} scores, {\jap baiman} scores are two times {\jap mangan} scores, {\jap sanbaiman} scores are three times {\jap mangan} scores,\footnote{Since {\jap bai} means ``twice'' or ``double'' in Japanese, {\jap baiman} literally means double {\jap mangan} in Japanese. Similarly, {\jap sanbai} means ``triple,'' so {\jap sanbaiman} literally means triple {\jap mangan}.} and {\jap yakuman} scores are four times {\jap mangan} scores.
@@ -69,7 +69,7 @@ In addition, scores for dealer are exactly 1.5 times the corresponding scores fo
 
 \subsection*{2. Figuring out the minipoints} 
 	\index{fu@{\jap fu} (minipoint)} \index{minipoint ({\jap fu})}
-When a hand has four or less {\jap fan}, you have to know the minipoints. As I pointed out earlier, this does not mean that you always have to count all the minipoint contributions from all the melds and wait in a hand. Such a calculation is required only in special cases. Instead, you can use the chart in Figure \ref{fig:mini} that summarizes the six most frequently observed patterns you need to memorize. 
+When a hand has four or less {\jap han}, you have to know the minipoints. As I pointed out earlier, this does not mean that you always have to count all the minipoint contributions from all the melds and wait in a hand. Such a calculation is required only in special cases. Instead, you can use the chart in Figure \ref{fig:mini} that summarizes the six most frequently observed patterns you need to memorize. 
 
 \bigskip
 
@@ -116,7 +116,7 @@ Therefore, what we check is whether a hand has any of the following:
 \bi \itemsep.2em
 \i at least \underline{one concealed} set of terminal/honor tiles;
 \i at least \underline{two open} sets of terminal/honor tiles;
-\i \underline{one open} set of terminal/honor tiles \emph{and} \\
+\i \underline{one open} set of terminal/honor tiles \emph{and} 
 \underline{one concealed} set of simples;
 \i at least \underline{two concealed} sets of simples.
 \ei
@@ -157,7 +157,7 @@ Scores for 30 minipoints are summarized in Table \ref{tbl:30mp}.
 \caption{Scores for 30 minipoints} \label{tbl:30mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 1 & 1000 & 1500  & 300-500 & 500-all\\ [\sep]
@@ -170,7 +170,7 @@ Scores for 30 minipoints are summarized in Table \ref{tbl:30mp}.
 \end{table}
 
 \bigskip
-Compared with the limit hands table (Table \ref{tbl:limithands}), the regularities in the 30 minipoints table are less precise. For example, scores for dealer are only \emph{roughly} 1.5 times those for non-dealer; {\jap tsumo} scores are sometimes slightly bigger than the corresponding {\jap ron} scores. For example, one-{\jap fan tsumo} (300-500) gives you $300+300+500 = 1100$, which is slightly bigger than one-{\jap fan ron} (1000). 
+Compared with the limit hands table (Table \ref{tbl:limithands}), the regularities in the 30 minipoints table are less precise. For example, scores for dealer are only \emph{roughly} 1.5 times those for non-dealer; {\jap tsumo} scores are sometimes slightly bigger than the corresponding {\jap ron} scores. For example, one-{\jap han tsumo} (300-500) gives you $300+300+500 = 1100$, which is slightly bigger than one-{\jap han ron} (1000). 
 
 \bigskip
 Therefore, it would be more efficient if we just memorize these patterns as they are, rather than trying to simplify them. Japanese players tend to memorize Table \ref{tbl:30mp} column-wise, as follows:
@@ -186,7 +186,7 @@ Therefore, it would be more efficient if we just memorize these patterns as they
 
 \bigskip
 \noindent
-The benefit of memorizing this score table column-wise is that scores get (roughly) twice as big for an additional {\jap fan}. Moreover, if we memorize the {\jap tsumo} scores for non-dealer, we can easily derive those for dealer. 
+The benefit of memorizing this score table column-wise is that scores get (roughly) twice as big for an additional {\jap han}. Moreover, if we memorize the {\jap tsumo} scores for non-dealer, we can easily derive those for dealer. 
 When I was trying to memorize these, I used to recite these sequences a number of times so that they get beaten into my head. 
 
 \subsubsection{\fbox{40 minipoints}}
@@ -202,7 +202,7 @@ Scores for 40 minipoints are summarized in Table \ref{tbl:40mp}.
 \caption{Scores for 40 minipoints} \label{tbl:40mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 1 & 1300 & 2000  & 400-700 & 700-all\\ [\sep]
@@ -228,14 +228,14 @@ The good news is that the {\jap ron} score sequence for non-dealer ---13, 26, 52
 \bigskip
 \subsubsection{\fbox{20 minipoints} {\jap (pinfu tsumo)}}
 	\index{pinfu@{\jap pinfu}}
-\noindent Scores for 20 minipoints are summarized in Table \ref{tbl:20mp}. This table is special in the sense that it does not have the {\jap ron} score component nor the one-{\jap fan} row. This is because you get 20 minipoints only when you get {\jap pinfu + tsumo} (hence we have at least two {\jap fan}). Even though this is a special case, {\jap pinfu} + {\jap tsumo} is far from a rare occurrence. It is thus important to know how to get the correct scores for this case. 
+\noindent Scores for 20 minipoints are summarized in Table \ref{tbl:20mp}. This table is special in the sense that it does not have the {\jap ron} score component nor the one-{\jap han} row. This is because you get 20 minipoints only when you get {\jap pinfu + tsumo} (hence we have at least two {\jap han}). Even though this is a special case, {\jap pinfu} + {\jap tsumo} is far from a rare occurrence. It is thus important to know how to get the correct scores for this case. 
 
 \begin{table}[h!]
 \centering\captionsetup{font=small}\small
 \caption{Scores for 20 minipoints} \label{tbl:20mp}
 \begin{tabular}{lrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 2 & 400-700 & 700-all\\ [\sep]
@@ -247,10 +247,10 @@ The good news is that the {\jap ron} score sequence for non-dealer ---13, 26, 52
 \end{table}
 
 \bigskip
-Notice that there is an interesting similarity between the 20 minipoints table (Table \ref{tbl:20mp}) and the 40 minipoints table (Table \ref{tbl:40mp}). The scoring patterns are almost identical, except that the required number of {\jap fan} to get a certain score is one {\jap fan} smaller for 40 minipoints than for 20 minipoints; that is, to get 400-700, we need 2 {\jap fan} with 20 minipoints, whereas we only need 1 {\jap fan} with 40 minipoints. 
+Notice that there is an interesting similarity between the 20 minipoints table (Table \ref{tbl:20mp}) and the 40 minipoints table (Table \ref{tbl:40mp}). The scoring patterns are almost identical, except that the required number of {\jap han} to get a certain score is one {\jap han} smaller for 40 minipoints than for 20 minipoints; that is, to get 400-700, we need 2 {\jap han} with 20 minipoints, whereas we only need 1 {\jap han} with 40 minipoints. 
 
 \bigskip
-This is not a coincidence. In general, when we double the minipoints, we need one less {\jap fan} to get the same score. For example, a 3 {\jap fan}--30 minipoints hand and a 2 {\jap fan}--60 minipoints hand have the same score (3900 for non-dealer; 5800 for dealer); a 2 {\jap fan}--25 minipoints hand and a 1 {\jap fan}--50 minipoints hand have the same score (1600 for non-dealer; 2400 for dealer). Therefore, once you memorize scores for 30 minipoints, we can easily deduce scores for hands with 60 minipoints. Similarly, we can deduce scores for hands with 50 or 80 minipoints once we memorize scores for 25 or 40 minipoints, respectively.
+This is not a coincidence. In general, when we double the minipoints, we need one less {\jap han} to get the same score. For example, a 3 {\jap han}--30 minipoints hand and a 2 {\jap han}--60 minipoints hand have the same score (3900 for non-dealer; 5800 for dealer); a 2 {\jap han}--25 minipoints hand and a 1 {\jap han}--50 minipoints hand have the same score (1600 for non-dealer; 2400 for dealer). Therefore, once you memorize scores for 30 minipoints, we can easily deduce scores for hands with 60 minipoints. Similarly, we can deduce scores for hands with 50 or 80 minipoints once we memorize scores for 25 or 40 minipoints, respectively.
 
 \bigskip
 \subsubsection{\fbox{25 minipoints} {\jap (chiitoitsu)}}
@@ -263,7 +263,7 @@ Scores for 25 minipoints are summarized in Table \ref{tbl:25mp}.
 \caption{Scores for 25 minipoints} \label{tbl:25mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 2 & 1600 & 2400  & \\ [\sep]
@@ -273,7 +273,7 @@ Scores for 25 minipoints are summarized in Table \ref{tbl:25mp}.
 \bottomrule
 \end{tabular}
 \end{table}
-Since {\jap chiitoitsu} is itself a two-{\jap fan} {\jap yaku}, the scoring table only starts with two {\jap fan} for {\jap ron} and three {\jap fan} for {\jap tsumo}. 
+Since {\jap chiitoitsu} is itself a two-{\jap han} {\jap yaku}, the scoring table only starts with two {\jap han} for {\jap ron} and three {\jap han} for {\jap tsumo}. 
 Again, we memorize this table column-wise. 
 
 \bigskip
@@ -299,21 +299,22 @@ Of course, no one will be able to master this method just by reading and underst
 \index{pinfu@{\jap pinfu}}
 \bigskip
 
-A very common mistake among European players (or among beginners in general, for that matter) is to claim 1000-2000 for {\jap riichi} + {\jap pinfu + tsumo} (mistaking 3 {\jap fan}--20 minipoints for 3 {\jap fan}--30 minipoints) or claim {\jap mangan} for {\jap riichi} + {\jap pinfu + tsumo + dora} (mistaking 4 {\jap fan}--20 minipoints for 4 {\jap fan}--40 minipoints). 
+One of the common mistakes that beginners tend to make is to claim 1000-2000 for riichi + {\jap pinfu + tsumo} (mistaking 3 {\jap han}--20 minipoints for 3 {\jap han}--30 minipoints) or claim {\jap mangan} for riichi + {\jap pinfu + tsumo + dora} (mistaking 4 {\jap han}--20 minipoints for 4 {\jap han}--40 minipoints). 
 If you have trouble wrapping your head around why {\jap pinfu + tsumo} hands are given lower minipoints, knowing the origin of this rule might be helpful. 
 \bigskip
 
-The {\jap yaku} {\jap pinfu} is realized when a hand has no component that generates an additional minipoint. A {\jap pinfu} hand cannot have a set, edge wait, closed wait, single wait, or a pair of value tiles because they all generate an additional minipoint. Recall that {\jap tsumo} also generates 2 minipoints. Therefore, logically speaking, {\jap pinfu} must not be claimed when you win it by {\jap tsumo}. In fact, some traditional mahjong rule sets do not allow a combination of {\jap pinfu} and {\jap tsumo}. 
-Under such rule sets, when you win a {\jap pinfu}-only hand by {\jap tsumo}, you are allowed to claim {\jap tsumo} only, giving you 1 {\jap fan}--30 minipoints (20 base minipoints + 2 minipoints for {\jap tsumo} = 22, rounded up to 30 minipoints), which gives you 300-500.  
+The {\jap yaku} {\jap pinfu} is realized when a hand has no component that generates an additional minipoint. A {\jap pinfu} hand cannot have a set, edge wait, closed wait, single wait, or a pair of value tiles because they all generate an additional minipoint. Recall that {\jap tsumo} also generates 2 minipoints. Therefore, logically speaking, {\jap pinfu} cannot be claimed when you win it by {\jap tsumo}. In fact, some traditional mahjong rule sets do not allow a combination of {\jap pinfu} and {\jap tsumo}. 
+Under such rule sets, when you win a {\jap pinfu}-only hand by {\jap tsumo}, you are allowed to claim {\jap tsumo} only, giving you 1 {\jap han}--30 minipoints (20 base minipoints + 2 minipoints for {\jap tsumo} = 22, rounded up to 30 minipoints), which gives you 300-500.  
 
-\hfill (\textit{continued on next page})
-
-\end{boxnote}
-
-\newpage
-\begin{boxnote} \small
-However, some people thought that this is a bit unfair, claiming that a {\jap pinfu tsumo} hand should be given a higher score than a {\jap tsumo}-only hand (1 {\jap fan}--30 minipoints). At the same time, they thought that the score for {\jap pinfu + tsumo} should be lower than that for a ``proper'' 2 {\jap fan}--30 minipoints hand (e.g., {\jap tanyao + tsumo}). 
-Therefore, they decided that {\jap pinfu + tsumo} should be placed in between these two --- 1 {\jap fan}--30 minipoints ({\jap tsumo} only; 300-500) and 2 {\jap fan}--30 minipoints ({\jap tanyao + tsumo}; 500-1000) --- giving it the score of 400-700. Therefore, the score for {\jap riichi} + {\jap pinfu + tsumo} (3 {\jap fan}--20 minipoints; 700-1300) is higher than {\jap riichi} + {\jap tsumo} (2 {\jap fan}--30 minipoints; 500-1000) but lower than {\jap riichi} + {\jap tanyao + tsumo} (3 {\jap fan}--30 minipoints; 1000-2000). 
+%\hfill (\textit{continued on next page})
+%
+%\end{boxnote}
+%
+%\newpage
+%\begin{boxnote} \small
+\bigskip
+However, some people thought that this is a bit unfair, claiming that a {\jap pinfu tsumo} hand should be given a higher score than a {\jap tsumo}-only hand. At the same time, they recognized that the score for {\jap pinfu + tsumo} should be lower than that for a ``proper'' 2-{\jap han} {\jap tsumo} hand (e.g., {\jap tanyao + tsumo}). 
+Therefore, they decided that {\jap pinfu + tsumo} should be placed in between these two --- 1 {\jap han}--30 minipoints ({\jap tsumo} only; 300-500) and 2 {\jap han}--30 minipoints ({\jap tanyao + tsumo}; 500-1000) --- giving it the score of 400-700. Therefore, the score for riichi + {\jap pinfu + tsumo} (3 {\jap han}--20 minipoints; 700-1300) is higher than riichi + {\jap tsumo} (2 {\jap han}--30 minipoints; 500-1000) but lower than riichi + {\jap tanyao + tsumo} (3 {\jap han}--30 minipoints; 1000-2000). 
 \end{boxnote}
 
 \newpage
@@ -349,25 +350,22 @@ quad	 & simple & 8 & 16\\
 \end{table}}
 
 \newpage
-\noindent Finally, we add minipoints for the following, if any. 
+\noindent Finally, we add 2 minipoints for each of the following, if any. 
+\bi \itemsep0.1em
+\i Pair of dragon tiles
+\i Pair of seat wind tiles
+\i Pair of prevailing wind tiles
+\i Closed, edge, or single wait
+\ei
 
-\bigskip
-\begin{tabular}{l l c}
-	&Dragon tiles & 2\\
-pair &seat Wind tiles  & 2\\
-	& prevailing Wind tiles & 2\\[\sep]
-wait & closed, edge, or single & 2 \\ 
-\end{tabular}
-
-\bigskip
-When the head of a hand is of seat Wind \emph{and} prevailing Wind (e.g., {\large\dong} for the East player in the East round), we get 2 + 2 = 4 minipoints.\footnote{This is the case with EMA rules and {\jap tenhou} rules, but this is not a universally adopted rule.} 
-If the wait is either side wait or pair wait, we don't get any minipoint for it.
+When the head of a hand is of seat wind \emph{and} prevailing wind (e.g., {\LARGE\dong} for the East player in the East round), we get 2 + 2 = 4 minipoints.\footnote{This is the case with EMA rules and {\jap Tenhou} rules, but this is not a universally adopted rule.} 
+If the wait is either side wait or dual {\jap pon} wait, we don't get any minipoint for it.
 As we saw when we discussed wait patterns in \ref{sec:waits}, we may get different minipoints depending on which of the multiple winning tiles to win on. 
 For example, consider the following hand.
 \bp
 \wan{3}\wan{4}\wan{4}\wan{5}\wan{6}\tong{4}\tong{4}\zhong\zhong\zhong~\suo{3}\suo{3}\rsuo{3}
 \ep
-The hand is waiting for {\large\wan{2}-\wan{5}}. If we win by {\jap ron} on a {\large\wan{2}}, we get no minipoint for the wait and so this hand has 30 minipoints (base 20 + 8 for a concealed set of honors + 2 for an open set of simple = 30). However, if we win this hand on a {\large\wan{5}}, we get additional 2 minipoints for closed wait. This is because {\large\wan{3}\wan{4}\wan{4}\wan{5}\wan{6}} can be thought of as {\large\wan{3}\wan{4}\wan{5} + \wan{4}\wan{6}}. Therefore, the hand has 40 minipoints in that case (30 + 2 = 32, rounded up to 40). 
+The hand is waiting for {\LARGE\wan{2}-\wan{5}}. If we win by {\jap ron} on {\LARGE\wan{2}}, we get no minipoint for the wait and so this hand has 30 minipoints (base 20 + 8 for a concealed set of honors + 2 for an open set of simple = 30). However, if we win this hand on {\LARGE\wan{5}}, we get additional 2 minipoints for closed wait. This is because {\LARGE\wan{3}\wan{4}\wan{4}\wan{5}\wan{6}} can be thought of as {\LARGE\wan{3}\wan{4}\wan{5} + \wan{4}\wan{6}}. Therefore, the hand has 40 minipoints in that case (30 + 2 = 32, rounded up to 40). 
 
 \bigskip
 \subsection{Scores for 50 minipoints or above}
@@ -376,14 +374,14 @@ When a hand has one or more concealed set of honor tiles, the hand may have 50 m
 If you are a perfectionist, you may also want to memorize the cases of 70 and 110 minipoints as well, but I can assure you that it would not be worth the effort. 
 
 \subsubsection{\fbox{50 minipoints}}
-\noindent Scores for 50 minipoints are quite easy to memorize if you have already memorized scores for 25 minipoints ({\jap chiitoitsu}), summarized in \ref{tbl:25mp}. Recall that the score for a 1 {\jap fan}--50 minipoints hand should be the same as that for a 2 {\jap fan}--25 minipoints hand.
+\noindent Scores for 50 minipoints are quite easy to memorize if you have already memorized scores for 25 minipoints ({\jap chiitoitsu}), summarized in \ref{tbl:25mp}. Recall that the score for a 1 {\jap han}--50 minipoints hand should be the same as that for a 2 {\jap han}--25 minipoints hand.
 
 \begin{table}[h!]
 \centering\captionsetup{font=small}\small
 \caption{Scores for 50 minipoints} \label{tbl:50mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 1 & 1600 & 2400  & 400-800 & 800-all\\ [\sep]
@@ -402,7 +400,7 @@ If you would like to memorize the table, notice that it is sequential (until the
 \caption{Scores for 70 minipoints} \label{tbl:70mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 1 & 2300 & 3400  & 600-1200 & 1200-all\\ [\sep]
@@ -420,7 +418,7 @@ If you would like to memorize the table, notice that it is sequential (until the
 \caption{Scores for 110 minipoints} \label{tbl:110mp}
 \begin{tabular}{lrrrr}
 \toprule
-{\jap fan} & \multicolumn{2}{c}{{\jap ron}}& \multicolumn{2}{c}{{\jap tsumo}}\\
+{\jap Han} & \multicolumn{2}{c}{{\jap Ron}}& \multicolumn{2}{c}{{\jap Tsumo}}\\
 &\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}&\multicolumn{1}{c}{\footnotesize Non-dealer}&\multicolumn{1}{c}{\footnotesize Dealer}\\
 \midrule
 1 & 3600 & 5300  & --- & ---\\ [\sep]
@@ -429,14 +427,16 @@ If you would like to memorize the table, notice that it is sequential (until the
 \bottomrule
 \end{tabular}
 \end{table}
+
+\newpage
 110 minipoints occur only in extremely rare occasions. Consider the following hand. 
 \bp
 \tong{6}\tong{7}\tong{8}\dong\dong\zhong\zhong~\suo{30}\suo{1}\suo{1}\suo{30}~~\suo{30}\suo{9}\suo{9}\suo{30}
 \ep
-Suppose you are in the East round. If the dealer wins this hand by {\jap ron} on a {\large\zhong}, she gets 20 (base) + 10 (closed hand {\jap ron}) + 4 (pair of seat \& prevailing Wind tiles) + 4 (open set of honors) + 32 (concealed quad of terminals) + 32 (concealed quad of terminals) = 102, rounded up to 110 minipoints. The score for 1 {\jap fan}--110 minipoints is 5300. 
+Suppose you are in the East round. If the dealer wins this hand by {\jap ron} on {\LARGE\zhong}, he gets 20 (base) + 10 (closed hand {\jap ron}) + 4 (pair of seat \& prevailing wind tiles) + 4 (open set of honors) + 32 (concealed quad of terminals) + 32 (concealed quad of terminals) = 102, rounded up to 110 minipoints. The score for 1 {\jap han}--110 minipoints is 5300. 
 
 \bigskip
-If she wins by {\jap ron} on a {\large\dong}, on the other hand, she gets more {\jap fan} (set of seat \& prevailing Wind) but lower minipoints. This is because the minipoint contribution of the pair of {\large\zhong} (2) is smaller than that of the pair of {\large\dong} (4). Since the score of 2 {\jap fan}--100 minipoints hand is the same as that of 3 {\jap fan}--50 minipoints hand, she obtains 9600 points.
+If he wins by {\jap ron} on {\LARGE\dong}, on the other hand, he gets more {\jap han} (set of seat \& prevailing wind) but lower minipoints. This is because the minipoint contribution of the pair of {\LARGE\zhong} (2) is smaller than that of the pair of {\LARGE\dong} (4). Since the score of 2 {\jap han}--100 minipoints hand is the same as that of 3 {\jap han}--50 minipoints hand, he obtains 9600 points.
 
 \newpage
 \subsection{Examples}
@@ -451,22 +451,22 @@ Let's see how scores change as we advance a hand. For each of the examples below
 \end{itembox}
 
 \bigskip
-\noindent If you win this hand by {\jap ron}, the hand has 1 {\jap fan} (Red Dragon) and 40 minipoints: 20 (base) + 10 (closed hand {\jap ron}) + 8 (concealed set of honors) = 38, rounded up to 40, so you get 1300 points. 
+\noindent If you win this hand by {\jap ron}, the hand has 1 {\jap han} (Red Dragon) and 40 minipoints: 20 (base) + 10 (closed hand {\jap ron}) + 8 (concealed set of honors) = 38, rounded up to 40, so you get 1300 points. 
 
 \bigskip
-If you win it by drawing a {\large\tong{3}}, the hand has an additional {\jap yaku}, {\jap menzen tsumo} (Fully Concealed Hand), with 30 minipoints: 20 + 8 + 2 ({\jap tsumo}) = 30. You thus get 500-1000 {\jap tsumo} = 2000 points. 
+If you win it by drawing {\LARGE\tong{3}}, the hand has an additional {\jap yaku}, {\jap menzen tsumo} (Fully Concealed Hand), with 30 minipoints: 20 + 8 + 2 ({\jap tsumo}) = 30. You thus get 500-1000 {\jap tsumo} = 2000 points. 
 
 \bigskip
-However, if you win it by drawing a {\large\tong{6}}, you get 40 minipoints because of the additional 2 minipoints for \\closed wait: {\large\tong{5}\tong{7}}. You thus get 700-1300 {\jap tsumo} = 2700 points.
+However, if you win it by drawing {\LARGE\tong{6}}, you get 40 minipoints because of the additional 2 minipoints for \\closed wait: {\LARGE\tong{5}\tong{7}}. You thus get 700-1300 {\jap tsumo} = 2700 points.
 
 \bigskip
 
-Let's say you draw a {\large\tong{5}}. What would you discard?
+Let's say you draw {\LARGE\tong{5}}. What would you discard?
 \bp
 \wan{2}\wan{2}\wan{3}\wan{4}\wan{5}\tong{4}\tong{5}\tong{5}\tong{6}\tong{7}\zhong\zhong\zhong~\tong{5}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~~~~~}
 \ep
-If you discard the {\large\tong{5}}, the wait is {\large\tong{3}-\tong{6}} (2 kinds--7 tiles). If you discard the {\large\tong{4}}, however, you get a 3-way wait: {\large\tong{5}-\tong{8} \wan{2}} (3 kinds--7 tiles). Let's say you choose the latter, resulting in the following hand. Now, let's think about the scores for each winning tile. 
+If you discard {\LARGE\tong{5}}, the wait is {\LARGE\tong{3}-\tong{6}} (2 kinds--7 tiles). If you discard {\LARGE\tong{4}}, however, you get a 3-way wait: {\LARGE\tong{5}-\tong{8} \wan{2}} (3 kinds--7 tiles). Let's say you choose the latter, resulting in the following hand. Now, let's think about the scores for each winning tile. 
 
 \begin{itembox}[r]{Scoring 2}
 \bp
@@ -476,16 +476,16 @@ If you discard the {\large\tong{5}}, the wait is {\large\tong{3}-\tong{6}} (2 ki
 \end{itembox}
 
 \bigskip
-\noindent If you win this hand on a {\large\wan{2}}, the hand is still 1 {\jap fan}--40 minipoints = 1300. However, if you win on a {\large\tong{5}} or {\large\tong{8}}, the three tiles of {\large\tong{5}} within the hand are treated as a concealed set, giving you 4 additional minipoints: 20 (base) + 10 (closed {\jap ron}) + 8 (set of \zhong) + 4 (set of \tong{5}) = 42, rounded up to 50 minipoints. You thus get 1 {\jap fan}--50 minipoints = 1600 points. If you win by {\jap tsumo}, you get 40 minipoints so you will get 700-1300 = 2700 points. 
+\noindent If you win this hand on {\LARGE\wan{2}}, the hand is still 1 {\jap han}--40 minipoints = 1300. However, if you win on {\LARGE\tong{5}} or {\LARGE\tong{8}}, the three tiles of {\LARGE\tong{5}} within the hand are treated as a concealed set, giving you 4 additional minipoints: 20 (base) + 10 (closed {\jap ron}) + 8 (set of \zhong) + 4 (set of \tong{5}) = 42, rounded up to 50 minipoints. You thus get 1 {\jap han}--50 minipoints = 1600 points. If you win by {\jap tsumo}, you get 40 minipoints so you will get 700-1300 = 2700 points. 
 
 \bigskip
 
-Let's say you draw a {\large\wan{3}}. What would you discard? 
+Let's say you draw {\LARGE\wan{3}}. What would you discard? 
 \bp
 \wan{2}\wan{2}\wan{3}\wan{4}\wan{5}\tong{5}\tong{5}\tong{5}\tong{6}\tong{7}\zhong\zhong\zhong~\wan{3}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~~~~~}
 \ep
-If you discard the {\large\wan{5}}, the wait is {\large\wan{1}-\wan{4}}. Let's think about the scores for each winning tile. 
+If you discard {\LARGE\wan{5}}, the wait is {\LARGE\wan{1}-\wan{4}}. Let's think about the scores for each winning tile. 
 \begin{itembox}[r]{Scoring 3}
 \bp
 \wan{2}\wan{2}\wan{3}\wan{3}\wan{4}\tong{5}\tong{5}\tong{5}\tong{6}\tong{7}\zhong\zhong\zhong
@@ -494,19 +494,19 @@ If you discard the {\large\wan{5}}, the wait is {\large\wan{1}-\wan{4}}. Let's t
 \end{itembox}
 
 \bigskip
-\noindent If you win the hand by {\jap ron} on a {\large\wan{4}}, you get an additional {\jap yaku}, {\jap iipeiko} (Pure Double Chow), giving you 2 {\jap fan}--40 minipoints = 2600 points. 
+\noindent If you win the hand by {\jap ron} on {\LARGE\wan{4}}, you get an additional {\jap yaku}, {\jap iipeiko} (Pure Double Chow), giving you 2 {\jap han}--40 minipoints = 2600 points. 
 
 \bigskip
-If you win the hand by {\jap tsumo}, the minipoints are now lower than before because you have side wait and only one concealed set; we cannot think of the three tiles of {\large\tong{5}} as a set any more. You get 2 {\jap fan}--30 minipoints if you draw a {\large\wan{1}} (500-1000 {\jap tsumo} = 2000), whereas you get 3 {\jap fan}--30 minipoints if you draw a {\large\wan{4}} (1000-2000 {\jap tsumo} = 4000).
+If you win the hand by {\jap tsumo}, the minipoints are now lower than before because you have side wait and only one concealed set; we cannot think of the three tiles of {\LARGE\tong{5}} as a set any more. You get 2 {\jap han}--30 minipoints if you draw {\LARGE\wan{1}} (500-1000 {\jap tsumo} = 2000), whereas you get 3 {\jap han}--30 minipoints if you draw {\LARGE\wan{4}} (1000-2000 {\jap tsumo} = 4000).
 
 \bigskip
 
-Let's say you draw a {\large\tong{6}}. What would you discard? 
+Let's say you draw {\LARGE\tong{6}}. What would you discard? 
 \bp
 \wan{2}\wan{2}\wan{3}\wan{3}\wan{4}\tong{5}\tong{5}\tong{5}\tong{6}\tong{7}\zhong\zhong\zhong~\tong{6}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~~~~~}
 \ep
-Discarding the {\large\tong{7}} is the best option. To understand why, let's think about the scores. 
+Discarding {\LARGE\tong{7}} is the best option. To understand why, let's think about the scores. 
 
 \begin{itembox}[r]{Scoring 4}
 \bp
@@ -516,16 +516,16 @@ Discarding the {\large\tong{7}} is the best option. To understand why, let's thi
 \end{itembox}
 
 \bigskip
-\noindent Notice that the wait and the potential {\jap fan} counts did not change at all. However, you get increased minipoints because you now have the concealed set of {\large\tong{5}} back again. You will get 2 {\jap fan}--50 minipoints = 3200 points if you win by {\jap ron} on a {\large\wan{4}}. If you draw a {\large\wan{4}}, you will get 3 {\jap fan}--40 minipoints, giving you 1300-2600 {\jap tsumo} = 5200 points. 
+\noindent Notice that the wait and the potential {\jap han} counts did not change at all. However, you get increased minipoints because you now have the concealed set of {\LARGE\tong{5}} back again. You will get 2 {\jap han}--50 minipoints = 3200 points if you win by {\jap ron} on {\LARGE\wan{4}}. If you draw {\LARGE\wan{4}}, you will get 3 {\jap han}--40 minipoints, giving you 1300-2600 {\jap tsumo} = 5200 points. 
 
 \bigskip
 
-Let's say you draw another {\large\tong{6}}. What would you discard? 
+Let's say you draw another {\LARGE\tong{6}}. What would you discard? 
 \bp
 \wan{2}\wan{2}\wan{3}\wan{3}\wan{4}\tong{5}\tong{5}\tong{5}\tong{6}\tong{6}\zhong\zhong\zhong~\tong{6}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~~~~~}
 \ep
-The best discard is {\large\wan{4}}, which makes this hand a {\jap toitoi} (All Pungs) hand, as follows.
+The best discard is {\LARGE\wan{4}}, which makes this hand a {\jap toitoi} (All Pungs) hand, as follows.
 
 \begin{itembox}[r]{Scoring 5}
 \bp
@@ -535,7 +535,7 @@ The best discard is {\large\wan{4}}, which makes this hand a {\jap toitoi} (All 
 \end{itembox}
 
 \bigskip
-\noindent The hand has three concealed sets already, giving you at least {\jap san anko} (Three Concealed Pungs) in addition to {\jap toitoi} and Red Dragon. Now you no longer need any tedious minipoints calculation. If you win this hand by {\jap tsumo}, it is {\jap yakuman} ({\jap su anko}; Four Concealed Pungs). If you win it by {\jap ron}, you get five {\jap fan} ({\jap toitoi}, {\jap san anko}, and Red Dragon); it is {\jap mangan} regardless of minipoints. 
+\noindent The hand has three concealed sets already, giving you at least {\jap san anko} (Three Concealed Pungs) in addition to {\jap toitoi} and Red Dragon. Now you no longer need any tedious minipoints calculation. If you win this hand by {\jap tsumo}, it is {\jap yakuman} ({\jap su anko}; Four Concealed Pungs). If you win it by {\jap ron}, you get five {\jap han} ({\jap toitoi}, {\jap san anko}, and Red Dragon); it is {\jap mangan} regardless of minipoints. 
 
 \newpage
 \section{Scoring tables}
@@ -544,7 +544,7 @@ The best discard is {\large\wan{4}}, which makes this hand a {\jap toitoi} (All 
 \caption{Scores for non-dealer} \label{tbl:scores1}
 \begin{tabular}{l c c c c}
 \toprule
-minipoints & 1 {\jap fan} & 2 {\jap fan} & 3 {\jap fan} &4 {\jap fan}\\
+Minipoints & 1 {\jap han} & 2 {\jap han} & 3 {\jap han} &4 {\jap han}\\
 \midrule
 20 & --- & --- & --- & --- \\
 & --- & (400-700) & (700-1300) & (1300-2600)\\ [\sep]
@@ -578,7 +578,7 @@ minipoints & 1 {\jap fan} & 2 {\jap fan} & 3 {\jap fan} &4 {\jap fan}\\
 \caption{Scores for dealer} \label{tbl:scores2}
 \begin{tabular}{l c c c c}
 \toprule
-minipoints & 1 {\jap fan} & 2 {\jap fan} & 3 {\jap fan} &4 {\jap fan}\\
+Minipoints & 1 {\jap han} & 2 {\jap han} & 3 {\jap han} &4 {\jap han}\\
 \midrule
 20 & --- & --- & --- & --- \\
 & --- & (700) & (1300) & (2600)\\ [\sep]
