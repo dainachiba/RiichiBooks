@@ -97,3 +97,4 @@ g
 dev.off()
 
 
+theme_set(theme_gray(base_family="")) # Set the default font back to the original

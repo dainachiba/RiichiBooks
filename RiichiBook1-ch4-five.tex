@@ -1,19 +1,20 @@
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-% Riichi Book 1, Chapter 4: Five block method
+% riichi Book 1, Chapter 4: Five block method
 %~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 \chapter{The five-block method} \label{ch:five}
+\thispagestyle{empty}
 
-In introducing basic building blocks of Riichi Mahjong in the previous chapter, I have also touched upon a number of important tile efficiency principles ---
-e.g., superiority of side-wait protoruns, the value of having two pairs in a hand rather than three, and the value of stretched single or bulging float blocks, to name a few. 
-
-\bigskip
-These principles are all important, but trying to take all of the important principles into consideration at once could be a daunting task. We have to make our discard choice in a limited amount of time,\footnote{Recall that, on regular (slower) tables at {\jap tenhou}, each discard choice must be made within 5 seconds. In offline games, we should make choices even faster so as not to irritate your fellow players.} and tile efficiency is not the only factor we need to consider in making a discard choice. 
-Moreover, some of the tile efficiency principles can at times clash with one another, requiring us to make a judgement call about which principle to follow. For example, we may at times wonder whether to retain a bulging float block or to retain two pairs in a hand, when we have to discard one of the two. 
+In introducing basic building blocks of riichi mahjong in the previous chapter, I have also touched upon a number of important tile efficiency principles ---
+e.g., superiority of side-wait protoruns, the value of having two pairs in a hand rather than three, and the value of stretched single or bulging float shapes, to name a few. 
 
 \bigskip
-The {\bf five-block method} I introduce in this chapter will help us prioritize between competing principles and find the most efficient discard choice quickly.\footnote{As I mentioned in the Preface, the exposition of this chapter is based on Makoto Fukuchi's books. In particular, I am indebted to Makoto Fukuchi. 2015. \textit{Haikouritsu Nyumon Doriru 76}. Yousensha. ISBN978-4-8003-0634-0.}
-The core idea of the five-block method is deceptively simple; we first identify five tile blocks in a hand --- four melds + one head, or their candidates --- and try to complete each block. 
+These principles are all important, but trying to take all of the important principles into consideration at once could be a daunting task. We have to make our discard choice in a limited amount of time,\footnote{Recall that, on regular (slower) tables on {\jap Tenhou}, each discard choice must be made within 5 seconds. In offline games, we should make choices even faster so as not to irritate your fellow players.} and tile efficiency is not the only factor we need to consider in making a discard choice. 
+Moreover, some of the tile efficiency principles can at times clash with one another, requiring us to make a judgement call about which principle to follow. For example, we may at times wonder whether to retain a bulging float shape or to retain two pairs in a hand, when we have to discard one of the two. 
+
+\bigskip
+The {\bf five-block method} I introduce in this chapter will help us prioritize between competing principles and find the most efficient discard choice quickly.\footnote{As I mentioned in the Preface, the exposition of this chapter is based on Makoto Fukuchi's books. In particular, I am indebted to Makoto Fukuchi 2015 \textit{Haikouritsu Nyumon Doriru 76}, Yousensha. ISBN978-4-8003-0634-0.}
+The core idea of the five-block method is deceptively simple; we first identify five tile blocks in a hand --- four groups + one head, or their candidates --- and try to complete each block. 
 \index{Fukuchi@Fukuchi, Makoto}
 
 \section{Finding a redundant tile} 
@@ -21,7 +22,7 @@ The core idea of the five-block method is deceptively simple; we first identify 
 
 We all understand that a standard hand
 %\footnote{Of course, non-standard hands --- {\jap chiitoitsu} (Seven pairs) and {\jap kokushimusou} (Thirteen Orphans) --- are exceptions.} 
-must have five blocks of tiles --- four melds and one head --- to win. 
+must have five blocks of tiles --- four groups and one head --- to win. 
 The five-block method encourages us to be always conscious about five tile blocks in a hand. 
 Consider the following hand. What would you discard and why?
 
@@ -30,49 +31,50 @@ Consider the following hand. What would you discard and why?
 \ep
 
 To figure out which tile is the least useful in this hand, let's divide the hand into tile blocks, as follows. 
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{5}\wan{5}}}
 \underbrace{\text{\wan{7}\wan{8}}}\underbrace{\text{\tong{2}\tong{4}\tong{5}\tong{5}}}\underbrace{\text{\suo{1}\suo{3}\suo{3}}}\underbrace{\text{\zhong\zhong\zhong}} \label{five:411a}
 $
 }\emj
-Notice that, although we do not know which block is going to be the head and which blocks are going to be four melds at the moment, the hand already has five tile blocks. This means that there is no need to increase or decrease the number of blocks from here. 
+Notice that, although we do not know which block is going to be the head and which blocks are going to be four groups at the moment, the hand already has five tile blocks. This means that there is no need to increase or decrease the number of blocks from here. 
 
 \bigskip
-Looking at each of the five blocks, the pair of {\large\wan{5}}, the protorun {\large\wan{7}\wan{8}}, and the set of {\large\zhong} are all self-sufficient; we keep them as they are. Our discard choice should thus be from the third or the fourth blocks, {\large\tong{2}\tong{4}\tong{5}\tong{5}} or {\large\suo{1}\suo{3}\suo{3}}. 
-Let's now compare these two closed-wait blocks. While the {\large\suo{1}} is being useful in its block, enabling the hand to accept a {\large\suo{2}}, the {\large\tong{2}} is completely redundant; the hand can accept a {\large\tong{3}} without having the {\large\tong{2}}. Therefore, the ideal discard is the {\large\tong{2}}. 
+Looking at each of the five blocks, the pair of {\LARGE\wan{5}}, the protorun {\LARGE\wan{7}\wan{8}}, and the set of {\LARGE\zhong} are all self-sufficient; we keep them as they are. Our discard choice should thus be from the third or the fourth blocks, {\LARGE\tong{2}\tong{4}\tong{5}\tong{5}} or {\LARGE\suo{1}\suo{3}\suo{3}}. 
+Let's now compare these two closed-wait blocks. While {\LARGE\suo{1}} is being useful within the block it belongs to, enabling the hand to accept {\LARGE\suo{2}}, {\LARGE\tong{2}} is completely redundant; the hand can accept {\LARGE\tong{3}} without having {\LARGE\tong{2}}. Therefore, the ideal discard here is {\LARGE\tong{2}}. 
 
 \bigskip
 There are two key points to remember in applying the five-block method. 
-First, we should not make any one of the five blocks ``too weak.''\footnote{Basically, any block that is weaker than a side-wait protorun is a weak block.} In the current example, if we discard a {\large\suo{3}}, the {\large\suo{1}\suo{3}\suo{3}} block becomes an isolated closed-wait protorun, which is too weak compared with the other blocks. Likewise, if we discard the {\large\suo{1}}, this block becomes a pair of {\large\suo{3}}. Since this hand already has two other pairs, having a third pair makes all the pairs in the hand too weak. 
+First, we should not make any one of the five blocks ``too weak.''\footnote{Basically, any block that is weaker than a side-wait protorun is a weak block.} In the current example, if we discard {\LARGE\suo{3}}, the {\LARGE\suo{1}\suo{3}\suo{3}} block becomes an isolated closed-wait protorun, which is too weak compared with the other blocks. Likewise, if we discard {\LARGE\suo{1}}, this block becomes a pair of {\LARGE\suo{3}}. Since this hand already has two other pairs, having a third pair makes all the pairs in the hand too weak. 
 
 \bigskip
-Second, each of the five tile blocks should ideally have three tiles. In the current example, the {\large\suo{1}\suo{3}\suo{3}} block has exactly three tiles and so we should not choose a discard from this block. On the other hand, the {\large\tong{2}\tong{4}\tong{5}\tong{5}} block currently has four tiles so we should discard one from this block to make this a three-tile block. 
+Second, each of the five tile blocks should ideally have three tiles. In the current example, the {\LARGE\suo{1}\suo{3}\suo{3}} block has exactly three tiles and so we should not choose a discard from this block. On the other hand, the {\LARGE\tong{2}\tong{4}\tong{5}\tong{5}} block currently has four tiles so we should discard one from this block to make this a three-tile block. 
 
-\bigskip
-\begin{itembox}[c]{Five-block method}
+\vfill
+\color{MyRed}
+\begin{itembox}[c]{Five-block method}\normalcolor
 Identify five tile blocks in a hand. Try to make sure: 
 \bi\itemsep.1pt
 \i[] (1) there is no block that is too weak; and 
 \i[] (2) each block has at most three tiles. 
 \ei
-\end{itembox}
+\end{itembox}\normalcolor
 
-\bigskip
+\newpage
 Let's see another example. 
 \bp
 \wan{3}\wan{5}\wan{7}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}\suo{4}\suo{6}\suo{6}\suo{8}\bai\bai~\bai\\
-\hspace{310pt}\footnotesize{{\jap Dora}}
+\hfill\footnotesize{{\jap Dora}~~~~~~~~~~~~}
 \ep
-We can easily see that there is one block in Cracks, two blocks in Dots, and a pair of White Dragons, giving us four blocks. This means that we need to have only one more block in Bamboos. Therefore, we divide the hand as follows. 
+We can easily see that there is one block in {\jap manzu} (cracks), two blocks in {\jap pinzu} (dots), and a pair of white dragons, giving us four blocks. This means that we need to have only one more block in {\jap souzu} (bamboos). Therefore, we divide the hand as follows. 
 
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{3}\wan{5}\wan{7}}}
 \underbrace{\text{\tong{4}\tong{5}\tong{6}}} \underbrace{\text{\tong{6}\tong{7}}}\underbrace{\text{\suo{4}\suo{6}\suo{6}\suo{8}}}\underbrace{\text{\bai\bai}} \label{five:411b}
 $
 }\emj
-Since we should not create a block that is too weak, discarding the {\large\wan{3}} or {\large\wan{7}} is not an option. Notice that the block in Bamboos has four tiles. We should thus discard one from this block. In case the pair of White Dragon later becomes a set, we should keep the pair of {\large\suo{6}}, leaving {\large\suo{4}} or {\large\suo{8}} as a discard candidate. Given that {\large\suo{4}} has a higher chance of creating a side-wait protorun, we should discard the {\large\suo{8}}. 
+Since we should not create a block that is too weak, discarding {\LARGE\wan{3}} or {\LARGE\wan{7}} is not an option. Notice that the block in {\jap souzu} (bamboos) has four tiles. We should thus discard one from this block. In case the pair of white dragon later becomes a set, we should keep the pair of {\LARGE\suo{6}}, leaving {\LARGE\suo{4}} or {\LARGE\suo{8}} as a discard candidate. Given that {\LARGE\suo{4}} has a higher chance of creating a side-wait protorun, we should discard {\LARGE\suo{8}}. 
 Then, none of the five blocks is too weak, and each block has at most three tiles. 
 
 \bigskip
@@ -87,28 +89,28 @@ Consider the following hand. What would you discard and why?
 
 Let's first divide the hand into five tile blocks. 
 
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{3}\wan{3}\wan{4}\wan{6}}}
 \underbrace{\text{\tong{2}\tong{2}}}\underbrace{\text{\tong{4}\tong{5}\tong{6}}}\underbrace{\text{\tong{6}\tong{7}}}\underbrace{\text{\zhong\zhong\zhong}} \label{five:421a}
 $
 }\emj
 
-This makes it clearer that, just like the previous example, the {\large\wan{6}} is creating a redundant closed-wait protorun, so we should discard it. Also, discarding the {\large\wan{6}} makes this a three-tile block. 
+This makes it clearer that, just like the previous example, {\LARGE\wan{6}} is creating a redundant closed-wait protorun, so we should discard it. Also, discarding {\LARGE\wan{6}} makes this a three-tile block. 
 
 \bigskip
 However, there is an alternative way to divide this hand into five blocks, and situational changes may call for such an alternative configuration. 
-Suppose that your opponents have already discarded all four tiles of {\large\wan{2}}. Suppose also that {\large\tong{3}} seems live in the wall. Or, suppose the {\large\wan{3}-\wan{6}} tiles seem too dangerous to discard against an opponent. Then, we might want to divide the hand in the following way instead. 
+Suppose that your opponents have already discarded all four tiles of {\LARGE\wan{2}}. Suppose also that {\LARGE\tong{3}} seems live in the wall. Or, suppose {\LARGE\wan{3}-\wan{6}} tiles seem too dangerous to discard against an opponent. Then, we might want to divide the hand in the following way instead. 
 
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{3}\wan{3}}}
 \underbrace{\text{\wan{4}\wan{6}}}\underbrace{\text{\tong{2}\tong{2}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}}}_{\text{\small 2}}\underbrace{\text{\zhong\zhong\zhong}} \label{five:421b}
 $
 }\emj
 
-That is, we aim to make the pair of {\large\wan{3}} the head of this hand, and we seek to have two runs in Dots. If we discard a {\large\tong{2}}, this block becomes {\large\tong{2}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}}. 
-Recall that a block like this can be split into {\large\tong{2}\tong{4}\tong{6} + \tong{5}\tong{6}\tong{7}} (recall the discussion of double closed block in Section \ref{sec:ryankan}). Therefore, this block can accept a {\large\tong{3}} as well as {\large\tong{5}-\tong{8}} to make two runs in Dots. The block in Dots will have six tiles, but this is OK because this block is worth two. 
+That is, we aim to make the pair of {\LARGE\wan{3}} the head of this hand, and we seek to have two runs in {\jap pinzu} (dots). If we discard {\LARGE\tong{2}}, this block becomes {\LARGE\tong{2}\tong{4}\tong{5}\tong{6}\tong{6}\tong{7}}. 
+Recall that a block like this can be split into {\LARGE\tong{2}\tong{4}\tong{6} + \tong{5}\tong{6}\tong{7}} (recall the discussion of double closed shape in Section \ref{sec:ryankan}). Therefore, this block can accept {\LARGE\tong{3}} as well as {\LARGE\tong{5}-\tong{8}} to make two runs in {\jap pinzu}. The block in {\jap pinzu} will have six tiles, but this is OK because this block is worth two. 
 
 \bigskip
 To master the five-block method, we need to be able to instantaneously envision the first block configuration (\ref{five:421a}) the moment we see this hand. However, that is not enough. We should also be able to imagine an alternative configuration (\ref{five:421b}) at the same time. 
@@ -129,8 +131,8 @@ What would you discard? \\
 How do you divide the hand into five tile blocks? 
 
 \bp
-\wan{1}\wan{1}\wan{3}\wan{4}\tong{3}\tong{4}\tong{5}\suo{3}\suo{3}\suo{5}\suo{6}\suo{7}\suo{7}~\suo{4}\\
-\hspace{290pt}\footnotesize{Draw}
+\wan{3}\wan{4}\wan{6}\wan{6}\tong{3}\tong{4}\tong{5}\suo{3}\suo{3}\suo{5}\suo{6}\suo{7}\suo{7}~\suo{4}\\
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -138,13 +140,14 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 1}
-\bmj{\huge
+\bmj{\Huge
 $
-\underbrace{\text{\wan{1}\wan{1}}}%
-\underbrace{\text{\wan{3}\wan{4}}}~\underbrace{\text{\tong{3}\tong{4}\tong{5}}}~\underbrace{\text{\suo{3}\suo{3}\suo{4}\suo{5}\suo{6}\suo{7}\suo{7}}}_{\text{\small 2}} \nonumber
+\underbrace{\text{\wan{3}\wan{4}}}%
+\underbrace{\text{\wan{6}\wan{6}}}~
+\underbrace{\text{\tong{3}\tong{4}\tong{5}}}~\underbrace{\text{\suo{3}\suo{3}\suo{4}\suo{5}\suo{6}\suo{7}\suo{7}}}_{\text{\small 2}} \nonumber
 $
 }\emj
-With the draw of a {\large\suo{4}}, we now have a 3-way side-wait block in Bamboos. {\large\suo{3}} or {\large\suo{7}} could be our back-up candidate for the head, in case we draw another {\large\wan{1}}. Since there is {\jap sanshoku} (Mixed Triple Chow) of 345, we discard a {\large\suo{3}}. 
+With the draw of {\LARGE\suo{4}}, we now have a 3-way side-wait block in {\jap souzu} (bamboos). {\LARGE\suo{3}} or {\LARGE\suo{7}} could be our back-up candidate for the head, in case we draw another {\LARGE\wan{6}}. Since there is {\jap sanshoku} (Mixed Triple Chow) of 345, we discard {\LARGE\suo{3}}. 
 \end{itembox}
 
 \vfill
@@ -156,7 +159,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{5}\wan{7}\tong{1}\tong{1}\tong{2}\tong{3}\tong{4}\tong{4}\tong{5}\tong{7}\suo{3}\suo{5}\suo{5}~\tong{4}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -167,14 +170,14 @@ How do you divide the hand into five tile blocks?
 %=====================
 \bigskip
 \begin{itembox}[r]{Answer 2}
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{5}\wan{7}}}\text{\tong{1}}
 \underbrace{\text{\tong{1}\tong{2}\tong{3}}}\underbrace{\text{\tong{4}\tong{4}\tong{4}}}\underbrace{\text{\tong{5}\tong{7}}}\underbrace{\text{\suo{3}\suo{5}\suo{5}}}
 \nonumber
 $
 }\emj
-Before we drew a {\large\tong{4}}, the Dots tiles were {\large\tong{1}\tong{1} + \tong{2}\tong{3}\tong{4} + \tong{4}\tong{5}}, so the {\large\tong{7}} was simply a floating tile. Now that we have another {\large\tong{4}}, the five-block configuration changes accordingly. The ideal discard is a {\large\tong{1}}, as this has become redundant.
+Before we drew the third {\LARGE\tong{4}}, the {\jap pinzu} (dots) tiles were {\LARGE\tong{1}\tong{1} + \tong{2}\tong{3}\tong{4} + \tong{4}\tong{5}}, so the {\LARGE\tong{7}} was simply a floating tile. Now that we have another {\LARGE\tong{4}}, the five-block configuration changes accordingly. The ideal discard is {\LARGE\tong{1}}, as this has become redundant.
 \end{itembox}
 %=====================
 
@@ -187,7 +190,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{4}\wan{4}\wan{6}\wan{6}\wan{7}\wan{8}\tong{2}\tong{3}\suo{3}\suo{4}\suo{6}\suo{6}\suo{7}~\wan{3}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -196,15 +199,15 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 3}
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{3}\wan{4}\wan{4}}}\text{\wan{6}}
 \underbrace{\text{\wan{6}\wan{7}\wan{8}}}\underbrace{\text{\tong{2}\tong{3}}}\underbrace{\text{\suo{3}\suo{4}}}\underbrace{\text{\suo{6}\suo{6}\suo{7}}}
 \nonumber
 $
 }\emj
-There are two ``side wait plus one'' blocks, {\large\wan{3}\wan{4}\wan{4}} and {\large\suo{6}\suo{6}\suo{7}}, that might later become the head or a run. At this point, however, we cannot determine which one will be which, so we should keep them as they are. 
-One of the two {\large\wan{6}} has become an obvious redundancy so we should discard one. 
+There are two ``side wait plus one'' shapes, {\LARGE\wan{3}\wan{4}\wan{4}} and {\LARGE\suo{6}\suo{6}\suo{7}}, that might later become the head or a run. At this point, however, we cannot determine which one will be which, so we should keep them as they are. 
+One of the two {\LARGE\wan{6}} has become an obvious redundancy so we should discard one. 
 \end{itembox}
 
 \vfill
@@ -216,7 +219,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{2}\wan{3}\wan{5}\wan{6}\tong{4}\tong{4}\tong{6}\tong{8}\tong{9}\suo{3}\suo{4}\suo{5}\bei~\wan{4}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -225,14 +228,14 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 4}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{2}\wan{3}\wan{4}\wan{5}\wan{6}}}_{\text{\small 2}}
 \underbrace{\text{\tong{4}\tong{4}}}\underbrace{\text{\tong{6}\tong{8}}}\text{\tong{9}}\underbrace{\text{\suo{3}\suo{4}\suo{5}}}\text{\bei}
 \nonumber
 $ 
 }\emj
-The {\large\bei} is obviously redundant, but the {\large\tong{9}} is also useless. Without the {\large\tong{9}}, the hand can accept a {\large\tong{7}}. Since honor tiles can be used as a safety tile (see Chapter \ref{ch:defense}), we discard the {\large\tong{9}} first. 
+The {\LARGE\bei} is obviously redundant, but {\LARGE\tong{9}} is also useless. Without {\LARGE\tong{9}}, the hand can accept {\LARGE\tong{7}}. Since honor tiles can be used as a safety tile (see Chapter \ref{ch:defense}), we discard {\LARGE\tong{9}} first. 
 \end{itembox}
 %=====================
 
@@ -246,7 +249,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{2}\wan{3}\wan{5}\wan{7}\wan{7}\tong{2}\tong{4}\tong{6}\tong{8}\suo{4}\suo{5}\suo{7}\suo{8}~\suo{8}~\tong{4}\\
-\hspace{283pt}\footnotesize{Draw}~\footnotesize{{\jap Dora}}
+\hfill\footnotesize{Draw~~{\jap Dora}~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -254,7 +257,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 5}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{2}\wan{3}}}
 \underbrace{\text{\wan{5}\wan{7}\wan{7}}}\underbrace{\text{\tong{2}\tong{4}\tong{6}\tong{8}}}\underbrace{\text{\suo{4}\suo{5}}}\underbrace{\text{\suo{7}\suo{8}\suo{8}}}
@@ -262,7 +265,7 @@ $
 $
 }\emj
 This is a bit difficult, as there are so many closed-wait protoruns. Recall that each tile block should have at most three tiles and that pairs are most valuable when there are two of them in a hand. 
-The block in Dots has four tiles, so we discard one from this block. Since {\large\tong{4}} is {\jap dora}, we discard the {\large\tong{8}}, leaving the double closed block around {\jap dora}: {\large\tong{2}\tong{4}\tong{6}}. 
+The block in {\jap pinzu} (dots) has four tiles, so we discard one from this block. Since {\LARGE\tong{4}} is {\jap dora}, we discard {\LARGE\tong{8}}, leaving the double closed shape around {\jap dora}: {\LARGE\tong{2}\tong{4}\tong{6}}. 
 \end{itembox}
 %=====================
 
@@ -275,7 +278,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{2}\wan{3}\wan{4}\wan{4}\tong{3}\tong{4}\tong{5}\tong{6}\suo{4}\suo{5}\suo{5}\suo{6}\suo{6}~\tong{4}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -283,7 +286,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 6}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{2}\wan{3}\wan{4}}}\text{\wan{4}}
 \underbrace{\text{\tong{3}\tong{4}\tong{4}\tong{5}\tong{6}}}_{\text{\small 2}}
@@ -291,7 +294,7 @@ $
 \nonumber
 $
 }\emj
-Finding the best discard by actually comparing tile acceptance counts for each possible discard candidate is super tedious. The five-block method simplifies the process quite a bit. Since we have two blocks in Dots and two blocks in Bamboos, we only need one block in Cracks, hence a {\large\wan{4}} is redundant. If we discard a {\large\wan{4}}, the hand can be made ready with 11 kinds--34 tiles. If we discard {\large\tong{3} \tong{4}} or {\large\suo{5}}, the hand can be ready only with 6 kinds--19 tiles. 
+Finding the best discard by actually comparing tile acceptance counts for each possible discard candidate is super tedious. The five-block method simplifies the process quite a bit. Since we have two blocks in {\jap pinzu} (dots) and two blocks in {\jap souzu} (bamboos), we only need one block in {\jap manzu} (cracks), hence one {\LARGE\wan{4}} is redundant. If we discard {\LARGE\wan{4}}, the hand can be made ready with 11 kinds--34 tiles. If we discard {\LARGE\tong{3} \tong{4}} or {\LARGE\suo{5}}, the hand can be ready only with 6 kinds--19 tiles. 
 \end{itembox}
 %=====================
 
@@ -304,7 +307,7 @@ What would you discard?
 
 \bp
 \wan{3}\wan{4}\wan{7}\tong{2}\tong{3}\tong{4}\tong{7}\tong{7}\tong{8}\suo{4}\suo{5}\suo{7}\suo{9}~\suo{6}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -314,16 +317,16 @@ What would you discard?
 %=====================
 
 \begin{itembox}[r]{Answer 7}
-\bmj{\huge
+\bmj{\Huge
 $
 \underbrace{\text{\wan{3}\wan{4}}}\text{\wan{7}}
 \underbrace{\text{\tong{2}\tong{3}\tong{4}}}\underbrace{\text{\tong{7}\tong{7}\tong{8}}}\underbrace{\text{\suo{4}\suo{5}\suo{6}\suo{7}\suo{9}}}_{\text{\small 2}}\nonumber
 $
 }\emj
-Do not discard the {\large\suo{9}} just because it forms a closed wait or because discarding it gets us {\jap tanyao} (All Simples). Avoiding closed wait too much and being hung up on {\jap tanyao} are two pathologies common among intermediate players. 
+Do not discard the {\LARGE\suo{9}} just because it forms a closed wait or because discarding it gets us {\jap tanyao} (All Simples). Avoiding closed wait too much and being hung up on {\jap tanyao} are two pathologies common among intermediate players. 
 \bigskip
 
-The block in Bamboos is actually a very good shape; this is a stretched single plus one, which can become either two runs immediately (if we draw a {\large\suo{8}}), one run plus one side-wait protorun (if we draw any of {\large\suo{3}\suo{5}\suo{6}}), or one run plus the head (if we draw a {\large\suo{4}} or a {\large\suo{7}}). Note also that we need both {\large\tong{7}} and {\large\tong{8}}, because this part may become the head if we get two runs in Bamboos; when we get the head in Bamboos, we will treat this part as a side-wait protorun. We thus discard the {\large\wan{7}}. 
+The block in {\jap souzu} (bamboos) is actually not too bad; this is a stretched single plus one, which can become either two runs immediately (if we draw {\LARGE\suo{8}}), one run plus one side-wait protorun (if we draw any of {\LARGE\suo{3}\suo{5}\suo{6}}), or one run plus the head (if we draw {\LARGE\suo{4}} or {\LARGE\suo{7}}). Note also that we need both {\LARGE\tong{7}} and {\LARGE\tong{8}}, because this part may become the head if we get two runs in {\jap souzu} (bamboos); when we get the head in {\jap souzu} (bamboos), we will treat this part as a side-wait protorun. We thus discard {\LARGE\wan{7}}. 
 \end{itembox}
 %=====================
 
@@ -345,12 +348,12 @@ Consider the following hand. How do we divide the hand into tile blocks, and wha
 %\vspace{-20pt}
 
 \bp 
-\hspace{143pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-18pt}
+\hspace{120pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-16pt}
 \wan{1}\wan{2}\wan{3}\tong{3}\tong{4}\tong{5}\tong{5}\tong{7}\tong{8}\suo{4}\rfs\suo{7}\suo{8}~\tong{2}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~~~~~}
 \ep
 We can see that the hand currently has six tile blocks, as follows. 
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{2}\wan{3}}}
 \underbrace{\text{\tong{2}\tong{3}\tong{4}}}
@@ -361,11 +364,11 @@ $
 \nonumber
 $
 }\emj
-Since the first two tile blocks are already complete and the third block is the head, our discard choice should be from the last three tile blocks, {\large\tong{7}\tong{8}}, {\large\suo{4}\rfs}, or {\large\suo{7}\suo{8}}. 
+Since the first two tile blocks are already complete and the third block is the head, our discard choice should be from the last three tile blocks, {\LARGE\tong{7}\tong{8}}, {\LARGE\suo{4}\rfs}, or {\LARGE\suo{7}\suo{8}}. 
 
 \bigskip
-From a perspective of tile efficiency, discarding the {\large\tong{7}\tong{8}} block means that we lose the ability to accept \emph{both} {\large\tong{6}} and {\large\tong{9}}. On the other hand, if we discard the {\large\suo{7}\suo{8}} block, we only lose the ability to accept {\large\suo{9}}; because of the {\large\suo{4}\rfs} block, we can still accept {\large\suo{6}}. We should thus choose between the two blocks in Bamboos. 
-Keeping the {\large\rfs} is desirable from a perspective of hand value (it is a red five) as well as safety (discarding {\large\suo{7}\suo{8}} is much safer than discarding {\large\suo{4}\rfs}, generally speaking). Therefore, the three criteria collectively suggest that we should discard {\large\suo{7}\suo{8}}. 
+From a perspective of tile efficiency, discarding the {\LARGE\tong{7}\tong{8}} block means that we lose the ability to accept \emph{both} {\LARGE\tong{6}} and {\LARGE\tong{9}}. On the other hand, if we discard the {\LARGE\suo{7}\suo{8}} block, we only lose the ability to accept {\LARGE\suo{9}}; because of the {\LARGE\suo{4}\rfs} block, we can still accept {\LARGE\suo{6}}. We should thus choose between the two blocks in {\jap souzu} (bamboos). 
+Keeping the {\LARGE\rfs} is desirable from a perspective of hand value (it is a red five) as well as safety (discarding {\LARGE\suo{7}\suo{8}} is much safer than discarding {\LARGE\suo{4}\rfs}, generally speaking). Therefore, the three criteria collectively suggest that we should discard {\LARGE\suo{7}\suo{8}}. 
 
 \bigskip
 
@@ -374,7 +377,7 @@ In practice, however, satisfying all three criteria may not be feasible. A commo
 \wan{1}\wan{3}\wan{5}\wan{7}\wan{7}\tong{3}\tong{7}\tong{8}\suo{3}\suo{4}\suo{8}\suo{8}\suo{9}\suo{9}
 \ep
 Let's divide the hand into tile blocks. There are several ways to do this. One way to do this is to split it into the following blocks. 
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}\wan{5}}}
 \underbrace{\text{\wan{7}\wan{7}}}
@@ -386,12 +389,12 @@ $
 \nonumber
 $
 }\emj
-If we simply maximize tile efficiency, we discard the {\large\tong{3}}, as we already have six tile blocks and we won't need any more floating tile. 
+If we simply maximize tile efficiency, we discard {\LARGE\tong{3}}, as we already have six tile blocks and we won't need any more floating tile. 
 
 \bigskip
-However, as it stands, the hand has no {\jap yaku} and it is likely to be a very cheap {\jap riichi}-only hand. Moreover, the hand has three pairs, which is not ideal as we saw in the previous chapter. 
+However, as it stands, the hand has no {\jap yaku} and it is likely to be a very cheap riichi-only hand. Moreover, the hand has three pairs, which is not ideal as we saw in the previous chapter. 
 Therefore, we might want to split the hand into the following five blocks. 
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}\wan{5}\wan{7}\wan{7}}}
 \underbrace{\text{\tong{3}}}
@@ -402,11 +405,11 @@ $
 \nonumber
 $
 }\emj
-We count the floating {\large\tong{3}} as an independent block, hoping it to grow into a run. We also treat the tiles in Cracks as a single block, hoping to get at least one meld or the head out of it. We thus discard a {\large\suo{9}} now, then another {\large\suo{9}} in the next turn. Depending on what tile gets drawn, our five-block configuration will be different. 
+We count the floating {\LARGE\tong{3}} as an independent block, hoping it to grow into a run. We also treat the tiles in {\jap manzu} (cracks) as a single block, hoping to get at least one group or the head out of it. We thus discard one {\LARGE\suo{9}} now, then another {\LARGE\suo{9}} in the next turn. Depending on what tile gets drawn, our five-block configuration will be different. 
 
 \bigskip
-For example, suppose we draw a {\large\tong{4}} and then a {\large\suo{5}}. We will then have the following. 
-\bmj{\huge
+For example, suppose we draw {\LARGE\tong{4}} and then {\LARGE\suo{5}}. We will then have the following. 
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}\wan{5}\wan{7}\wan{7}}}
 \underbrace{\text{\tong{3}\tong{4}}}
@@ -416,11 +419,11 @@ $
 \nonumber
 $
 }\emj
-We will discard the {\large\wan{1}} as a first step toward reducing the number of tiles in the Cracks block to three. We can now see that this hand has a potential of getting {\jap sanshoku} of 345 as well as {\jap pinfu} and {\jap tanyao}.
+We will discard the {\LARGE\wan{1}} as a first step toward reducing the number of tiles in the {\jap manzu} (cracks) block to three. We can now see that this hand has a potential of getting {\jap sanshoku} of 345 as well as {\jap pinfu} and {\jap tanyao}.
 
 \bigskip
-On the other hand, if we draw a {\large\wan{6}} and then a {\large\wan{8}}, we can expect to have two melds in Cracks so we will discard the {\large\tong{3}}.
-\bmj{\huge
+On the other hand, if we draw {\LARGE\wan{6}} and then {\LARGE\wan{8}}, we can expect to have two groups in {\jap manzu} (cracks) so we will discard {\LARGE\tong{3}}.
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}\wan{5}\wan{6}\wan{7}\wan{7}\wan{8}}}_{\text{\small 2}}
 \text{\tong{3}}
@@ -447,7 +450,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{2}\wan{3}\wan{3}\wan{7}\wan{8}\tong{5}\tong{6}\suo{1}\suo{1}\suo{2}\suo{4}\suo{9}\suo{9}~\suo{9}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -455,7 +458,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 8}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{2}\wan{3}\wan{3}}}
 \underbrace{\text{\wan{7}\wan{8}}}
@@ -466,7 +469,7 @@ $
 \nonumber
 $
 }\emj
-The hand currently has six blocks so we need to get rid of one. The {\large\suo{2}\suo{4}} block is the only closed-wait protorun so we should get rid of this one. We should discard the {\large\suo{4}} first; if we draw a {\large\suo{3}} we will discard a {\large\suo{1}} to leave the possibility of {\jap pinfu}. If not, we discard the {\large\suo{2}} next, and then a {\large\wan{3}}. 
+The hand currently has six blocks so we need to get rid of one. The {\LARGE\suo{2}\suo{4}} block is the weakest -- it is the only closed-wait protorun -- so we should get rid of this one. We should discard {\LARGE\suo{4}} first; if we draw {\LARGE\suo{3}} we will discard {\LARGE\suo{1}} to leave the possibility of {\jap pinfu}. If not, we discard {\LARGE\suo{2}} next, and then  {\LARGE\wan{3}}. 
 \end{itembox}
 %=====================
 
@@ -479,7 +482,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{2}\wan{4}\tong{7}\tong{8}\tong{9}\tong{9}\tong{9}\suo{2}\suo{2}\suo{6}\suo{7}\bai\bai~\wan{4}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -487,7 +490,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 9}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{2}\wan{4}\wan{4}}}
 \underbrace{\text{\tong{7}\tong{8}\tong{9}\tong{9}\tong{9}}}_{\text{\small 2}}
@@ -497,7 +500,7 @@ $
 \nonumber
 $
 }\emj
-We were planning to discard the {\large\wan{2}\wan{4}} block because this was the weakest block among the six blocks in this hand. However, as the draw of a {\large\wan{4}} has made the {\large\suo{2}\suo{2}} block the weakest block. We thus discard a {\large\suo{2}}.
+We were planning to discard the {\LARGE\wan{2}\wan{4}} block because this was the weakest block among the six blocks in this hand. However, now that we drew another {\LARGE\wan{4}}, the {\LARGE\suo{2}\suo{2}} block is now the weakest. We thus discard {\LARGE\suo{2}}.
 \end{itembox}
 %=====================
 
@@ -510,7 +513,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{1}\wan{3}\wan{5}\wan{6}\wan{7}\tong{1}\tong{3}\suo{3}\suo{4}\suo{7}\suo{8}\bei\bei~\suo{5}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -519,7 +522,7 @@ How do you divide the hand into five tile blocks?
 
 
 \begin{itembox}[r]{Answer 10}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}}}
 \underbrace{\text{\wan{5}\wan{6}\wan{7}}}
@@ -530,7 +533,7 @@ $
 \nonumber
 $
 }\emj
-The hand currently has six blocks so we need to get rid of one. Comparing the two closed-wait blocks {\large\wan{1}\wan{3}} and {\large\tong{1}\tong{3}}, the {\large\wan{1}\wan{3}} block is more valuable because it is adjacent to a run. If we draw a {\large\wan{4}}, we will get a 3-way side-wait block. On the other hand, the {\large\tong{1}\tong{3}} block will only become a 2-way side-wait block when we draw a {\large\tong{4}}. We should discard the {\large\tong{1}} first, not {\large\tong{3}}, because if we draw a {\large\tong{4}} next , we will discard the {\large\wan{1}\wan{3}} block.
+The hand currently has six blocks so we need to get rid of one. Comparing the two closed-wait blocks {\LARGE\wan{1}\wan{3}} and {\LARGE\tong{1}\tong{3}}, the {\LARGE\wan{1}\wan{3}} block is more valuable because it is adjacent to a run. If we draw {\LARGE\wan{4}}, we will get a 3-way side-wait block. On the other hand, the {\LARGE\tong{1}\tong{3}} block will only become a 2-way side-wait block when we draw {\LARGE\tong{4}}. We should discard {\LARGE\tong{1}} first, not {\LARGE\tong{3}}, because if we draw {\LARGE\tong{4}} next, we will discard the {\LARGE\wan{1}\wan{3}} block.
 \end{itembox}
 %=====================
 
@@ -543,7 +546,7 @@ How do you divide the hand into five tile blocks?
 
 \bp
 \wan{5}\wan{7}\tong{1}\tong{1}\tong{3}\tong{7}\tong{7}\suo{1}\suo{1}\suo{4}\suo{5}\suo{6}\suo{7}~\suo{3}\\
-\hspace{290pt}\footnotesize{Draw}
+\hfill\footnotesize{Draw~~~~~~~~~~~}
 \ep
 \end{itembox}
 %=====================
@@ -552,7 +555,7 @@ How do you divide the hand into five tile blocks?
 
 
 \begin{itembox}[r]{Answer 11}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{5}\wan{7}}}
 \underbrace{\text{\tong{1}\tong{1}\tong{3}}}
@@ -562,21 +565,21 @@ $
 \nonumber
 $
 }\emj
-Now that we have a 3-way side-wait block in Bamboos, we should get rid of one block. Comparing a closed-wait block {\large\wan{5}\wan{7}} and two pairs {\large\tong{7}\tong{7}} and {\large\suo{1}\suo{1}}, we should value the closed-wait block. This is because the hand has three pairs already so we should get rid of one of them. Since we see a (remote) possibility of {\jap sanshoku} of 567, we should discard a {\large\suo{1}}. 
+Now that we have a 3-way side-wait block in {\jap souzu} (bamboos), we should get rid of one block. Comparing a closed-wait block {\LARGE\wan{5}\wan{7}} and two pairs {\LARGE\tong{7}\tong{7}} and {\LARGE\suo{1}\suo{1}}, we should value the closed-wait block. This is because the hand has three pairs already so we should get rid of one of them. Since we see a (remote) possibility of {\jap sanshoku} of 567, we should discard {\LARGE\suo{1}}. 
 \end{itembox}
 %=====================
 
 
 \section{Building a block}
 
-When a hand has less than five blocks, we need to build a new block, possibly from a floating tile we already have in a hand. In doing so, we should envision the kind of {\jap yaku} that the hand is going to have eventually. Consider the following hand. Suppose you are the dealer and this is East-1. What would you discard?
+When a hand has fewer than five blocks, we need to build a new block, possibly from a floating tile we already have in the hand. In doing so, we should envision the kind of {\jap yaku} that the hand is going to have eventually. Consider the following hand. Suppose you are the dealer and this is East-1. What would you discard?
 
 \bp
 \wan{6}\wan{7}\wan{7}\wan{8}\tong{3}\tong{3}\tong{4}\tong{9}\suo{4}\suo{7}\suo{8}\suo{9}\zhong\bei
 \ep
 
 As usual, we will split the hand into blocks. Notice that the hand has at most four blocks only. 
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{6}\wan{7}\wan{7}\wan{8}}}_{\text{\small 2}}
 \underbrace{\text{\tong{3}\tong{3}\tong{4}}}
@@ -586,17 +589,18 @@ $
 \nonumber
 $
 }\emj \label{hand:head}
-We should thus compare the four floating tiles {\large\tong{9} \suo{4} \zhong ~\bei} in terms of their capabilities to grow into an independent block. Of these four tiles, {\large\suo{4}} is the strongest candidate, because it can form a side-wait protorun with two kinds of tiles, \text{\suo{3}} and \text{\suo{5}}. Any simple tiles between 3 and 7 are a strong floating tile because of their ability to form a side-wait protorun. Terminals (1 and 9) will never become a side-wait protorun, and 2 and 8 can become a side-wait protorun when paired with only one kind of tiles (3 or 7). However, number tiles are still stronger than honor tiles because honor tiles can never form a run. 
+We should thus compare the four floating tiles {\LARGE\tong{9} \suo{4} \zhong ~\bei} in terms of their relative capabilities to grow into an independent block. Of these four tiles, {\LARGE\suo{4}} is the strongest candidate, because it can form a side-wait protorun with two kinds of tiles, \text{\suo{3}} and \text{\suo{5}}. Any simple tiles between 3 and 7 are a strong floating tile because of their ability to form a side-wait protorun. Terminals (1 and 9) will never become a side-wait protorun, and 2 and 8 can become a side-wait protorun when paired with only one kind of tiles (3 or 7). However, number tiles are still stronger than honor tiles because honor tiles can never form a run. 
 
 \bigskip
-We should thus choose between the two honor tiles, {\large\zhong} and {\large\bei}. Which one should we discard? Notice that this hand is clearly a {\jap pinfu} hand and that it is currently lacking the head. Since value tiles can never be the head of a {\jap pinfu} hand, we should discard the {\large\zhong} rather than the {\large\bei}. 
+We should thus choose between the two honor tiles, {\LARGE\zhong} and {\LARGE\bei}. Which one should we discard? Notice that this hand is clearly a {\jap pinfu} hand and that it is currently lacking the head. Since value tiles can never be the head of a {\jap pinfu} hand, we should discard {\LARGE\zhong} rather than {\LARGE\bei}. 
 
+\bigskip
 We may want to choose a discard from an existing block rather than discarding a floating tile in order to enhance the hand value. Consider the following hand. 
 \bp
 \wan{5}\wan{6}\wan{6}\wan{8}\tong{1}\tong{2}\tong{2}\tong{6}\suo{1}\suo{1}\suo{4}\suo{5}\suo{6}\suo{7}
 \ep
-From a pure perspective of tile efficiency, the discard choice should be either {\large\suo{4} \suo{7}} or {\large\tong{6}}, for discarding either of the three will maximize tile acceptance. The block configuration behind that decision is as follows. 
-\bmj{\huge
+From a pure perspective of tile efficiency, the discard choice should be either {\LARGE\suo{4} \suo{7}} or {\LARGE\tong{6}}, for discarding either of the three will maximize tile acceptance. The block configuration behind such a  decision is as follows. 
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{5}\wan{6}}}
 \underbrace{\text{\wan{6}\wan{8}}}
@@ -607,9 +611,9 @@ $
 \nonumber
 $
 }\emj
-However, doing so will almost guarantee that the hand ends up having a low score and/or a bad wait. Alternatively, we can expect the stretched single block {\large\suo{4}\suo{5}\suo{6}\suo{7}} to produce two runs, the {\large\tong{6}} to form a run, and the tiles in Cracks to produce one run, as follows. 
+However, doing so makes it almost inevitable that the hand ends up having a low score and/or a bad wait. Alternatively, we can expect the stretched single shape {\LARGE\suo{4}\suo{5}\suo{6}\suo{7}} to produce two runs, {\LARGE\tong{6}} to form a run, and the tiles in {\jap manzu} (cracks) to produce one run, as follows. 
 
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{5}\wan{6}\wan{6}\wan{8}}}
 \underbrace{\text{\tong{1}\tong{2}\tong{2}}}
@@ -619,7 +623,7 @@ $
 \nonumber
 $
 }\emj
-We should thus discard the {\large\tong{1}} for now, anticipating to discard the pair of {\large\suo{1}} eventually. That way, we can expect to have {\jap tanyao}, {\jap pinfu}, and possibly {\jap sanshoku}. 
+We should thus discard the {\LARGE\tong{1}} for now, anticipating to discard the pair of {\LARGE\suo{1}} eventually. That way, we can expect to have {\jap tanyao}, {\jap pinfu}, and possibly {\jap sanshoku}. 
 
 \vfill
 
@@ -636,7 +640,7 @@ How do you divide the hand into five tile blocks?
 
 \vspace{-30pt}
 \bp
-\hspace{-193pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-18pt}
+\hspace{-163pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-16pt}
 \wan{1}\wan{3}\rfw\wan{8}\wan{9}\tong{3}\tong{4}\tong{4}\suo{2}\suo{2}\suo{3}\suo{5}\suo{6}\suo{7}
 \ep
 \end{itembox}
@@ -645,7 +649,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 12}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}\rfw}}
 \underbrace{\text{\wan{8}\wan{9}}}
@@ -655,7 +659,7 @@ $
 \nonumber
 $
 }\emj
-If we were to simply maximize tile acceptance, the discard choice should be either {\large\wan{1}} or {\large\rfw}. However, that would make the block in Cracks too week. Breaking the {\large\tong{3}\tong{4}\tong{4}} or {\large\suo{2}\suo{2}\suo{3}} is not ideal, as these blocks are very strong. We should therefore discard the {\large\wan{9}} to get rid of this edge-wait block. This will temporarily reduce the number of blocks from five to four, but we can expect to get back to five soon with this hand. 
+If we were to simply maximize tile acceptance, the discard choice should be either {\LARGE\wan{1}} or {\LARGE\rfw}. However, that would make the block in {\jap manzu} (cracks) too week. Breaking the {\LARGE\tong{3}\tong{4}\tong{4}} or {\LARGE\suo{2}\suo{2}\suo{3}} is not ideal, as these blocks are very strong. We should therefore discard the {\LARGE\wan{9}} to get rid of this edge-wait block. This will temporarily reduce the number of blocks from five to four, but we can expect to get back to five soon with this hand. 
 \end{itembox}
 %=====================
 
@@ -668,7 +672,7 @@ How do you divide the hand into five tile blocks?
 
 \vspace{-30pt}
 \bp
-\hspace{-193pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-18pt}
+\hspace{-163pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-16pt}
 \wan{1}\wan{3}\rfw\wan{5}\tong{3}\tong{4}\tong{4}\tong{5}\suo{2}\suo{2}\suo{3}\suo{5}\suo{6}\suo{7}
 \ep
 \end{itembox}
@@ -677,7 +681,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 13}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{3}}}
 \underbrace{\text{\rfw\wan{5}}}
@@ -687,7 +691,7 @@ $
 \nonumber
 $
 }\emj
-Discarding a {\large\tong{4}} or a {\large\suo{2}} will make this hand 1-Away, so our choice is between these two options. Notice that the {\large\wan{1}\wan{3}} block is weaker than the other four. As a back up, we should keep two {\large\tong{4}} to maintain the bulging float block in Dots for now, hoping to get two runs out of it. If we draw {\large\tong{2}-\tong{5}} or {\large\tong{3}-\tong{6}} first, we will get rid of the {\large\wan{1}\wan{3}} block. We should thus discard a {\large\suo{2}}. If we draw any of {\large\suo{1}\suo{4}\wan{2}}, we should do insta-{\jap riichi}. 
+Discarding {\LARGE\tong{4}} or {\LARGE\suo{2}} will make this hand 1-Away, so our choice is between these two options. Notice that the {\LARGE\wan{1}\wan{3}} block is weaker than the other four. As a back up, we should keep two {\LARGE\tong{4}} to maintain the bulging float block in {\jap pinzu} (dots) for now, hoping to get two runs out of it. If we draw {\LARGE\tong{2}-\tong{5}} or {\LARGE\tong{3}-\tong{6}} first, we will get rid of the {\LARGE\wan{1}\wan{3}} block. We should thus discard {\LARGE\suo{2}}. If we draw any of {\LARGE\suo{1}\suo{4}\wan{2}}, we should do insta-riichi. 
 \end{itembox}
 %=====================
 
@@ -700,7 +704,7 @@ How do you divide the hand into five tile blocks?
 
 \vspace{-30pt}
 \bp
-\hspace{-153pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-18pt}
+\hspace{-128pt}{\footnotesize\color{red!75!black} Red}\\ \vspace{-16pt}
 \wan{1}\wan{1}\wan{3}\rfw\wan{5}\tong{3}\tong{4}\tong{4}\tong{5}\suo{2}\suo{3}\suo{5}\suo{6}\suo{7}
 \ep
 \end{itembox}
@@ -709,7 +713,7 @@ How do you divide the hand into five tile blocks?
 \newpage
 
 \begin{itembox}[r]{Answer 14}
-\bmj{\huge
+\bmj{\Huge
 $ 
 \underbrace{\text{\wan{1}\wan{1}\wan{3}\rfw\wan{5}}}_{\text{\small 2}}
 \underbrace{\text{\tong{3}\tong{4}\tong{4}\tong{5}}}
@@ -718,7 +722,7 @@ $
 \nonumber
 $
 }\emj
-As we drew another {\large\wan{1}}, the block in Cracks is now a decent shape. This can become one meld and the head with a draw of {\large\wan{1} \wan{2} \wan{4} \wan{5}}. Therefore, we should discard a {\large\tong{4}} to break the bulging float block. 
+As we drew another {\LARGE\wan{1}}, the block in {\jap manzu} (cracks) is now a decent shape. This can become one group and the head with a draw of {\LARGE\wan{1} \wan{2} \wan{4} \wan{5}}. Therefore, we should discard  {\LARGE\tong{4}} to break the bulging float shape. 
 \end{itembox}
 %=====================
 
