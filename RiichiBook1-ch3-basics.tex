@@ -25,14 +25,14 @@ Because of the probabilistic nature of the game, making the best choice does not
 \noindent
 This hand becomes ready to win if you discard {\LARGE\tong{6}} or {\LARGE\tong{7}}. Let's compare the two choices.
 \bi\itemsep.1pt
-\i Discard {\LARGE\tong{6}} \hfill $\Rightarrow$ you wait for {\LARGE\tong{5} \tong{8}} (2 kinds--8 tiles)
-\i Discard {\LARGE\tong{7}} \hfill $\Rightarrow$ you wait for {\LARGE\wan{4}} {\LARGE\tong{6}} (2 kinds--4 tiles)
+\i Discard {\LARGE\tong{6}} \hspace{5pt} $\Rightarrow$ you wait for {\LARGE\tong{5} \tong{8}} (2 kinds--8 tiles)
+\i Discard {\LARGE\tong{7}} \hspace{5pt} $\Rightarrow$ you wait for {\LARGE\wan{4}} {\LARGE\tong{6}} (2 kinds--4 tiles)
 \ei
 Which discard choice is better? Although both of the two choices yield a 2-way wait, waiting for {\LARGE\tong{5} \tong{8}} is much better than waiting for {\LARGE\wan{4}} {\LARGE\tong{6}}, probabilistically speaking. With the {\LARGE\tong{5} \tong{8}} wait, there are four tiles of {\LARGE\tong{5}} and another four tiles of {\LARGE\tong{8}} to win on, leaving at most eight winning tiles.\footnote{Of course, the number of winning tiles could be smaller than eight if some of them have already been discarded.} 
 With the {\LARGE\wan{4}} {\LARGE\tong{6}} wait, on the other hand, you have already used up two tiles of {\LARGE\wan{4}} and two tiles of {\LARGE\tong{6}} yourself, leaving at most four winning tiles. It is clearly better to choose the {\LARGE\tong{5} \tong{8}} wait over the {\LARGE\wan{4}} {\LARGE\tong{6}} wait, because that will give you a higher probability of winning this hand. 
 
 \bigskip
-It is possible that, after you decided on the {\LARGE\tong{5} \tong{8}} wait, your opponents end up not discarding {\LARGE\tong{5}} or {\LARGE\tong{8}} at all, while discarding lots of {\LARGE\wan{4} \tong{6}}. This is the kind of things that will happen often in mahjong (or in any game of luck, for that matter). When things like this happen, do not think that you made a bad call; you didn't. You made the right choice, but you were just unlucky. When we experience this kind of bad luck, we just need to keep calm and carry on. 
+It is possible that, after you decided on the {\LARGE\tong{5} \tong{8}} wait, your opponents end up not discarding {\LARGE\tong{5}} or {\LARGE\tong{8}} at all, while discarding lots of {\LARGE\wan{4} \tong{6}}. This is the kind of thing that will happen often in mahjong (or in any game of luck, for that matter). When things like this happen, do not think that you made a bad call; you didn't. You made the right choice, but you were just unlucky. When we experience this kind of bad luck, we just need to keep calm and carry on. 
 
 \bigskip
 Before discussing a practical method of maximizing tile efficiency in the next chapter, I will discuss some basic principles of tile efficiency in this chapter. In doing so, I introduce several key terms we use in later chapters. I will also provide the original Japanese term for each (shown in {\jap this font}). I do so because you may find these Japanese terms used in some online strategy discussions in English.
@@ -57,7 +57,7 @@ Mahjong tiles can be classified into two categories --- number tiles and honor t
 \end{itembox}
 
 \bigskip \noindent
-We further classify number tiles into {\bf simples} ({\jap tanyao hai}; tiles between 2 and 8) and {\bf terminals} (1 and 9). They are differentiated because they serve different {\jap yaku} and generate different minipoints ({\jap fu}). 
+We further classify number tiles into {\bf simples} ({\jap tanyao hai}; tiles between 2 and 8) and {\bf terminals} ({\jap yaochu hai}; 1 and 9). They are differentiated because they serve different {\jap yaku} and generate different minipoints ({\jap fu}). 
 	\index{simple tiles ({\jap tanyao hai})} \index{tanyao@{\jap tanyao hai} (simple tiles)}
 	\index{terminal tiles}
 	\index{fu@{\jap fu} (minipoint)} \index{minipoint ({\jap fu})}
@@ -863,7 +863,7 @@ However, consider the following hand that has the exact same wait pattern: {\LAR
 \wan{4}\wan{5}\wan{6}\tong{1}\tong{1}\tong{2}\tong{3}\suo{1}\suo{2}\suo{3}\zhong\zhong\zhong
 \ep
 If we win this hand by drawing {\LARGE\tong{1}}, we will treat the wait as single wait: {\LARGE\tong{1}} + {\LARGE\tong{1}\tong{2}\tong{3}}, which will give us 40 minipoints. If we treated the wait as side wait: {\LARGE\tong{1}\tong{1}} + {\LARGE\tong{2}\tong{3}}, we would get only 30 minipoints.
-Of course, if we win this hand on {\LARGE\tong{4}}, we cannot think of the wait as side wait (because it is not). Similarly, if we win it by {\jap ron}, it does not make a difference if it is side wait or single wait (either way we get 40 minipoints). 
+Of course, if we win this hand on {\LARGE\tong{4}}, we cannot think of the wait as single wait (because it is not). Similarly, if we win it by {\jap ron}, it does not make a difference if it is side wait or single wait (either way we get 40 minipoints). 
 
 \newpage
 
@@ -952,7 +952,7 @@ Example & Wait & Acceptance\\
 
 \begin{description}
 \item[Simple tiles ({\jap tanyao hai})] are tiles between 2 and 8.
-\item[Terminal tiles] are 1 and 9.
+\item[Terminal tiles ({\jap yaochu hai})] are 1 and 9.
 \item[Honor tiles ({\jap jihai})] are non-number tiles (dragon tiles and wind tiles).
 \item[Value tiles ({\jap fanpai} / {\jap yakuhai})] include dragon tiles, seat wind tiles, and prevailing wind tiles. We get one {\jap han} for a set of value tiles. 
 \item[Valueless wind tiles ({\jap otakaze hai})] are wind tiles that are neither a prevailing wind tile nor a seat wind tile.
