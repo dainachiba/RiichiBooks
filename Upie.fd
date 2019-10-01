@@ -1,0 +1,10 @@
+%%
+%% mah-jongg pie fonts by Takayuki Yamaizumi
+%% 1998/02/19 Shun-ichi Ito
+%%
+\ProvidesFile{Upie.fd}[1998/02/19 mah-jongg pie font definitions]
+\DeclareFontFamily{U}{pie}{}
+\DeclareFontShape{U}{pie}{m}{n}{<-> pie}{}
+\endinput
+%%
+%% End of file `Upie.fd'.
