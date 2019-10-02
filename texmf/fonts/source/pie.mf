@@ -1,0 +1,978 @@
+% pie.mf August 17, 1996 Takayuki Yamaizumi
+% 10 point 用麻雀牌。
+% History
+% Version 1.0 August 9,1996: pie.mf 34個+牌の裏地完成。
+% Version 1.1 August 10,1996: 赤い牌を追加。
+% Version 1.2 August 11,1996: a. -90度の方向に回転した牌を追加。
+%                             b. 赤い牌の調整。
+% Version 1.21 August 12,1996: 花牌の「春」を追加。
+% Version 1.22 August 14,1996: 花牌の「夏」を追加。
+% Version 1.23 August 15,1996: 花牌の「秋」を追加。
+% Version 1.24 August 17,1996: 花牌の「冬」を追加。全牌完成。
+% Version 1.99.0 December 30, 2002: 花牌のファイル名を pieflower.mf に
+%  変更したのに伴い、input 文(コメントアウトされています。)を変更。
+
+font_identifier:="PIE";
+font_coding_scheme "PIE";
+font_size 10pt#;
+
+mode_setup;
+
+input piemacro.mf
+
+%% 以下、各牌の描画部。
+height = 8pt#;
+width = 7.2pt#;
+depth = 1.5pt#;
+picture v[];  % 牌の絵を保存するための変数。
+
+beginchar(0, width, height, depth); % 赤五索
+drawwusou(h,w,d,h-d,0.1w);
+cullit;
+pickup pencircle scaled 0.02w;
+ungray(0,-d,w,h,0.08w);
+cullit;
+Waku(h,w,d);
+v0:=currentpicture;
+endchar;
+
+beginchar(1, width, height, depth); % 一索
+r1 = 0.1w;
+pickup pencircle scaled r1;
+Waku(h, w, d);
+tate=h+d; x10 = 0.45w; y10=0.55tate; 
+x11 = -0.5r1 + x10; y11 = y10 - sqrt(3)*r1 + 0.25r1;
+x12 = x10; y12 = y11 - 0.05w; x13 = (x11 + x12) / 2; y13 = y12 - 0.06w;
+x14 = x13 - 0.01w; y14 = y13 - 0.06w;
+x15 = x14 - 0.01w; y15 = y14 - 0.06w;
+x14 = 0.05[x15,x17]; y18 = (y14 + y15) / 2; y17 = 0.6[y15,y14];
+z16 = 0.5[z15,z17];
+x18 = x20 = x17 + 0.05w; x19 = x18 + 0.02w;
+y20 = y18 - 0.12w; y19 = 0.5[y18,y20];
+x21 = x16; x22 = x15;
+y22 = y20 - 0.01w; y20 = 0.5[y21,y22];
+x22 = 0.7[x21,x23]; y23 = y22 + 0.005w;
+y24 = y19; x24 = x23 - 0.05w;
+y25 = 0.5[y13,y14]; x25 = 0.5[x23,x24];
+y26 = y12; x26 = x24;
+y27 = y28 = y22 - 0.2w; x27 = x22 - 0.02w; x28 = x21 + 0.02w;
+z29 = 0.3[z22,z27]; z31 = 0.32[z21,z28];
+x30 = 0.5[x21,x22]; y30 = 0.6[y22,y27];
+x32 = 0.45[x21,x20]; y32 = 0.61[y21,y28];
+z33 = 1.4[z32,z27];
+z34 = z33 rotatedaround (z27, 30); z35 = z34 rotatedaround (z27, 30);
+z36 - (0.001w, 0.002w) - z28 = z33 - z27;
+z37 = z36 rotatedaround (z28, 30); z38 = z37 rotatedaround (z28, 30);
+z39 = z23 - (0.15w, 0.05w);
+y40 = 0.5[y13,y14]; x40 = x19;
+y41 = y13; x41 = x40 + 0.1w;
+x43 = x41 + 0.02w; y43 = y19 + 0.11w;
+x44 = x41; y44 = 0.5[y21,y31];
+z45 = z11 rotatedaround(z10,60);
+z46 = 2.2[z39,z15];
+y47 = 0.5[y10,y11]; x47 = x43; z48 = 0.25[z47,z43];
+z49 = 0.45[z46,z47]+(0, 0.01w);
+z50 = 0.5[z11,z26]+(0, 0.015w);
+z51 = z50 + (-0.065w, 0.04w); z52 = z51 + (-0.09w, 0.045w);
+z53 = 0.25[z52,z24];
+z54 = z10 + (-0.15w, 0); 
+z55 = z54 + (-0.08w, 0);
+z56 = 0.5[z54,z55] + (0, 0.02w);
+z57 = (0.8[z10,z54]) rotatedaround (z10, -30);
+z58 = (0.82[z10,z55]) rotatedaround (z10, -30);
+z59 = 0.5[z57,z58] + (0.007w, 0);
+z60 = z54 rotatedaround (z10, -60);
+z61 = z55 rotatedaround (z10, -60);
+z62 = 0.5[z60,z61] + (0.005w, 0);
+z63 = (0.8[z10,z54]) rotatedaround (z10, -90);
+z64 = z55 rotatedaround (z10, -90);
+z65 = 0.5[z63,z64] + (0.007w, 0);
+z66 = z54 rotatedaround (z10, -120);
+z67 = z55 rotatedaround (z10, -120);
+z68 = 0.5[z66,z67] + (0.007w, 0);
+z69 = (0.8[z10,z54]) rotatedaround (z10, -150);
+z70 = (1.1[z10,z55]) rotatedaround (z10, -150);
+z71 = 0.5[z69,z70] + (0.015w, 0);
+z72 = z54 rotatedaround (z10, -180);
+z73 = z55 rotatedaround (z10, -180);
+z74 = 0.5[z72,z73] + (0, 0.01w);
+z42 = 0.2[z26,z25];
+z75 = z42 + (-0.06w, -0.03w);
+z76 = (z13 + z50 + z26) / 3;
+z77 = 0.5[z12,z76] - (0,0.01w);
+z78 = 0.8[z26,z13];
+penpos42(0.06w,angle(z26-z25)); penpos75(0,0);
+draw fullcircle scaled r1 shifted z10;
+for n = 0,60,120,180,240,300:
+draw fullcircle scaled r1 shifted (x10+r1, y10) rotatedaround (z10,-n);
+endfor;
+draw z11{1,0}..z12..z13..z14..z15..z16..z17..z18 & z18..z19..z20;
+draw z44..z20..z21..z22..z23..z24..z25..z26..z50..{1,0}z11;
+draw z22--z27; draw z21--z28; draw z29--z30; draw z31--z32;
+draw z27--z33; draw z27--z34; draw z27--z35;
+draw z28--z36; draw z28--z37; draw z28--z38;
+draw z23--z39 & z39--z24;
+draw z16..z40..z41 & z41..z43..z44;
+draw z40..z46..z45;
+draw z46..z49..z47; draw z49--z48;
+draw z50..z51..z52; draw z51{-1,0}..z53;
+draw z54..z56..z55; draw z57..z59..z58; draw z60..z62..z61; draw z63..z65..z64;
+draw z66..z68..z67; draw z69..z71..z70; draw z72..z74..z73;
+pickup pencircle scaled 0;
+filldraw z42l--z75 & z75--z42r & z42r--z42l--cycle;
+pickup pencircle scaled 0.01w;
+draw fullcircle xscaled 0.03w yscaled 0.04w shifted z76;
+fill fullcircle xscaled 0.015w yscaled 0.02w shifted (z76 + (-0.0075w, 0));
+draw z77{z24-z77}..z78..{z15-z77}z77;
+penlabels(range 1 thru 8,range 10 thru 78);
+v1:=currentpicture;
+endchar;
+
+beginchar(2, width, height, depth); % 二索
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+z9 = (0.5w,0.5tate-2.8dr); z10 = (0.5w,0.5tate+2.8dr);
+banboo(z9,dr,0,1.8); banboo(z10,dr,0,1.8);
+v2:=currentpicture;
+endchar;
+
+beginchar(3, width, height, depth); % 三索
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+dw:=2.5dr; dh:=2.8dr; z9=(0.5w,0.5tate);
+z10=z9+(0,dh); z11=z9+(-dw,-dh); z12=z9+(dw,-dh);
+for i = 10,11,12:
+    banboo(z[i],dr,0,1.8);
+endfor;
+v3:=currentpicture;
+endchar;
+
+beginchar(4, width, height, depth); % 四索
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+dw:=1.7dr; dh:=2.8dr; z9=(0.5w,0.5tate);
+z10=z9+(-dw,dh); z11=z9+(dw,dh); z12=z9+(-dw,-dh); z13=z9+(dw,-dh); 
+for i = 10 upto 13:
+    banboo(z[i],dr,0,1.8);
+endfor;
+v4:=currentpicture;
+endchar;
+
+beginchar(5, width, height, depth); % 五索
+Waku(h,w,d);
+drawwusou(h,w,d,h-d,0.1w);
+v5:=currentpicture;
+endchar;
+
+beginchar(6, width, height, depth); % 六索
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+dw:=2.5dr; dh:=2.8dr; z9=(0.5w,0.5tate);
+z10=z9+(-dw,dh); z11=z9+(dw,dh); z12=z9+(-dw,-dh); z13=z9+(dw,-dh);
+z14=z9+(0,dh); z15=z9+(0,-dh); 
+for i = 10 upto 15:
+    banboo(z[i],dr,0,1.8);
+endfor;
+v6:=currentpicture;
+endchar;
+
+beginchar(7, width, height, depth); % 七索
+makechisou(h,w,d,0.1w,h-d);
+v7:=currentpicture;
+endchar;
+
+beginchar(8, width, height, depth); % 八索
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+z9 = (0.75w,0.5tate-2.8dr); z10 = (0.75w,0.5tate+2.8dr);
+z11 = (0.25w,0.5tate-2.8dr); z12 = (0.25w,0.5tate+2.8dr);
+z13 = (0.6w,0.5tate+2.5dr); z14 = (0.4w,0.5tate+2.5dr);
+z15 = (0.6w,0.5tate-2.5dr); z16 = (0.4w,0.5tate-2.5dr);
+banboo(z13,0.9dr,45,1.8); banboo(z14,0.9dr,-45,1.8);
+banboo(z16,0.9dr,45,1.8); banboo(z15,0.9dr,-45,1.8); 
+banboo(z9,dr,0,1.8); banboo(z10,dr,0,1.8); banboo(z11,dr,0,1.8); 
+banboo(z12,dr,0,1.8);
+v8:=currentpicture;
+endchar;
+
+beginchar(9, width, height, depth); % 九索
+dr:=0.1w;
+makechisou(h,w,d,dr,h-d);
+banboo(z16,dr,0,1.2); banboo(z17,dr,0,1.2);
+v9:=currentpicture;
+endchar;
+
+beginchar(10, width, height, depth); % 赤五筒
+drawwupin(h,w,d,h-d,0.1w);
+cullit;
+pickup pencircle scaled 0.02w;
+ungray(0,-d,w,h,0.08w);
+cullit;
+Waku(h,w,d);
+v10:=currentpicture;
+endchar;
+
+beginchar(11, width, height, depth); % 一筒
+tate:=h-d; r1:=0.1w; 
+Waku(h, w, d);
+x10 = 0.5w; y10=0.5tate;
+pickup pencircle scaled 0.3r1;
+draw fullcircle scaled 6r1 shifted z10;
+pickup pencircle scaled 0;
+filldraw fullcircle scaled r1 shifted z10;
+for n = 0 upto 7:
+  arg := 45 * n;
+  pickup pencircle scaled 0;
+  penpos[11+n*3](0.02w,-90-15+arg); 
+  penpos[13+n*3](0.02w,arg); 
+  penpos[12+n*3](0.02w,90+15+arg);
+  z[11+n*3] = (z10 + (0.07w, 0)) rotatedaround (z10,-15+arg);
+  z[12+n*3] = (z10 + (0.07w, 0)) rotatedaround (z10,15+arg);
+  z[13+n*3] = (z10 + (0.13w, 0)) rotatedaround (z10,arg);
+  penstroke z[11+n*3]e{dir(-18+arg)}..z[13+n*3]e{(cosd (90+arg), sind (90+arg))}..{dir(180+18+arg)}z[12+n*3]e;
+  penlabels(range 11+n*3 thru 13+n*3);
+endfor;
+pickup pencircle scaled 0.1r1;
+draw fullcircle scaled 3.2r1 shifted z10;
+draw fullcircle scaled 4.2r1 shifted z10;
+for n = 0 upto 7:
+  argout := 45 * n; argin := 22.5 + 45 * n;
+  z[41+n*2] = (x10 + 1.7r1, y10) rotatedaround (z10, argout);
+  z[42+n*2] = (x10 + 2.1r1, y10) rotatedaround (z10, argin);
+  penlabels(range 41+n*2 thru 42+n*2);
+endfor;
+draw z41..z42..z43..z44..z45..z46..z47..z48..z49..z50..z51..z52..z53..z54..z55..z56..cycle;
+for n = 0 upto 7:
+  argout := 45 * n; argin := 22.5 + 45 * n;
+  z[61+n*2] = (x10 + 1.7r1, y10) rotatedaround (z10, argin);
+  z[62+n*2] = (x10 + 2.1r1, y10) rotatedaround (z10, argout);
+  penlabels(range 61+n*2 thru 62+n*2);
+endfor;
+draw z62..z61..z64..z63..z66..z65..z68..z67..z70..z69..z72..z71..z74..z73..z76..z75..cycle;
+for n = 0 upto 11:
+  argout := 30 * n; argin := 15 + 30 * n;
+  z[81+n*2] = (x10 + 3r1, y10) rotatedaround (z10, argout);
+  z[82+n*2] = (x10 + 2.1r1, y10) rotatedaround (z10, argin);
+  penlabels(range 81+n*2 thru 82+n*2);
+endfor;
+for n = 0 upto 22:
+draw z[81+n]--z[82+n];
+endfor;
+draw z81--z104;
+penlabels(range 1 thru 8,10);
+v11:=currentpicture;
+endchar;
+
+beginchar(12, width, height, depth); % 二筒
+tate:=h-d; r1:=0.1w;
+Waku(h, w, d);
+x9+x10 = w; y9+y10=tate;
+x9 = x10; y9 = 0.2tate; % y9 の値は必要に応じて変えること。
+erpincircle(z9, r1);
+erpincircle(z10, r1);
+penlabels(range 1 thru 10);
+v12:=currentpicture;
+endchar;
+
+beginchar(13, width, height, depth); % 三筒
+tate:=h-d; dr:=0.1w; 
+Waku(h,w,d);
+x9 = 0.5w; y9 = 0.5tate;
+x10 = x9 - 0.2w; y10 = y9 + 0.35tate;
+z11 = 2z9 - z10;
+smallpin(z9,dr,0); smallpin(z10,dr,0); smallpin(z11,dr,0);
+v13:=currentpicture;
+endchar;
+
+beginchar(14, width, height, depth); % 四筒
+Waku(h,w,d);
+makesupin(h,w,d,0.1w,h-d);
+v14:=currentpicture;
+endchar;
+
+beginchar(15, width, height, depth); % 五筒
+Waku(h,w,d);
+drawwupin(h,w,d,h-d,0.1w);
+v15:=currentpicture;
+endchar;
+
+beginchar(16, width, height, depth); % 六筒
+tate:=h-d; dr:=0.1w; dm:=0.95; Waku(h,w,d); dt:=0.06tate;
+x9 = 0.5w; y9 = 0.49tate+dt;
+z10=(0.5w,0.49tate-0.5dt);
+z11=z10+(-dm*1.45dr,dm*1.4dr*3); z12=z10+(dm*1.45dr,dm*1.4dr*3);
+z14=z9+(-dm*1.45dr,-dm*1.45dr); z15=z9+(dm*1.45dr,-dm*1.45dr);
+z16=z9+(-dm*1.45dr,-dm*1.45dr*3); z17=z9+(dm*1.45dr,-dm*1.45dr*3);
+for i=11,12,14,15,16,17:
+outersmallpin(z[i],dm*dr,36);
+endfor;
+cullit;
+for i=11,12,14,15,16,17:
+deletering(z[i],dm*dr);
+endfor;
+cullit;
+for i=11,12,14,15,16,17:
+innersmallpin(z[i],dm*dr,36);
+endfor;
+v16:=currentpicture;
+endchar;
+
+beginchar(17, width, height, depth); % 七筒
+tate:=h-d; dr:=0.1w; dm:=0.95; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.48tate;
+z10=(x9,0.82tate);
+z11=z10+(-dm*2.9dr,0);
+z12=z11 rotatedaround (z10,150); z13=z11 rotatedaround (z10,-30);
+z14=z9+(-dm*1.45dr,-dm*1.4dr); z15=z9+(dm*1.45dr,-dm*1.4dr);
+z16=z9+(-dm*1.45dr,-dm*1.4dr*3); z17=z9+(dm*1.45dr,-dm*1.4dr*3);
+for i=10,12,13,14,15,16,17:
+outersmallpin(z[i],dm*dr,36);
+endfor;
+cullit;
+for i=10,12,13,14,15,16,17:
+deletering(z[i],dm*dr);
+endfor;
+cullit;
+for i=10,12,13,14,15,16,17:
+innersmallpin(z[i],dm*dr,36);
+endfor;
+v17:=currentpicture;
+endchar;
+
+beginchar(18, width, height, depth); % 八筒
+tate:=h-d; dr:=0.1w; dm:=0.95;
+Waku(h,w,d);
+x9 = 0.5w; y9 = 0.5tate;
+z10=z9+(-dm*1.45dr,dm*1.4dr*3); z11=z9+(dm*1.45dr,dm*1.4dr*3);
+z12=z9+(-dm*1.45dr,dm*1.4dr); z13=z9+(dm*1.45dr,dm*1.4dr);
+z14=z9+(-dm*1.45dr,-dm*1.4dr); z15=z9+(dm*1.45dr,-dm*1.4dr);
+z16=z9+(-dm*1.45dr,-dm*1.4dr*3); z17=z9+(dm*1.45dr,-dm*1.4dr*3);
+for i=0 upto 7:
+outersmallpin(z[10+i],dm*dr,36);
+endfor;
+cullit;
+for i=0 upto 7:
+deletering(z[10+i],dm*dr);
+endfor;
+cullit;
+for i=0 upto 7:
+innersmallpin(z[10+i],dm*dr,36);
+endfor;
+v18:=currentpicture;
+endchar;
+
+beginchar(19, width, height, depth); % 九筒
+tate:=h-d; dr:=0.1w; Waku(h,w,d); z9=(0.5w,0.5tate); dm:=0.9;
+z10=z9+(-dm*1.45dr*2,0); z11=z9+(dm*1.45dr*2,0);
+for i=9 upto 11:
+  z[i+3]=z[i]+(0,dm*1.4dr*2.8);
+  z[i+6]=z[i]+(0,-dm*1.4dr*2.8);
+endfor;
+for i=9 upto 17:
+outersmallpin(z[i],dm*dr,36);
+endfor;
+cullit;
+for i=9 upto 17:
+deletering(z[i],dm*dr);
+endfor;
+cullit;
+for i=9 upto 17:
+innersmallpin(z[i],dm*dr,36);
+endfor;
+v19:=currentpicture;
+endchar;
+
+beginchar(20, width, height, depth); % 赤伍萬
+drawwuwan(h,w,d,h-d,0.1w);
+cullit;
+pickup pencircle scaled 0.02w;
+ungray(0,-d,w,h,0.08w);
+cullit;
+Waku(h,w,d);
+v20:=currentpicture;
+endchar;
+
+beginchar(21, width, height, depth); % 一萬
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w; TenThousand(9,dr);
+% 以下「一」の字。参照点の番号は67番から。
+penpos67(0.75dr,130); penpos68(0.55dr,135); penpos69(0.55dr,140);
+penpos70(1.2dr,145);
+z67=(0.22w,0.88tate); z68=z67+(2.1dr,0.1dr); z69=z68+(dr,0.05dr);
+z70=z69+(2.1dr,0.1dr);
+tome(67,68,69,70);
+penlabels(range 67 thru 70);
+v21:=currentpicture;
+endchar;
+
+beginchar(22, width, height, depth); % 二萬
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w; TenThousand(9,dr);
+% 以下「二」の字。参照点の番号は67番から。
+penpos67(0.75dr,135); penpos68(0.55dr,135); penpos69(0.55dr,135);
+penpos70(0.9dr,135); penpos71(0.75dr,130); penpos72(0.5dr,130); 
+penpos73(0.5dr,130); penpos74(0.95dr,125); 
+z67=(0.32w,0.98tate); z68=z67+(1.3dr,0.05dr); z69=z68+(0.65dr,0.05dr);
+z70=z69+(1.3dr,0.05dr);
+z71=z67+(-dr,-2.2dr); z72=z71+(2.4dr,0.07dr); z73=z72+(1.2dr,0.07dr);
+z74=z73+(2.4dr,0.07dr);
+tome(67,68,69,70); tome(71,72,73,74); 
+penlabels(range 67 thru 74);
+v22:=currentpicture;
+endchar;
+
+beginchar(23, width, height, depth); % 三萬
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w; TenThousand(9,dr);
+% 以下「三」の字。参照点の番号は67番から。
+penpos67(0.75dr,135); penpos68(0.55dr,135); penpos69(0.55dr,135);
+penpos70(0.8dr,135); penpos71(0.7dr,140); penpos72(0.5dr,140); 
+penpos73(0.5dr,135); penpos74(0.75dr,135); penpos75(0.75dr,145); 
+penpos76(0.55dr,140); penpos77(0.55dr,135); penpos78(0.8dr,130); 
+z67=(0.32w,1.01tate); z68=z67+(1.4dr,0.05dr); z69=z68+(0.7dr,0.05dr);
+z70=z69+(1.4dr,0.05dr);
+z71=z67+(0.5dr,-1.17dr); z72=z71+(1.2dr,0.05dr); z73=z72+(0.6dr,0.05dr);
+z74=z73+(1.2dr,0.05dr);
+z75=z67+(-dr,-2.52dr); z76=z75+(2.4dr,0.07dr); z77=z76+(1.2dr,0.07dr);
+z78=z77+(2.4dr,0.07dr);
+tome(67,68,69,70); tome(71,72,73,74); tome(75,76,77,78);
+penlabels(range 67 thru 78);
+v23:=currentpicture;
+endchar;
+
+beginchar(24, width, height, depth); % 四萬
+tate:=h-d; dr:=0.1w; Waku(h, w, d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+% 以下「四」の字。参照点の番号は67番から。
+penpos67(0.4dr,135); penpos68(0.5dr,225); penpos69(0.55dr,225);
+penpos70(0.45dr,115); penpos71(0.45dr,115); penpos72(0.5dr,60);
+penpos73(0.65dr,30); penpos74(0.75dr,5); penpos75(0.75dr,-5);
+penpos76(0.65dr,-35); penpos77(0.6dr,-45); penpos78(0.62dr,-40);
+penpos80(0.5dr,0); penpos81(0.35dr,0); penpos82(0.3dr,0);
+penpos83(0.5dr,0); penpos84(0.4dr,-15); penpos85(0.25dr,-30);
+penpos86(0.45dr,135); penpos87(0.45dr,135); penpos88(0.45dr,135);
+penpos89(0.45dr,135);
+z67 = (0.25w,0.97tate); z68 = z67 + (0.1dr,-1.2dr); 
+z69 = z68 + (0.4dr,-1.2dr); 
+z70 = z67l + (0.1dr,0); z71 = z70 + (3dr,0.3dr); z72 = z71 + (1.5dr,-0.2dr);
+z73l = z72l + (0.1dr,-0.1dr); z74l = z73l + (0.1dr,-0.1dr);
+z75l = z74l; z76l = z75l + (-0.1dr,-0.1dr);
+z77 = z76 + (-0.8dr,-1.6dr); z78r = 0.5[z77r,z76r];
+z79 = z77l + (0,-0.25dr); z80 = 0.5[z70,z71];
+z81 = z80 + (0.2dr,-1.1dr); z82 = z81 + (0,-0.9dr);
+z83 = z71; z84 = z83 + (0.1dr,-1.2dr); z85 = z84 + (-0.2dr, -0.9dr);
+z86 = z69l; z87 = z82; z88 = z85; z89 = z77 + (-0.2dr,0.3dr);
+pickup pencircle scaled 0.1dr;
+harai(67,68,69);
+filldraw z70l..z71l..z72l..z73l..z74l..z75l..z76l--z78l--z77l--z77r..z78r..z76r..z75r..z74r..{z73r-z74r}z73r..{z72r-z73r}z72r..z71r..z70r--z70l--cycle;
+filldraw z77r{z77r-z78r}..z79..{z78l-z77l}z77l--z77r--cycle;
+harai(80,81,82); harai(83,84,85); tome(86,87,88,89);
+penlabels(range 67 thru 89);
+v24:=currentpicture;
+endchar;
+
+beginchar(25, width, height, depth); % 伍萬
+drawwuwan(h,w,d,h-d,0.1w);
+Waku(h,w,d);
+v25:=currentpicture;
+endchar;
+
+beginchar(26, width, height, depth); % 六萬
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+% 以下「六」の字。参照点の番号は67番から。
+penpos67(dr,-15); penpos68(0.55dr,-15); penpos69(0.45dr,0);
+penpos70(0.6dr,135); penpos71(0.4dr,135); penpos72(0.4dr,135);
+penpos73(0.65dr,135); penpos74(0.7dr,150); penpos75(0.35dr,165);
+penpos76(0.05dr,145); penpos77(0.05dr,45); penpos78(0.5dr,45);
+penpos79(0.7dr,45);
+z67=(0.48w,1.05tate); z68=z67-(-0.1dr,0.3dr); z69=z68-(0,0.5dr);
+z70=z67+(-2.2dr,-dr); z71=z70+(1.8dr,0.05dr); z72=z71+(dr,0);
+z73=z72+(1.8dr,0); z74=z71+(0,-dr); z75=(0.5[x74,x76],0.65[y74,y76]);
+z76=z74+(-2.2dr,-1.9dr); z77=z74+(dr,0); z78=(0.5[x77,x79],0.35[y77,y79]);
+z79=z77+(1.7dr,-1.7dr); z80=z79+(0,-0.35dr);
+harai(67,68,69); tome(70,71,72,73); harai(74,75,76); harai(77,78,79);
+filldraw z79l{z79l-z78l}..z80..{z78r-z79r}z79r--z79l..cycle;
+penlabels(range 67 thru 80);
+v26:=currentpicture;
+endchar;
+
+beginchar(27, width, height, depth); % 七萬
+tate:=h-d; dr:=0.1w; Waku(h, w, d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+% 以下「七」の字。参照点の番号は67番から。
+penpos67(0.45dr,145); penpos68(0.35dr,145); penpos69(0.35dr,145);
+penpos70(0.7dr,145); penpos71(dr,155); penpos72(0.7dr,155);
+penpos73(0.55dr,155); penpos74(0.45dr,155); penpos75(0.4dr,180);
+penpos76(0.4dr,225); penpos77(0.4dr,270); penpos78(0.5dr,300);
+penpos79(0.65dr,330);
+z67=(0.25w,0.75tate); z68=z67+(1.8dr,0.6dr); z69=z68+(dr,0.36dr);
+z70=z69+(2.1dr,0.6dr); z71=z67+(1.8dr,2.5dr); z72=z71-(0,0.3dr);
+z73=z72-(0,dr); z74=z73-(0,dr); z75l=z74l+(0,-0.2dr);
+z76l=z75l+(0.1dr,-0.1dr); z77l=z76l+(0.1dr,-0.1dr);
+z78=z77+(0.8dr,0); z79=z78+(0.8dr,0);
+tome(67,68,69,70);
+filldraw z71l..z72l..z73l--z74l..z75l..z76l..z77l..z78l..z79l--z79r..z78r..z77r..z76r..z75r..z74r--z73r..z72r..z71r--z71l--cycle;
+penlabels(range 67 thru 79);
+v27:=currentpicture;
+endchar;
+
+beginchar(28, width, height, depth); % 八萬
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+% 以下「八」の字。参照点の番号は67番から。
+penpos67(0.65dr,135); penpos68(0.45dr,150); penpos69(0.05dr,150);
+penpos70(0.6dr,45); penpos71(0.5dr,45); penpos72(0.5dr,60);
+penpos73(0.05dr,70); penpos74(0.3dr,65);
+z67=(0.45w,0.85tate); z68=z67+(-0.6dr,-0.6dr); z69=z68+(-2dr,-dr);
+z70=z67+(0.2dr,1.5dr); z71=z70+(1.5dr,-1.6dr); z72r=z71r+(0.2dr,-0.3dr);
+z73=z72+(2dr,-1.2dr); z74=0.5[z72,z73];
+harai(67,68,69);
+filldraw z70r..z71r..z72r..z74r..z73r--z73l..z74l..z72l..z71l..z70l--cycle;
+penlabels(range 67 thru 74);
+v28:=currentpicture;
+endchar;
+
+beginchar(29, width, height, depth); % 九萬
+tate:=h-d; dr:=0.1w;
+Waku(h, w, d);
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+% 以下「九」の字。参照点の番号は67番から。
+penpos67(0.8dr,160); penpos68(0.65dr,160); penpos69(0.4dr,145);
+penpos70(0.2dr,130); penpos71(eps,90); penpos72(0.5dr,135);
+penpos73(0.35dr,135); penpos76(0.23dr,135); penpos74(0.35dr,135); 
+penpos75(0.7dr,135); penpos77(0.5dr,145); penpos78(0.4dr,150);
+penpos79(0.4dr,155); penpos80(0.35dr,205); penpos81(0.4dr,270);
+penpos82(0.5dr,290); penpos83(0.9dr,330); penpos84(0.55dr,0);
+penpos85(0.3dr,0); penpos86(eps,0);
+z67 = (0.42w,1.05tate); z68 = z67 - (0,0.3dr);
+x69 = 0.2[x68,x70]; y69 = 0.6[y68,y70];
+y70 = 0.5[y69,y71]; x70 = 0.25[x69,x71];
+z71 = z68 - (2.5dr,3.2dr);
+z72 = z67 - (1.7dr,1.4dr); z73 = z72 + (0.2dr,0.03dr);
+z74 = z73 + (2dr,0.3dr); z75 = z74 + (1.2dr,0.18dr);
+z76 = 0.5[z73,z74];
+z77 = z75 - (0.2dr,0.4dr); z78 = 0.5[z77,z79];
+z79 = z77 - (0.4dr,1.1dr); z80 = z79 + (0dr,-0.6dr);
+z81 = z80 + (0.4dr,-0.25dr);
+y82r = y81r + 0.03dr; x82r = x81r + 1.9dr; z83l = z82l + (0.05dr,0.05dr);
+z84l = z83l + (0.05dr,0.05dr); z85 = z84 + (0,0.27dr);
+z86 = z85 + (0,0.9dr);
+filldraw z67l..z68l..z69l..z70l..z71l--z71r..z70r..z69r..z68r..z67r & z67r--z67l--cycle;
+filldraw z72l..z73l..z76l..z74l..z75l--z75r..z74r..z76r..z73r..z72r--z72l--cycle;
+filldraw z75l..z77l..z78l..z79l..z80l..z81l..z82l..z83l..z84l..z85l..z86l--z86r..z85r..z84r..z83r & 
+         z83r..z82r..z81r..z80r..z79r..z78r..z77r..z75r--z75l--cycle;
+penlabels(range 67 thru 86);
+v29:=currentpicture;
+endchar;
+
+beginchar(30, width, height, depth); % 牌の裏地。暗槓の時にでも使ってください。
+picture vura;
+begingroup
+save p,r,dr,i;
+path p[];
+r := 0.9pt; dr := 0.1w;
+pickup pencircle scaled 0.2pt;
+lft x1 = 0; x1 + x4 = w; x8 = x1; x4 = x5;
+bot y7 = -d; y7 + y2 = h-d; y6 = y7; y2 = y3;
+x2 = x1 + r; x3 + r = x4;
+y2 = y1 + r; y3 - r = y4;
+x5 - r = x6; y5 - r = y6;
+x7 - r = x8; y7 + r = y8;
+p0 = (z8--z1{z1-z8}..{z3-z2}z2--z3{z3-z2}..{z5-z4}z4--z5{z5-z4}..{z7-z6}z6--z7{z7-z6}..{z1-z8}z8--cycle);
+filldraw (x1,y2)--(x1,y7)--(x4,y7)--(x4,y2)--cycle;
+unfilldraw p0;
+vura = currentpicture;
+i := 0.2dr;
+forever:
+  i := i + 0.4dr;
+  pickup penrazor scaled (0.145dr + uniformdeviate 0.1pt);
+  draw (i,h)--(i,-d); exitif i >= w - 0.2dr;
+endfor;
+cullit;
+currentpicture := currentpicture - vura;
+pickup pencircle scaled 0.2pt;
+draw p0;
+v30:=currentpicture;
+endgroup endchar;
+
+beginchar(31, width, height, depth); % 東
+tate:=h-d; dr:=0.1w; Waku(h,w,d);
+penpos9(0.25dr,145); penpos10(0.2dr,145); penpos11(0.2dr,145);
+penpos12(0.35dr,135); penpos13(0.45dr,155); penpos14(0.4dr,155);
+penpos15(0.3dr,155); penpos16(0.3dr,145); penpos17(0.25dr,135);
+penpos18(0.35dr,125); penpos19(0.55dr,35); penpos20(0.55dr,0);
+penpos21(0.4dr,-45); penpos23(0.45dr,-45); penpos24(0.3dr,145); 
+penpos25(0.25dr,145); penpos26(0.25dr,145); penpos27(0.4dr,135);
+penpos28(0.2dr,145); penpos29(0.15dr,145); penpos30(0.15dr,145); 
+penpos31(0.3dr,135); penpos32(0.8dr,135); penpos33(0.8dr,135);
+penpos34(0.6dr,135); penpos35(0.55dr,135); penpos36(0.6dr,135);
+penpos37(0.8dr,110); penpos38(0.8dr,75); penpos39(0.25dr,75);
+penpos40(0.05dr,75); penpos41(0.6dr,145); penpos42(0.35dr,145);
+penpos43(0.02dr,145); penpos44(0.2dr,0); penpos45(0.5dr,5);
+penpos46(1.3dr,10);
+z9 = (0.35w,0.75w);
+x10 = x9 + dr; y10 = y9 + 0.05dr;
+x11 = x10 + dr; y11 = y10 + 0.05dr;
+x12 = x11 + dr; y12 = y11 + 0.1dr;
+x13 = x9 - 0.3dr; y13 = y9 - dr;
+x14 = x13 + 0.05dr; y14 = y13 - 0.3dr;
+x15 = x14 + 0.05dr; y15 = y14 - 2dr;
+x16 = x13; y16 = y13 - 0.1dr;
+x17 = x16 + 1.75dr; y17 = y16 + 0.05dr;
+x18 = x17 + 1.75dr; y18 = y17 + 0.05dr;
+z19l = z18l + (0.02dr, -0.02dr);
+x20 = x19 - 0.04dr; y20 = y19 - 0.45dr;
+x21 = x20 - 0.16dr; y21 = y20 - 1.8dr;
+x22 = x21; y22 = y21 - 0.25dr;
+z23 = 0.5[z20,z21];
+z24 = z16 + (0.7dr, -dr);
+z25 = z24 + (0.7dr, 0.05dr);
+z26 = z25 + (0.7dr, 0.05dr);
+z27 = z26 + (0.7dr, 0.05dr);
+z28 = z16 + (0.2dr, -2dr);
+z29 = z28 + (1.1dr, 0.05dr);
+z30 = z29 + (1.15dr, 0.05dr);
+z31 = z30 + (1.1dr, -0.05dr);
+z32 = z9 + (1.3dr,1.5dr);
+z33 = z32 + (0.1dr, -0.3dr);
+z34 = z33 + (0, -dr);
+z35 = z34 + (0, -2.5dr);
+z36 = z35 + (0, -4.3dr);
+z37r = z36r + (-0.05dr,-0.05dr);
+z38r = z37r + (-0.05dr,-0.05dr);
+z39 = z38 + (-0.45dr,0.6dr);
+z40 = z39 + (-0.45dr,0.75dr);
+z41 = z28 + (0.6dr,-0.3dr);
+x42 = 0.5[x41,x43]; y42 = 0.65[y41,y43];
+z43 = z41 + (-2.5dr,-3dr);
+z44 = z30;
+x45 = 0.5[x44,x46]; y45 = 0.65[y44,y46];
+z46 = z44 + (2.2dr,-3.14dr);
+pickup pencircle scaled 0.02w;
+tome(9,10,11,12); harai(13,14,15);
+filldraw z16l..z17l..{z18l-z17l}z18l..z19l..z20l{z23l-z20l}..z23l..{z21l-z23l}z21l--z21r..z23r..z20r..z19r..z18r..{z17r-z18r}z17r..z16r--z16l--cycle;
+filldraw z21l{z21l-z23l}..z22..z21r--z21l--cycle;
+tome(24,25,26,27); tome(28,29,30,31);
+filldraw z32r..z33r..z34r..z35r..{z36r-z35r}z36r..z37r..z38r..z39r..{z40r-z39r}z40r--z40l..z39l..z38l..z37l..z36l{z35l-z36l}..z35l..z34l{z33l-z34l}..z33l..z32l--z32r--cycle;
+harai(41,42,43); harai(44,45,46);
+penlabels(range 9 thru 46);
+v31:=currentpicture;
+endchar;
+
+beginchar(32, width, height, depth); % 南
+tate:=h-d; r1:=0.1w;
+Waku(h,w,d);
+penpos9(0.08w,155); penpos10(0.05w,155); penpos11(0.03w,155); 
+penpos12(0.02w,155); penpos13(0.015w,145); penpos14(0.02w,140);
+penpos15(0.03w,135); penpos16(0.01w,135); penpos17(0.02w,180);
+penpos18(0.05w,225); penpos19(0.02w,250); penpos20(0.015w,135);
+penpos21(0.015w,125); penpos22(0.03w,90); penpos23(0.04w,10);
+penpos24(0.015w,130); penpos25(0.05w,-10); penpos26(0.05w,-30);
+penpos28(0.03w,-90); penpos29(0.02w,-90); penpos27(0,90);
+penpos30(0.01w,-90); penpos31(0.04w,165); penpos32(0.03w,200);
+penpos33(0.03w,210); penpos34(0.03w,210); penpos36(0.08w,165);
+penpos37(0.035w,165); penpos38(0,165); penpos39(0.04w,140);
+penpos40(0.03w,140); penpos41(0.03w,140); penpos42(0.035w,135);
+penpos43(0.04w,145);
+penpos44(0.03w,140); penpos45(0.03w,140); penpos46(0.035w,135);
+penpos47(0.05w,135); penpos48(0.03w,180); penpos49(0.035w,205);
+x9 = 0.45w; y9 = 0.9tate;
+x10 = x9 + 0.05w; y10 = y9 - 0.1w;
+x11 = x10 - 0.01w; y11 = y10 - 0.07w;
+x12 = x11 - 0.01w; y12 = y11 - 0.07w;
+x13 = x9 - 0.08w; y13 = y9 - 0.15w;
+x14 = x13 + 0.2w; y14 = y13 + 0.03w;
+x15 = x14 + 0.06w; y15 = y14;
+x16 = x13 - 0.14w; y16 = y13 - 0.15w;
+z17 = 0.5[z16,z18] - (0.01w,0);
+x18 = x16 + 0.02w; y18 = y16 - 0.25w;
+x19 = x18 + 0.02w; y19 = y18 - 0.02w;
+x20 = x19; y20 = y16 + 0.01w;
+x21 = x20 + 0.3w; y21 = y20 + 0.04w;
+x22 = x21 + 0.1w; y22 = y21;
+x23 = x22 + 0.07w; y23 = y22 - 0.05w;
+z24 = 0.5[z20,z21];
+z25 = 0.5[z23,z26] + (0.04w, 0);
+x26 = x23; y26 = y23 - 0.3w;
+x28l = x26l - 0.03w; y28l = y26l - 0.02w;
+x29 = x28 - 0.02w; y29 = y28;
+x27 = x29 - 0.05w; y27 = y29 + 0.02w;
+z30 = 0.5[z29,z27];
+x31 = 0.4[x20,x24]; y31 = 0.5[y11,y12];
+x32l = x31l + 0.01w; y32l = y31l - 0.02w;
+z33 = 0.6[z20,z24];
+x34 = x24 - 0.03w; y34 = y24 - 0.1w;
+z35 = z34 - (0,0.02w);
+z36 = 0.6[z22,z15];
+z37 = 0.4[z36,z38];
+x38 = 0.5[x21,x12]; y38 = y34;
+x39 = x35; y39 = y35 - 0.04w;
+x40 = x39 + 0.07w; y40 = y39;
+x41 = x40 + 0.07w; y41 = y40 + 0.005w;
+x42 = x41 + 0.07w; y42 = y40;
+x43 = x39 - 0.01w; y43 = y39 - 0.08w;
+x44 = x43 + 0.08w; y44 = y43;
+x45 = x44 + 0.08w; y45 = y44 + 0.005w;
+x46 = x45 + 0.07w; y46 = y44;
+x47 = 0.5[x44,x45]; y47 = y40;
+x48 = 0.5[x44,x45]; y48 = y44;
+x49 = x48; y49 = y29;
+x50 = x49 - 0.005w; y50 = y49 - 0.02w;
+pickup pencircle scaled 0.02w;
+tome(9,10,11,12); harai(13,14,15); harai(16,17,18);
+filldraw z18l..z19l..z19r..z18r--z18l--cycle;
+filldraw z20l..z24l..z21l..z22l..z23l..z25l..z26l..z28l..z29l..z30l..z27l--z27r..z30r..z29r..z28r..z26r..z25r..z23r..z22r..z21r..z24r..z20r--z20l--cycle;
+tome(31,32,33,34);
+filldraw z34l..z35..z34r--z34l--cycle;
+harai(36,37,38); tome(39,40,41,42); tome(43,44,45,46); 
+harai(47,48,49);
+filldraw z49l{z49l-z48l}..z50..z49r--z49l--cycle;
+penlabels(range 1 thru 50);
+v32:=currentpicture;
+endchar;
+
+beginchar(33, width, height, depth); % 西
+tate:=h-d; dr:=0.1w; pickup pencircle scaled dr; Waku(h,w,d);
+penpos9(0.3dr,135); penpos10(0.45dr,135); penpos11(1.1dr,150);
+penpos15(0.6dr,125); penpos16(0.35dr,160); penpos17(0.3dr,125);
+penpos18(0.3dr,125); penpos19(0.33dr,115); penpos21(0.35dr,85);
+penpos22(0.45dr,45); penpos23(0.8dr,0); penpos24(0.8dr,-25);
+penpos25(0.6dr,-35); penpos26(0.5dr,-35); penpos29(0.6dr,150);
+penpos30(0.45dr,150); penpos31(0.3dr,150); penpos32(0.15dr,150);
+penpos33(0.12dr,150); penpos34(0.5dr,60); penpos35(0.5dr,60);
+penpos36(0.5dr,60);
+pickup pencircle scaled 0.1dr;
+z9 = (0.25w,0.8tate); z10 = z9 + (3.3dr,0.2dr); z11 = z10 + (1.3dr,0);
+z12 = z11r; top z13 = whatever[z10,z11]; x13 = 0.6w;
+z14 = z13 - (1.5dr,1.8dr); z15 = z9 + (0.15dr,-1.55dr);
+z16 = z15 + (0.8dr,-4dr); z17 = 0.22[z15r,z16l];
+z18 = z17 + (2dr,0.35dr); z19 = z18 + (1.5dr,0.175dr);
+z20 = whatever[z13,z14] = whatever[z17,z18];
+z21l = z19l + (0.2dr,-0.1dr); z22l = z21l + (0.2dr,-0.1dr);
+z23l = z22l + (0.2dr,-0.1dr); z24l = z23l + (0,-0.05dr);
+z25l = 0.5[z24l,z26l]; z26 = z24 + (-1.4dr, -3.2dr);
+z27 = 0.55[z13,z15]; z28 = 0.4[z16,z26];
+z29 = (x27+1.4dr,y27); z30r = z29r + (0,-0.1dr); z31r = z30r + (0,-0.2dr);
+z32 = 0.4[z31,z33];
+z33 = 0.65[z16,z26];
+z34 = z16r; z35 = z33 + (0,-0.05dr); z36 = z26 + (0.2dr,-0.1dr);
+harai(9,10,11);
+pickup pencircle scaled 0.23dr;
+draw z12--z13--z14--z20;
+pickup pencircle scaled 0.1dr;
+filldraw z15l--z16l--z16r--z15r--z15l--cycle;
+filldraw z17l..z18l..{z19l-z18l}z19l--z21l--z22l--z23l--z24l..{z25l-z24l}z25l..z26l--z26r..z25r..z24r..z23r..z22r..z21r..z19r..z18r..z17r--z17l--cycle;
+pickup pencircle scaled 0.28dr;
+draw z27--z28;
+pickup pencircle scaled 0.15dr;
+filldraw z29l..z30l..z31l..{z32l-z31l}z32l..{z33l-z32l}z33l--z33r--z32r..z31r..z30r..z29r--z29l--cycle;
+harai(34,35,36);
+penlabels(range 9 thru 36);
+v33:=currentpicture;
+endchar;
+
+beginchar(34, width, height, depth); % 北
+dr:=0.1w; tate:=h-d;
+pickup pencircle scaled dr;
+Waku(h, w, d);
+penpos9(0.8dr,135); penpos10(0.65dr,135); penpos11(0.55dr,135);
+penpos12(0.45dr,135); penpos13(0.3dr,225); penpos14(0.05dr,60);
+penpos15(0.35dr,75); penpos16(0.15dr,75); penpos17(0.02dr,130);
+penpos18(0.2dr,135); penpos19(0.5dr,140); penpos20(0.85dr,210);
+penpos21(0.7dr,225); penpos22(0.5dr,240); penpos23(0.3dr,270);
+penpos24(0.25dr,300); penpos25(0.15dr,300); penpos26(0.15dr,300);
+penpos27(0.2dr,300); penpos28(0.5dr,300); penpos29(0.1dr,300);
+penpos30(0.05dr,0); penpos31(0.85dr,0); penpos32(0.5dr,0);
+penpos33(0.4dr,0); penpos34(0.4dr,0); penpos35(0.45dr,45);
+penpos36(0.4dr,90); penpos37(0.4dr,90); penpos38(0.4dr,90);
+penpos39(0.2dr,135); penpos40(0.2dr,180);
+x9 = 0.44w; y9 = 0.77tate;
+x13 = x12 = x11 = x10 = x9;
+y10 = y9 - 0.2dr; y11 = y10 - 0.2dr; y12 = y11 - dr; y13 = y12 - 2.8dr;
+x14 = x9 - 1.8dr; y14 = y9 - dr;
+x15 = x14 + 0.9dr; y15 = y14 - 0.4dr;
+x16 = x15 + 0.4dr; y16 = y15;
+x17 = x15 + 0.1dr; y17 = y15 + 0.5dr;
+x18 = 0.5[x17,x19]; y18 = 0.6[y17,y19];
+x19 = x17 - 1.2dr; y19 = y17 - 3.2dr;
+z24l = z23l = z22l = z21l = z20l = z19l;
+x25 = x24 + 1.2dr; y25 = y24 + dr;
+x26 = x25 + 1.2dr; y26 = y25 + 0.9dr;
+x27 = x26 + 1.2dr; y27 = y26 + dr;
+x28 = x27 + 0.3dr; y28 = y27 + 0.3dr;
+x29 = x28 + 0.7dr; y29 = y28 + 0.1dr;
+x30 = x9 + 1.2dr; y30 = y9 + 1.2dr;
+x31 = x30; y31 = y30 - 0.7dr;
+x32 = x31; y32 = y31 - 0.5dr;
+x33 = x32; y33 = y32 - 2.2dr;
+x34 = x33; y34 = y33 - 2.2dr;
+z36r = z35r + (0.05dr,-0.05dr) = z34r + (0.1dr,-0.1dr);
+x37 = x36 + 1.2dr; y38 = y37 + 0.1dr = y36;
+x38 = x37 + 1.2dr;
+z40r = z39r = z38r;
+filldraw z9l..z10l..z11l..z12l..z13l--z13r..z12r..z11r..z10r..z9r--cycle;
+pickup pencircle scaled 0.1dr;
+harai(14,15,16);
+filldraw z17l..z18l..z19l..z20l..z21l..z22l..z23l..z24l..z25l..z26l..{z27l-z26l}z27l..z28l{z29l-z28l}..z29l--z29r..z28r..z27r..z26r..z25r..z24r..z23r..z22r..z21r..z20r..z19r..z18r..z17r--z17l--cycle;
+filldraw z30l{z31l-z30l}..z31l..z32l{z33l-z32l}..z33l..{z34l-z33l}z34l..z35l..z36l..z37l..{z38l-z37l}z38l..z39l..z40l--z40r..z39r..z38r..z37r..{z36r-z37r}z36r..z35r..z34r{z33r-z34r}..z33r..{z32r-z33r}z32r..z31r..{z30r-z31r}z30r--z30l--cycle;
+penlabels(range 9 thru 38);
+v34:=currentpicture;
+endchar;
+
+beginchar(35, width, height, depth); % 白板 
+Waku(h,w,d);
+v35:=currentpicture;
+endchar;
+
+beginchar(36, width, height, depth); % 緑発
+tate:=h-d; r1:=0.1w;
+Waku(h, w, d);
+penpos9(0.05w,135); penpos10(0.05w,140); penpos11(0.05w,155);
+penpos12(0.01w,135); penpos13(0.03w,135); penpos14(0.05w,135);
+penpos15(0.11w,145); penpos16(0.03w,0); penpos17(0.12w,5);
+penpos18(0.05w,5); penpos19(0.05w,95); penpos20(0.03w,90); penpos21(eps,90);
+penpos22(0.1w,120); penpos23(0.045w,120); penpos24(0,120);
+penpos25(0.07w,120); penpos26(0.036w,120); penpos27(0.005w,120);
+penpos28(0,120); penpos29(0.015w,145); penpos30(0.008w,120);
+penpos31(0.008w,110); penpos32(0.01w,130); penpos33(0.008w,130);
+penpos34(0.006w,135); penpos35(0.012w,135); penpos36(0.008w,130);
+penpos37(0.011w,130); penpos38(0.015w,120); penpos39(0.012w,120);
+penpos40(0.02w,110); penpos41(0.012w,120); penpos42(0.012w,120);
+penpos43(0.025w,145); penpos44(0.01w,145); penpos45(0.025w,145);
+penpos46(0.04w,90); penpos47(0.04w, 45); penpos48(0.03w, 45);
+penpos49(0,45); penpos50(0.03w,140); penpos51(0.02w,140); penpos52(0,140);
+penpos53(0.03w,130); penpos54(0.03w,130); penpos55(0.04w,135);
+penpos56(0.05w,135); penpos57(0.02w,130); penpos58(0.02w,130);
+penpos59(0.027w,135); penpos60(0.033w,135); penpos61(0.04w,150);
+penpos62(0.035w,150); penpos63(0.02w,145); penpos64(eps,137);
+penpos65(0,60); penpos66(0.02w,45); penpos67(0.05w,45);
+x9 = 0.35w; y9 = 0.72w; x10 = x11 = 0.5w; y10 = y11 = y9;
+x12 = x9 - 0.17w; y12 = y9 - 0.35w;
+x13 = 0.5[x11,x12]; y13 = 0.6[y11,y12];
+x14 = x9 + 0.01w; y14 = y9 - 0.004w;
+x15 = x10 + 0.05w; y15 = y10 + 0.005w;
+z16 = 0.5[z10,z15];
+x17 = w - x12; y17 = y12 - 0.005w;
+x18 = 0.5[x16,x17]; y18 = 0.55[y16,y17];
+x19 = 0.65[x12,x14]; y19 = 0.4[y14,y13];
+x20 = 0.825[x12,x14]; y20 = y19 - 0.01w;
+z21 = (z10 + z13 + z14) / 3 - (0.01w,0.01w);
+x22 = x15 + 0.15w; y22 = y15 - 0.05w;
+x23 = x22 - 0.04w; y23 = y22 - 0.03w;
+x24 = x22 - 0.12w; y24 = y22 - 0.09w;
+x25 = x22 + 0.05w; y25 = y13 + 0.08w;
+x26 = x25 - 0.04w; y26 = y25 - 0.01w;
+x27 = x25 - 0.14w; y27 = y26 - 0.02w;
+x28 = x27 - 0.04w; y28 = y27 - 0.01w;
+x29 = x14; y29 = 0.5[y13,y28];
+x30 = x29 + 0.02w; y30 = y29 - 0.005w;
+x31 = x29 + 0.1w; y31 = y30;
+x32 = x31; y32 = y31 - 0.01w;
+x33 = x32 - 0.02w; y33 = y32 - 0.01w;
+x34 = x33 - 0.06w; y34 = y33 - 0.046w;
+x35 = x34 - 0.07w; y35 = y34 - 0.005w;
+x36 = x35 + 0.01w; y36 = y35 - 0.004w;
+x37 = x36 + 0.1w; y37 = y36 + 0.001w;
+x38 = x37; y38 = y37 - 0.01w;
+z39 = 0.5[z38,z40];
+x40 = x35 - 0.01w; y40 = y35 - 0.105w;
+x41 = x40 + 0.02w; y41 = y40 + 0.02w;
+x42 = x41 + 0.07w; y42 = y41;
+x43 = x42 + 0.06w; y43 = y42 + 0.01w;
+x44 = x43 - 0.05w; y44 = y43 - 0.07w;
+x45 = x41; y45 = y44 - 0.13w;
+x46r = x45r - 0.005w; y47r = y46r = y45r;
+x47r = x46r - 0.005w;
+x48 = x47 - 0.02w; y48 = y47 + 0.02w;
+x49 = x48 - 0.06w; y49 = y48 + 0.05w; 
+x50 = x28 - 0.04w; y50 = y28 - 0.02w;
+x51 = 0.5[x50,x52]; y51 = 0.6[y50,y52];
+z52 = 0.5[z38,z43];
+x53 = x52 + 0.04w; y53 = y52 + 0.02w;
+x54 = x28; y54 = y53;
+x55 = x54 + 0.07w; y55 = y54 + 0.007w;
+x56 = x55 + 0.035w; y56 = y55 - 0.003w;
+x57 = x53 - 0.01w; y57 = y17 - 0.02w;
+x58 = x28; y58 = y57;
+x59 = x54 + 0.09w; y59 = y58 + 0.007w;
+x60 = x59 + 0.035w; y60 = y59 - 0.003w;
+x61 = 0.15[x28,x18l]; y61 = 0.6[y38,y43];
+x62 = x61 - 0.005w; y62 = y61 - 0.015w;
+x63 = 0.2[x62,x64]; y63 = 0.4[y62,y64];
+x64 = x43l - 0.03w; y64 = y46l - 0.005w;
+z65 = whatever[z57l,z60l] = whatever[z62l,z64l];
+x66 = 0.6[x65,x67]; y66 = 0.5[y65,y67];
+z67 = (x60l,y46 + 0.02w);
+x68 = x67; y68 = y67 - 0.03w;
+pickup pencircle scaled 0.02w;
+tome(9,14,10,15);
+penstroke z11e..z13e..z12e;
+penstroke z16e..z18e..z17e;
+harai(19,20,21); harai(22,23,24); tome(25,26,27,28); harai(29,30,31);
+harai(32,33,34);
+harai(35,36,37);
+harai(38,39,40);
+harai(41,42,43);
+harai(43,44,45);
+harai(45,46,47);
+harai(47,48,49);
+harai(50,51,52);
+tome(53,54,55,56);
+tome(57,58,59,60);
+tome(61,62,63,64);
+harai(65,66,67);
+filldraw z67r..z68..z67l & z67l--z67r--cycle;
+penlabels(range 1 thru 67);
+v36:=currentpicture;
+endchar;
+
+beginchar(37, width, height, depth); % 紅中
+dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
+penpos9(0,0); penpos10(0.5dr,0); penpos11(0.9dr,0);
+penpos12(0.6dr,-20); penpos13(0.45dr,-20); penpos14(0.4dr,-20);
+penpos15(0.35dr,-20); penpos16(0.3dr,-20); penpos17(0.2dr,-20);
+penpos18(0.05dr,-20);
+penpos31(0.5dr,90); penpos32(0.35dr,45); penpos33(0.4dr,0);
+penpos34(0.25dr,45); penpos35(0.3dr,45); penpos36(0.35dr,45);
+penpos37(0.45dr,25); penpos38(0.65dr,0); penpos39(0.7dr,-15);
+penpos40(0.6dr,-20); penpos41(0.4dr,-20); penpos42(0.25dr,90);
+penpos43(0.25dr,90); penpos44(0.25dr,90);
+z9=(0.48w,0.97tate); z10=z9-(0,0.3dr); z11=z10-(0,0.4dr);
+z12=z11-(-0.1dr,0.4dr); z13=z12-(0,0.5dr); z14=z13-(0,0.5dr);
+z15=z14-(0,1.8dr); z16=z15-(0,1.8dr); z17=z16-(0,1.6dr);
+z18=z17-(0,1.6dr);
+z31=z9+(-2.5dr,-2.5dr); z32=z31+(0.6dr,-0.8dr); z33=z32+(0.6dr,-dr);
+z34=0.5[z31,z32]; z36=z34+(4.5dr,0.8dr); z35=0.5[z34,z36]; 
+z37l=z36l+(0.05dr,-0.05dr); z38l=z37l+(0.05dr,-0.05dr);
+z39l=z38l+(0,-0.05dr); z40l=0.3[z39l,z41l]; z41l=z39l+(-1.1dr,-1.9dr);
+z42r=z33l; z44l=z41r; z43=0.5[z42,z44]+(0,0.05dr);
+filldraw z9r..z10r..z11r..z12r..z13r..z14r..z15r..z16r..z17r..z18r--z18l..z17l..z16l..z15l..z14l..z13l..z12l..z11l..z10l..z9l--z9r--cycle;
+harai(31,32,33);
+filldraw z34r--z35r--z36r..z37r..z38r..z39r..z40r..z41r--z41l--z40l..z39l..z38l..z37l..z36l--z35l--z34l--z34r--cycle;
+harai(42,43,44);
+penlabels(range 9 thru 18, range 31 thru 44);
+v37:=currentpicture;
+endchar;
+
+% -90度回転した牌。リーチやチー・ポンの表現用に使えるかも。
+begingroup
+save i;
+for i = 0 upto 37:
+  beginchar (40+i, height+depth, width-depth, depth);
+    currentpicture:= v[i] rotated -90 shifted (d,h);
+  endchar;
+endfor;
+endgroup;
+
+% 花牌用ファイルの include。
+%% input pieflower.mf
+end;

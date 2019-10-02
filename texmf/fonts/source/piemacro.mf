@@ -1,0 +1,310 @@
+% piemacro.mf August 10,1996 Takayuki Yamaizumi
+% 10 point 用麻雀牌のマクロ。
+
+%% 複数の牌に関係するマクロの定義。
+def Waku(expr h, w, d) =   
+	% 外枠。これで、z1 .. z8 が自動的にとられてしまうことに注意。 
+r := 0.9pt; % これも絶対的な長さの指定じゃないです。
+pickup pencircle scaled 0.2pt;
+lft x1 = 0; x1 + x4 = w; x8 = x1; x4 = x5;
+bot y7 = -d; y7 + y2 = h-d; y6 = y7; y2 = y3;
+x2 = x1 + r; x3 + r = x4;
+y2 = y1 + r; y3 - r = y4;
+x5 - r = x6; y5 - r = y6;
+x7 - r = x8; y7 + r = y8;
+draw z8--z1{z1-z8}..{z3-z2}z2--z3{z3-z2}..{z5-z4}z4--z5{z5-z4}..{z7-z6}z6--z7{z7-z6}..{z1-z8}z8--cycle;
+penlabels(range 1 thru 8);
+enddef;
+
+def erpincircle(expr z, r) =    % 二筒の「筒」
+begingroup
+save i, p;
+path p[];
+pickup pencircle scaled 0.3r;
+filldraw fullcircle scaled 3.6r shifted z;
+pickup pencircle scaled 0.1r;
+unfilldraw fullcircle scaled 0.5r shifted z;
+filldraw fullcircle scaled 0.2r shifted z;
+
+p0 = (z+(0,0.7r)) rotatedaround (z, -15)..(z+(0,0.7r))..
+     (z+(0,0.7r)) rotatedaround (z, +15) &
+     (z+(0,0.7r)) rotatedaround (z, +15)..(z+(0,1.1r)) rotatedaround (z, +25)..
+     (z+(0,1.4r)) rotatedaround (z, +25)..(z+(0,1.6r))..
+     (z+(0,1.4r)) rotatedaround (z, -25)..(z+(0,1.1r)) rotatedaround (z, -25)..
+     (z+(0,0.7r)) rotatedaround (z, -15)..cycle;
+p1 = (z+(0,0.7r)) rotatedaround (z, -10)..(z+(0,r)) rotatedaround (z, -12)..
+     (z+(0,1.3r)) rotatedaround (z, -16);
+p2 = (z+(0,0.7r))..(z+(0,1.5r));
+p3 = (z+(0,0.7r)) rotatedaround (z, +10)..(z+(0,r)) rotatedaround (z, 12)..
+     (z+(0,1.3r)) rotatedaround (z, 16);
+for i = 0 upto 4:
+pickup pencircle scaled 0.01r;
+unfilldraw p0 rotatedaround (z, i*72);
+pickup pencircle scaled 0.1r;
+draw p1 rotatedaround (z, i*72);
+draw p2 rotatedaround (z, i*72);
+draw p3 rotatedaround (z, i*72);
+endfor;
+endgroup enddef;
+
+def smallpin(expr z, r, ioff) =
+% 筒子の「筒」。scalable で車軸の角度は変更できるようになっている。
+outersmallpin(z,r,ioff);
+innersmallpin(z,r,ioff);
+enddef; 
+
+def outersmallpin(expr z,r,ioff) =
+% 筒子の「筒」の外側。scalable で車軸の角度は変更できるようになっている。
+pickup pencircle scaled 0.3r;
+draw fullcircle scaled 2.9r shifted z;
+enddef;
+
+def deletering(expr z,r) =
+% 筒子の「筒」の外側の円のすぐ内部を消去する。
+pickup pencircle scaled 0.175r;
+undraw fullcircle scaled 2.475r shifted z;
+enddef;
+
+def innersmallpin(expr z, r, ioff) =
+% 筒子の「筒」の内側部。scalable で車軸の角度は変更できるようになっている。
+begingroup
+save i, p;
+path p[];
+pickup pencircle scaled 0.2r;
+draw fullcircle scaled 2r shifted z;
+draw fullcircle scaled 0.8r shifted z;
+pickup pencircle scaled 0.1r;
+filldraw fullcircle scaled 0.3r shifted z;
+pickup pencircle scaled 0.22r;
+p0 = (z+(0,0.4r))--(z+(0,r));
+for i = 0 upto 4:
+   draw p0 rotatedaround (z, i*72 + ioff);
+endfor;
+endgroup enddef; 
+
+def harai(suffix a, b, c) = % 文字のはらい。
+filldraw z[a]r..z[b]r..z[c]r & z[c]r--z[c]l & 
+         z[c]l..z[b]l..z[a]l & z[a]l--z[a]r--cycle;
+enddef;
+def tome(suffix a, b, c, d) = % 文字のとめ。
+filldraw z[a]r..z[b]r..z[c]r..z[d]r & z[d]r--z[d]l &
+	 z[d]l..z[c]l..z[b]l..z[a]l & z[a]l--z[a]r--cycle;
+enddef;
+
+def TenThousand(suffix n)(expr dr) = % 萬子用の「萬」の字。
+% この macro を使うと、基準点以外に z[n+1]..z[n+57] の57点が
+% 自動的に使われる。
+penpos[n+1](0.5dr,145); penpos[n+2](0.45dr,145); penpos[n+3](0.35dr,145);
+penpos[n+4](0.3dr,145); penpos[n+5](0.5dr,145); penpos[n+6](0.45dr,145);
+penpos[n+7](0.35dr,145); penpos[n+8](0.3dr,145); penpos[n+9](0.45dr,145);
+penpos[n+10](0.45dr,145); penpos[n+11](0.5dr,135); penpos[n+12](0.45dr,135);
+penpos[n+13](0.3dr,170); penpos[n+14](0.27dr,190); penpos[n+16](0.25dr,135);
+penpos[n+17](0.2dr,135); penpos[n+18](0.2dr,135); penpos[n+19](0.5dr,145);
+penpos[n+20](0.45dr,150); penpos[n+21](0.35dr,165); penpos[n+22](0.3dr,180);
+penpos[n+24](0.25dr,135); penpos[n+25](0.2dr,135); penpos[n+26](0.2dr,135); 
+penpos[n+27](0.25dr,145); penpos[n+28](0.25dr,135); penpos[n+29](0.2dr,135);
+penpos[n+30](0.2dr,135); penpos[n+31](0.25dr,135); penpos[n+32](0.23dr,135);
+penpos[n+33](0.23dr,135); penpos[n+34](0.23dr,135); penpos[n+35](0.5dr,120);
+penpos[n+36](0.35dr,120); penpos[n+37](0.3dr, 135); penpos[n+38](0.2dr,120);
+penpos[n+39](0.05dr,30); penpos[n+40](0.25dr,15); penpos[n+41](0.3dr,0);
+penpos[n+42](0.25dr,-30); penpos[n+43](0.05dr,140); penpos[n+44](0.15dr,160); 
+penpos[n+45](0.2dr,180); penpos[n+46](0.25dr,240); penpos[n+47](0.3dr,145);
+penpos[n+48](0.25dr,140); penpos[n+49](0.25dr,120); penpos[n+50](0.35dr,90);
+penpos[n+51](0.45dr,50); penpos[n+52](0.5dr,-30); penpos[n+53](0.42dr,-60);
+penpos[n+54](0.5dr,-90); penpos[n+55](0.5dr,-120); penpos[n+56](0.3dr,-120);
+penpos[n+57](0.05dr,-120);
+x[n+1] = x[n] - 0.4dr = x[n+3] = x[n+2] = x[n+4];
+y[n+1] = y[n] + 2.2dr; y[n+2] = y[n+1] - 0.05dr; y[n+3] = y[n+2] - 0.2dr;
+y[n+4] = y[n+3] - 0.4dr; 
+x[n+5] = x[n] + 0.4dr = x[n+7] = x[n+6] = x[n+8];
+y[n+5] = y[n] + 2.5dr; y[n+6] = y[n+5] - 0.05dr; y[n+7] = y[n+6] - 0.3dr;
+y[n+8] = y[n+7] - 0.6dr;
+z[n+9] = 2.1[z[n+4],z[n+8]]; z[n+10] = 2[z[n+8],z[n+4]];
+x[n+11] = x[n+10] + 0.2dr; y[n+11] = y[n+10] - 0.3dr;
+z[n+12]l = z[n+11]l + (0,-0.2dr);
+z[n+13] = 0.6[z[n+12],z[n+14]] + (0.05dr,0);
+z[n+14] = z[n+12] - (-0.05dr,1.5dr); z[n+15] = z[n+14] - (0,0.2dr); 
+x[n+16] = x[n+12]; y[n+16] = y[n+12] - 0.1dr;
+x[n+17] = x[n+16] + 0.7dr; y[n+17] = y[n+16];
+x[n+18] = x[n+17] + 1.25dr; y[n+18] = y[n+17] + 0.05dr;
+x[n+19] = x[n+18] + 0.7dr; y[n+19] = y[n+18];
+x[n+20]r = x[n+19]r; x[n+21]r = x[n+20]r - 0.05dr;
+x[n+22]r = x[n+21]r - 0.05dr; y[n+20] = y[n+19] - 0.1dr; 
+y[n+21] = y[n+20] - 0.7dr; y[n+22] = y[n+21] - 0.65dr;
+z[n+23] = z[n+22] + (0,-0.2dr); x[n+24] = x[n+16]; y[n+24] = y[n+16] - 0.7dr;
+x[n+25] = x[n+24] + 0.7dr; y[n+25] = y[n+24];
+x[n+26] = x[n+25] + 1.15dr; y[n+26] = y[n+25];
+x[n+27] = x[n+26] + 0.7dr; y[n+27] = y[n+26];
+x[n+28] = x[n+24]; y[n+28] = y[n+24] - 0.7dr;
+x[n+29] = x[n+28] + 0.7dr; y[n+29] = y[n+28] + 0.05dr;
+x[n+30] = x[n+29] + 1.15dr; y[n+30] = y[n+29];
+x[n+31] = x[n+30] + 0.7dr; y[n+31] = y[n+30] - 0.05dr;
+x[n+32] = x[n+8]r; y[n+32] = y[n+17];
+x[n+34] = x[n+33] = x[n+32]; y[n+33] = y[n+32] - 1.5dr; 
+y[n+34] = y[n+33] - 1.3dr;
+x[n+35] = x[n+15] - 0.1dr; y[n+35] = y[n+15] - 1.6dr;
+x[n+36] = x[n+35] + 0.2dr; y[n+36] = y[n+35] - 0.05dr;
+x[n+37] = x[n+36] + 0.3dr; y[n+37] = y[n+36] + 0.05dr;
+x[n+38] = x[n+37] + 1.6dr; y[n+38] = y[n+37] + 0.5dr;
+x[n+39] = x[n+38] - 0.2dr; y[n+39] = y[n+38] + 0.4dr;
+x[n+40] = x[n+39] + 0.2dr; y[n+40] = y[n+39] - 0.2dr;
+x[n+41] = x[n+40] + 0.1dr; y[n+41] = y[n+40] - 0.2dr;
+x[n+42] = x[n+41] - 0.1dr; y[n+42] = y[n+41] - 0.4dr;
+x[n+43] = x[n+38] - 3.2dr; y[n+43] = y[n+38] + 0.8dr;
+x[n+44] = x[n+43] - 0.1dr; y[n+44] = y[n+43] - 0.5dr;
+x[n+45] = x[n+44] - 0.1dr; y[n+45] = y[n+44] - 0.5dr;
+x[n+46] = x[n+45] + 0.1dr; y[n+46] = y[n+45] - dr;
+x[n+47] = x[n+43] - 1.3dr; y[n+47] = y[n+43] - 0.7dr;
+x[n+48] = x[n+47] + 1.5dr; y[n+48] = y[n+47] + 0.3dr;
+x[n+49] = x[n+48] + 3.6dr; y[n+49] = y[n+48] + 0.4dr;
+x[n+50] = x[n+49] + 1.1dr; y[n+50] = y[n+49] - 0.08dr;
+x[n+51]l = x[n+50]l + 0.2dr; y[n+51]l = y[n+50]l - 0.2dr;
+x[n+52]l = x[n+51]l; y[n+52]l = y[n+51]l - 0.2dr;
+x[n+53] = x[n+52] - 0.6dr; y[n+53] = y[n+52] - 0.65dr;
+x[n+54] = x[n+52] - 1.5dr; y[n+54] = y[n+52] - 1.25dr;
+x[n+55]l = x[n+54]l - 0.1dr; y[n+55]l = y[n+54]l; 
+x[n+56] = x[n+55] - 0.3dr; y[n+56] = y[n+55] + 0.15dr;
+x[n+57] = x[n+56] - 0.3dr; y[n+57] = y[n+56] + 0.15dr;
+tome([n+1],[n+2],[n+3],[n+4]); tome([n+5],[n+6],[n+7],[n+8]); 
+tome([n+10],[n+4],[n+8],[n+9]); tome([n+11],[n+12],[n+13],[n+14]);
+filldraw z[n+14]l--z[n+14]r{dir -90}..z[n+15]..{dir 90}z[n+14]l.. cycle;
+tome([n+16],[n+17],[n+18],[n+19]); tome([n+19],[n+20],[n+21],[n+22]);
+filldraw z[n+22]l--z[n+22]r{dir -90}..z[n+23]..{dir 90}z[n+22]l.. cycle;
+tome([n+24],[n+25],[n+26],[n+27]); tome([n+28],[n+29],[n+30],[n+31]);
+harai([n+32],[n+33],[n+34]); tome([n+35],[n+36],[n+37],[n+38]);
+tome([n+39],[n+40],[n+41],[n+42]); tome([n+43],[n+44],[n+45],[n+46]);
+filldraw z[n+47]l..z[n+48]l..z[n+49]l..z[n+50]l..z[n+51]l..z[n+52]l..z[n+53]l..{z[n+54]l-z[n+53]l}z[n+54]l..z[n+55]l..z[n+56]l..z[n+57]l--z[n+57]r..z[n+56]r..z[n+55]r..z[n+54]r{z[n+53]r-z[n+54]r}..z[n+53]r..z[n+52]r..z[n+51]r..z[n+50]r..z[n+49]r..z[n+48]r..z[n+47]r--z[n+47]l--cycle;
+penlabels(range n+1 thru n+57);
+enddef;
+
+def chikuwa(expr z,center,n,dr,psize,degr) = % 索子の上と中央と下についている輪。
+% n = 0 なら draw
+% n = 1 なら filldraw する。
+begingroup
+save p;
+path p[];
+p0 = (z+(-0.3dr,0.3dr))--(z+(0.3dr,0.3dr)){dir 0}..
+     (z+(0.6dr,0))..{dir 180}(z+(0.3dr,-0.3dr))--
+     (z+(-0.3dr,-0.3dr)){dir 180}..(z+(-0.6dr,0))..
+     {dir 0}(z+(-0.3dr,0.3dr))--cycle;
+pickup pencircle scaled psize;
+if n = 0:
+  draw p0 rotatedaround (center,degr)
+else:
+  filldraw p0 rotatedaround (center,degr)
+fi
+endgroup enddef;
+
+def banboo(expr z,dr,degr,dh) = % 索子の「索」
+% dh で高さを指定。
+begingroup
+save p;
+path p[];
+chikuwa(z+(0,dh*dr),z,1,dr,0.3dr,degr); chikuwa(z,z,1,dr,0.3dr,degr);
+chikuwa(z-(0,dh*dr),z,1,dr,0.3dr,degr);
+pickup pencircle scaled 0.3dr; 
+p0 = (z+(0,dh*dr)+(-0.3dr,0.2dr))--(z+(0,dh*dr)+(0.3dr,0.2dr))--
+     (z-(0,dh*dr)+(0.3dr,-0.2dr))--(z-(0,dh*dr)-(0.3dr,0.2dr))--cycle;
+unfilldraw p0 rotatedaround (z,degr);
+unfilldraw p0 rotatedaround (z,degr);
+cullit;
+draw p0 rotatedaround (z,degr);
+chikuwa(z,z,0,dr,0.3dr,degr);
+cullit;
+endgroup enddef;
+
+def makesupin(expr h,w,d,dr,tate) = % 四筒、五筒用マクロ。
+x9 = 0.5w; y9 = 0.5tate;
+x10 = x9 - 0.16w; y10 = y9 + 0.33tate;
+z11 = 2z9 - z10;
+z12 = (x11,y10); z13 = (x10,y11);
+smallpin(z10,0.95dr,36); smallpin(z11,0.95dr,36);
+smallpin(z12,0.95dr,36); smallpin(z13,0.95dr,36);
+enddef;
+
+def makechisou(expr h,w,d,dr,tate) = % 七索、九索用マクロ。
+begingroup;
+save i;
+pickup pencircle scaled dr; Waku(h,w,d);
+dw:=0.27w; dh:=3.6dr;
+z9=(0.5w,0.5tate);
+z10=(0.5w,0.5tate+dh);
+z11=(0.5w-dw,0.5tate); z12=(0.5w+dw,0.5tate);
+z13=(0.5w,0.5tate-dh); z14=(0.5w-dw,0.5tate-dh); z15=(0.5w+dw,0.5tate-dh);
+z16=(0.5w-dw,0.5tate+dh); z17=(0.5w+dw,0.5tate+dh); 
+for i = 9 upto 15:
+    banboo(z[i],dr,0,1.2);
+endfor; 
+endgroup enddef;
+
+def ungray (expr sx,sy,fx,fy,d) = 
+% 点を正三角形の頂点上に並べることで灰色っぽく見せる。
+% sx,sy,fx,fy,d で長方形領域を、d で間隔をそれぞれ指定。
+begingroup
+   save t,g;
+   t = d * sind 60;
+   g = d * cosd 60;
+   for y = 0 upto (fy-sy)/t:
+      for x = 0 upto (fx-sx)/d:
+         undrawdot(sx + d*x if odd y: +g fi, sy + t*y);
+      endfor
+   endfor
+endgroup enddef;
+
+def drawwuwan(expr h,w,d,tate,dr) = % 「伍萬」の文字を描く。
+x9 = 0.5w; y9 = 0.3tate; % 「田」の部分の中心。
+pickup pencircle scaled 0.02w;
+TenThousand(9,dr);
+penlabels(range 1 thru 9);
+% 以下「伍」の字。
+penpos67(0.6dr,125); penpos68(0.2dr,125); penpos69(0,125);
+penpos70(0.3dr,170); penpos71(0.3dr,180); penpos72(0.27dr,170);
+penpos74(0.5dr,145); penpos75(0.33dr,145); penpos76(0.33dr,145); 
+penpos77(0.55dr,145); penpos78(0.55dr,145); penpos79(0.4dr,145); 
+penpos80(0.3dr,145); penpos81(0.25dr,145); penpos82(0.4dr,145); 
+penpos83(0.26dr,145); penpos84(0.26dr,145); penpos85(0.5dr,145);
+penpos86(0.4dr,145); penpos87(0.35dr,145); penpos88(0.55dr,145);
+penpos89(0.45dr,145); penpos90(0.45dr,145); penpos91(0.75dr,145);
+x67 = 0.38w; y67 = tate; x68 = 0.5[x67,x69]; y68 = 0.6[y67,y69]; 
+x69 = x67 - 0.25w; y69 = y67 - 0.25w;
+z70r = (x68l,y68l) + (0.05dr,0.05dr);
+x71 = x70; y71 = y70 - 0.8dr; x72 = x71 - 0.1dr; y72 = y71 - 0.8dr;
+x73 = x72; y73 = y72 - 0.08dr;
+x74 = x67l + 0.3dr; y74 = y67l + 0.1dr;
+x75 = x74 + dr; y75 = y74 + 0.1dr;
+x76 = x75 + 0.9dr; y76 = y75 + 0.1dr;
+x77 = x76 + dr; y77 = y76 + 0.1dr;
+z78 = 0.4[z75l,z76l];
+x79 = x78 - 0.1dr; y79 = y78 - 0.35dr;
+x80 = x79 - 0.2dr; y80 = y79 - 0.7dr;
+x81 = x80 - 0.45dr; y81 = y80 - 1.6dr;
+x82 = x74 - 0.3dr; y82 = y74 - 1.3dr;
+x83 = x82 + 0.8dr; y83 = y82 + 0.1dr;
+x84 = x83 + 0.91dr; y84 = y83 + 0.1dr;
+x85 = x84 + dr; y85 = y84 + 0.1dr;
+x86 = x85 - 0.1dr; y86 = y85 - 0.4dr;
+x87 = x86 - 0.15dr; y87 = y86 - dr;
+x88 = x82 - 0.3dr; y88 = y82 - 1.3dr;
+x89 = x88 + 1.7dr; y89 = y88 + 0.1dr;
+x90 = x89 + 1.53dr; y90 = y89 + 0.1dr;
+x91 = x90 + 1.2dr; y91 = y90 + 0.13dr;
+harai(67,68,69); harai(70,71,72); filldraw z72l..z73..z72r--z72l--cycle;
+tome(74,75,76,77); tome(78,79,80,81); tome(82,83,84,85); harai(85,86,87);
+tome(88,89,90,91);
+penlabels(range 67 thru 91);
+enddef;
+
+def drawwupin(expr h,w,d,tate,dr) = % 「五筒」の車輪を描く。
+makesupin(h,w,d,dr,tate); smallpin(z9,0.95dr,36);
+enddef;
+
+def drawwusou(expr h,w,d,tate,dr) = % 「五索」の索を描く。
+begingroup
+save dw,dh;
+pickup pencircle scaled dr;
+dw:=2.5dr; dh:=2.8dr; z9=(0.5w,0.5tate);
+z10=z9+(-dw,dh); z11=z9+(dw,dh); z12=z9+(-dw,-dh); z13=z9+(dw,-dh);
+for i = 9 upto 13:
+    banboo(z[i],dr,0,1.8);
+endfor; 
+endgroup enddef;

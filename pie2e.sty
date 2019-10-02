@@ -1,0 +1,120 @@
+% pie2e.sty  Feb. 19, 1998  Shun-ichi Ito
+% (Takayuki Yamaizumi さん作 ``pie.sty'' を LaTeX 2e 用に改変)
+% pie.sty にあって pie2e.sty にないマクロ定義を復活させてみました。
+% (March 9, 1998 Takayuki Yamaizumi) 
+% Modified by Michał "phoe" Herda, October 1, 2019.
+%
+%      \usepackage{pie2e}
+
+\DeclareRobustCommand\piefamily{%
+  \not@math@alphabet\piefamily\relax
+  \fontencoding{U}\fontfamily{pie}\selectfont}
+\DeclareTextFontCommand{\textpie}{\piefamily}
+
+\def\suo#1{{\@tempcnta=#1%
+	\piefamily\symbol{\@tempcnta}}}
+\def\yisuo{\suo{1}}
+\def\ersuo{\suo{2}}
+\def\sansuo{\suo{3}}
+\def\sisuo{\suo{4}}
+\def\wusuo{\suo{5}}
+\def\liusuo{\suo{6}}
+\def\qisuo{\suo{7}}
+\def\pasuo{\suo{8}}
+\def\jiusuo{\suo{9}}
+\def\chiwusuo{\suo{0}}
+
+\def\rsuo#1{{\@tempcnta=#1\advance\@tempcnta 40%
+        \piefamily\symbol{\@tempcnta}}}
+\def\ryisuo{\rsuo{1}}
+\def\rersuo{\rsuo{2}}
+\def\rsansuo{\rsuo{3}}
+\def\rsisuo{\rsuo{4}}
+\def\rwusuo{\rsuo{5}}
+\def\rliusuo{\rsuo{6}}
+\def\rqisuo{\rsuo{7}}
+\def\rpasuo{\rsuo{8}}
+\def\rjiusuo{\rsuo{9}}
+\def\rchiwusuo{\rsuo{0}}
+
+\def\tong#1{{\@tempcnta=#1\advance\@tempcnta 10%
+	\piefamily\symbol{\@tempcnta}}}
+\def\yitong{\tong{1}}
+\def\ertong{\tong{2}}
+\def\santong{\tong{3}}
+\def\sitong{\tong{4}}
+\def\wutong{\tong{5}}
+\def\liutong{\tong{6}}
+\def\qitong{\tong{7}}
+\def\patong{\tong{8}}
+\def\jiutong{\tong{9}}
+\def\chiwutong{\tong{0}}
+
+\def\rtong#1{{\@tempcnta=#1\advance\@tempcnta 50%
+        \piefamily\symbol{\@tempcnta}}}
+\def\ryitong{\rtong{1}}
+\def\rertong{\rtong{2}}
+\def\rsantong{\rtong{3}}
+\def\rsitong{\rtong{4}}
+\def\rwutong{\rtong{5}}
+\def\rliutong{\rtong{6}}
+\def\rqitong{\rtong{7}}
+\def\rpatong{\rtong{8}}
+\def\rjiutong{\rtong{9}}
+\def\rchiwutong{\rtong{0}}
+
+\def\wan#1{{\@tempcnta=#1\advance\@tempcnta 20%
+	\piefamily\symbol{\@tempcnta}}}
+\def\yiwan{\wan{1}}
+\def\erwan{\wan{2}}
+\def\sanwan{\wan{3}}
+\def\siwan{\wan{4}}
+\def\wuwan{\wan{5}}
+\def\liuwan{\wan{6}}
+\def\qiwan{\wan{7}}
+\def\pawan{\wan{8}}
+\def\jiuwan{\wan{9}}
+\def\chiwuwan{\wan{0}}
+
+\def\rwan#1{{\@tempcnta=#1\advance\@tempcnta 60%
+        \piefamily\symbol{\@tempcnta}}}
+\def\ryiwan{\rwan{1}}
+\def\rerwan{\rwan{2}}
+\def\rsanwan{\rwan{3}}
+\def\rsiwan{\rwan{4}}
+\def\rwuwan{\rwan{5}}
+\def\rliuwan{\rwan{6}}
+\def\rqiwan{\rwan{7}}
+\def\rpawan{\rwan{8}}
+\def\rjiuwan{\rwan{9}}
+\def\rchiwuwan{\rwan{0}}
+
+\def\dong{{\piefamily\symbol{31}}}
+\def\nan{{\piefamily\symbol{32}}}
+\def\xi{{\piefamily\symbol{33}}}
+\def\bei{{\piefamily\symbol{34}}}
+
+\def\rdong{{\piefamily\symbol{71}}}
+\def\rnan{{\piefamily\symbol{72}}}
+\def\rxi{{\piefamily\symbol{73}}}
+\def\rbei{{\piefamily\symbol{74}}}
+
+\def\bai{{\piefamily\symbol{35}}}
+\def\fa{{\piefamily\symbol{36}}}
+\def\zhong{{\piefamily\symbol{37}}}
+
+\def\rbai{{\piefamily\symbol{75}}}
+\def\rfa{{\piefamily\symbol{76}}}
+\def\rzhong{{\piefamily\symbol{77}}}
+
+\def\ura{{\piefamily\symbol{30}}}
+
+\def\rura{{\piefamily\symbol{70}}}
+
+\def\kotsu#1{#1#1#1}
+\def\minkan#1{#1#1#1#1}
+\def\ankan#1{\ura#1#1\ura}
+\def\toitsu#1{#1#1}
+\def\atama#1{#1#1}
+
+\endinput
