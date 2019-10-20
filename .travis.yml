@@ -3,6 +3,7 @@ language: minimal
 branches:
   only:
   - master
+  - translation-pl
 before_install:
 - sudo apt-get update
 - sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-luatex texlive-lang-polish
@@ -15,7 +16,7 @@ jobs:
     - TEXMFHOME=./texmf platex RiichiBook1.tex
     - TEXMFHOME=./texmf dvipdfmx RiichiBook1.dvi
 before_deploy:
-- git tag -f latest
+- git tag -f ${TRAVIS_BRANCH}-latest
 deploy:
   provider: releases
   api_key:
