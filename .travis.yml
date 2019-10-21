@@ -24,6 +24,7 @@ deploy:
   file: RiichiBook1.pdf
   on:
     repo: riichi/RiichiBooks
+    all_branches: true
   skip_cleanup: true
   overwrite: true
 
