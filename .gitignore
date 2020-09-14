@@ -10,6 +10,7 @@
 *.ilg
 *.lot
 *.toc
+*.dvi
 
 # TeXMF tempdirs #
 texmf/fonts/pk/
