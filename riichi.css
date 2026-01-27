@@ -57,6 +57,23 @@ p.author {
 #content h2 {
     font-size:130%;
     color:#CD192A;
+
+    /* Added spacing around section headings */
+    margin: 22px 0 12px 0;  /* space before h2, and space between h2 and following text */
+}
+#content h3{
+    /* Added spacing around subsection headings */
+    margin: 18px 0 10px 0;  /* space before h3, and space between h3 and following text */
+}
+
+/* Ensure the first element after a heading has a bit more breathing room */
+#content h2 + p,
+#content h2 + ul,
+#content h2 + ol,
+#content h3 + p,
+#content h3 + ul,
+#content h3 + ol{
+    margin-top: 0.6em;
 }
 
 p.booklink {
@@ -150,5 +167,3 @@ table td.main {
     padding:12px 30px 0 30px;
     width:100%;
 }
-
-
