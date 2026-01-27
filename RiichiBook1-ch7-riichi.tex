@@ -464,7 +464,7 @@ It is OK to go {\jap dama} if the wait of your hand is really bad, especially wh
 \bigskip
 \subsubsection{1. The number of winning tiles left}
 \bigskip
-The first factor to consider is the pure number of winning tiles of your hand. The more tiles you can win on, the better the wait is. Table \ref{tbl:repwaits} provides a list of representative waits (roughly) in the order of desirability. 
+The first factor to consider is the pure number of winning tiles of your hand.\footnote{In Table \ref{tbl:repwaits}, the kinds and numbers of winning tiles are the \emph{ideal} values implied by the hand shape alone (i.e., assuming all winning tiles are live and ignoring discards/calls). In actual play, you should instead count the kinds and number of \emph{live} winning tiles, taking visible information into account.} The more tiles you can win on, the better the wait is. Table \ref{tbl:repwaits} provides a list of representative waits (roughly) in the order of desirability. 
 
 	\index{waits!side wait} \index{waits!closed wait} 
 	\index{waits!dual pon wait} \index{waits!edge wait} \index{waits!single wait} 
@@ -491,8 +491,8 @@ single wait & {\LARGE \tong{2}} & {\LARGE \tong{2}} & 1 kind--3 tiles\\[\sep]
 In general, a wait is said to be good if there are at least two kinds and more than four tiles left to win on. Therefore, dual {\jap pon} wait, closed wait, edge wait, and single wait are generally considered to be bad waits. 
 
 \bigskip
-In counting the kinds and the number of winning tiles for your hand, keep in mind that you have to count the kinds and the number of \emph{live} tiles to win on.
-For example, if your opponents have already discarded all the four tiles of {\LARGE \suo{2}} somehow, a side wait of {\LARGE \suo{2}-\suo{5}} essentially becomes an edge wait of {\LARGE\suo{5}}, leaving only 1 kind--4 tiles to win on.
+In counting the kinds and the number of winning tiles for your hand, keep in mind that you should count the kinds and the number of \emph{live} tiles to win on, not merely the ideal numbers suggested by the hand shape. Visible information such as discards and calls can reduce (or even eliminate) some of your nominal winning tiles, effectively worsening the wait.
+For example, if your opponents have already discarded all four tiles of {\LARGE \suo{2}}, a side wait of {\LARGE \suo{2}-\suo{5}} effectively becomes an edge wait of {\LARGE\suo{5}}, leaving only 1 kind--4 tiles to win on.
 
 \subsubsection{2. Cheap / expensive waits}
 However, this is only a part of the picture. When judging whether your wait is good enough, you should also take into account the second factor; namely, whether or not your winning tiles are likely to be used by other players in their hands. As we learned in discussing {\jap chiitoitsu} hands, middle simple tiles 4, 5, and 6 generally have a high chance of being used by the opponents. 
