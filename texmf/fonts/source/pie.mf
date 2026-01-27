@@ -1,16 +1,16 @@
 % pie.mf August 17, 1996 Takayuki Yamaizumi
-% 10 point ÍÑËã¿ıÇ×¡£
+% 10 point ç”¨éº»é›€ç‰Œã€‚
 % History
-% Version 1.0 August 9,1996: pie.mf 34¸Ä+Ç×¤ÎÎ¢ÃÏ´°À®¡£
-% Version 1.1 August 10,1996: ÀÖ¤¤Ç×¤òÄÉ²Ã¡£
-% Version 1.2 August 11,1996: a. -90ÅÙ¤ÎÊı¸ş¤Ë²óÅ¾¤·¤¿Ç×¤òÄÉ²Ã¡£
-%                             b. ÀÖ¤¤Ç×¤ÎÄ´À°¡£
-% Version 1.21 August 12,1996: ²ÖÇ×¤Î¡Ö½Õ¡×¤òÄÉ²Ã¡£
-% Version 1.22 August 14,1996: ²ÖÇ×¤Î¡Ö²Æ¡×¤òÄÉ²Ã¡£
-% Version 1.23 August 15,1996: ²ÖÇ×¤Î¡Ö½©¡×¤òÄÉ²Ã¡£
-% Version 1.24 August 17,1996: ²ÖÇ×¤Î¡ÖÅß¡×¤òÄÉ²Ã¡£Á´Ç×´°À®¡£
-% Version 1.99.0 December 30, 2002: ²ÖÇ×¤Î¥Õ¥¡¥¤¥ëÌ¾¤ò pieflower.mf ¤Ë
-%  ÊÑ¹¹¤·¤¿¤Î¤ËÈ¼¤¤¡¢input Ê¸(¥³¥á¥ó¥È¥¢¥¦¥È¤µ¤ì¤Æ¤¤¤Ş¤¹¡£)¤òÊÑ¹¹¡£
+% Version 1.0 August 9,1996: pie.mf 34å€‹+ç‰Œã®è£åœ°å®Œæˆã€‚
+% Version 1.1 August 10,1996: èµ¤ã„ç‰Œã‚’è¿½åŠ ã€‚
+% Version 1.2 August 11,1996: a. -90åº¦ã®æ–¹å‘ã«å›è»¢ã—ãŸç‰Œã‚’è¿½åŠ ã€‚
+%                             b. èµ¤ã„ç‰Œã®èª¿æ•´ã€‚
+% Version 1.21 August 12,1996: èŠ±ç‰Œã®ã€Œæ˜¥ã€ã‚’è¿½åŠ ã€‚
+% Version 1.22 August 14,1996: èŠ±ç‰Œã®ã€Œå¤ã€ã‚’è¿½åŠ ã€‚
+% Version 1.23 August 15,1996: èŠ±ç‰Œã®ã€Œç§‹ã€ã‚’è¿½åŠ ã€‚
+% Version 1.24 August 17,1996: èŠ±ç‰Œã®ã€Œå†¬ã€ã‚’è¿½åŠ ã€‚å…¨ç‰Œå®Œæˆã€‚
+% Version 1.99.0 December 30, 2002: èŠ±ç‰Œã®ãƒ•ã‚¡ã‚¤ãƒ«åã‚’ pieflower.mf ã«
+%  å¤‰æ›´ã—ãŸã®ã«ä¼´ã„ã€input æ–‡(ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã•ã‚Œã¦ã„ã¾ã™ã€‚)ã‚’å¤‰æ›´ã€‚
 
 font_identifier:="PIE";
 font_coding_scheme "PIE";
@@ -20,13 +20,13 @@ mode_setup;
 
 input piemacro.mf
 
-%% °Ê²¼¡¢³ÆÇ×¤ÎÉÁ²èÉô¡£
+%% ä»¥ä¸‹ã€å„ç‰Œã®æç”»éƒ¨ã€‚
 height = 8pt#;
 width = 7.2pt#;
 depth = 1.5pt#;
-picture v[];  % Ç×¤Î³¨¤òÊİÂ¸¤¹¤ë¤¿¤á¤ÎÊÑ¿ô¡£
+picture v[];  % ç‰Œã®çµµã‚’ä¿å­˜ã™ã‚‹ãŸã‚ã®å¤‰æ•°ã€‚
 
-beginchar(0, width, height, depth); % ÀÖ¸Şº÷
+beginchar(0, width, height, depth); % èµ¤äº”ç´¢
 drawwusou(h,w,d,h-d,0.1w);
 cullit;
 pickup pencircle scaled 0.02w;
@@ -38,7 +38,7 @@ Waku(h,w,d);
 v0:=currentpicture;
 endchar;
 
-beginchar(1, width, height, depth); % °ìº÷
+beginchar(1, width, height, depth); % ä¸€ç´¢
 r1 = 0.1w;
 pickup pencircle scaled r1;
 Waku(h, w, d);
@@ -130,14 +130,14 @@ penlabels(range 1 thru 8,range 10 thru 78);
 v1:=currentpicture;
 endchar;
 
-beginchar(2, width, height, depth); % Æóº÷
+beginchar(2, width, height, depth); % äºŒç´¢
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 z9 = (0.5w,0.5tate-2.8dr); z10 = (0.5w,0.5tate+2.8dr);
 banboo(z9,dr,0,1.8); banboo(z10,dr,0,1.8);
 v2:=currentpicture;
 endchar;
 
-beginchar(3, width, height, depth); % »°º÷
+beginchar(3, width, height, depth); % ä¸‰ç´¢
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 dw:=2.5dr; dh:=2.8dr; z9=(0.5w,0.5tate);
 z10=z9+(0,dh); z11=z9+(-dw,-dh); z12=z9+(dw,-dh);
@@ -147,7 +147,7 @@ endfor;
 v3:=currentpicture;
 endchar;
 
-beginchar(4, width, height, depth); % »Íº÷
+beginchar(4, width, height, depth); % å››ç´¢
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 dw:=1.7dr; dh:=2.8dr; z9=(0.5w,0.5tate);
 z10=z9+(-dw,dh); z11=z9+(dw,dh); z12=z9+(-dw,-dh); z13=z9+(dw,-dh); 
@@ -157,13 +157,13 @@ endfor;
 v4:=currentpicture;
 endchar;
 
-beginchar(5, width, height, depth); % ¸Şº÷
+beginchar(5, width, height, depth); % äº”ç´¢
 Waku(h,w,d);
 drawwusou(h,w,d,h-d,0.1w);
 v5:=currentpicture;
 endchar;
 
-beginchar(6, width, height, depth); % Ï»º÷
+beginchar(6, width, height, depth); % å…­ç´¢
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 dw:=2.5dr; dh:=2.8dr; z9=(0.5w,0.5tate);
 z10=z9+(-dw,dh); z11=z9+(dw,dh); z12=z9+(-dw,-dh); z13=z9+(dw,-dh);
@@ -174,12 +174,12 @@ endfor;
 v6:=currentpicture;
 endchar;
 
-beginchar(7, width, height, depth); % ¼·º÷
+beginchar(7, width, height, depth); % ä¸ƒç´¢
 makechisou(h,w,d,0.1w,h-d);
 v7:=currentpicture;
 endchar;
 
-beginchar(8, width, height, depth); % È¬º÷
+beginchar(8, width, height, depth); % å…«ç´¢
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 z9 = (0.75w,0.5tate-2.8dr); z10 = (0.75w,0.5tate+2.8dr);
 z11 = (0.25w,0.5tate-2.8dr); z12 = (0.25w,0.5tate+2.8dr);
@@ -192,14 +192,14 @@ banboo(z12,dr,0,1.8);
 v8:=currentpicture;
 endchar;
 
-beginchar(9, width, height, depth); % ¶åº÷
+beginchar(9, width, height, depth); % ä¹ç´¢
 dr:=0.1w;
 makechisou(h,w,d,dr,h-d);
 banboo(z16,dr,0,1.2); banboo(z17,dr,0,1.2);
 v9:=currentpicture;
 endchar;
 
-beginchar(10, width, height, depth); % ÀÖ¸ŞÅû
+beginchar(10, width, height, depth); % èµ¤äº”ç­’
 drawwupin(h,w,d,h-d,0.1w);
 cullit;
 pickup pencircle scaled 0.02w;
@@ -211,7 +211,7 @@ Waku(h,w,d);
 v10:=currentpicture;
 endchar;
 
-beginchar(11, width, height, depth); % °ìÅû
+beginchar(11, width, height, depth); % ä¸€ç­’
 tate:=h-d; r1:=0.1w; 
 Waku(h, w, d);
 x10 = 0.5w; y10=0.5tate;
@@ -262,18 +262,18 @@ penlabels(range 1 thru 8,10);
 v11:=currentpicture;
 endchar;
 
-beginchar(12, width, height, depth); % ÆóÅû
+beginchar(12, width, height, depth); % äºŒç­’
 tate:=h-d; r1:=0.1w;
 Waku(h, w, d);
 x9+x10 = w; y9+y10=tate;
-x9 = x10; y9 = 0.2tate; % y9 ¤ÎÃÍ¤ÏÉ¬Í×¤Ë±ş¤¸¤ÆÊÑ¤¨¤ë¤³¤È¡£
+x9 = x10; y9 = 0.2tate; % y9 ã®å€¤ã¯å¿…è¦ã«å¿œã˜ã¦å¤‰ãˆã‚‹ã“ã¨ã€‚
 erpincircle(z9, r1);
 erpincircle(z10, r1);
 penlabels(range 1 thru 10);
 v12:=currentpicture;
 endchar;
 
-beginchar(13, width, height, depth); % »°Åû
+beginchar(13, width, height, depth); % ä¸‰ç­’
 tate:=h-d; dr:=0.1w; 
 Waku(h,w,d);
 x9 = 0.5w; y9 = 0.5tate;
@@ -283,19 +283,19 @@ smallpin(z9,dr,0); smallpin(z10,dr,0); smallpin(z11,dr,0);
 v13:=currentpicture;
 endchar;
 
-beginchar(14, width, height, depth); % »ÍÅû
+beginchar(14, width, height, depth); % å››ç­’
 Waku(h,w,d);
 makesupin(h,w,d,0.1w,h-d);
 v14:=currentpicture;
 endchar;
 
-beginchar(15, width, height, depth); % ¸ŞÅû
+beginchar(15, width, height, depth); % äº”ç­’
 Waku(h,w,d);
 drawwupin(h,w,d,h-d,0.1w);
 v15:=currentpicture;
 endchar;
 
-beginchar(16, width, height, depth); % Ï»Åû
+beginchar(16, width, height, depth); % å…­ç­’
 tate:=h-d; dr:=0.1w; dm:=0.95; Waku(h,w,d); dt:=0.06tate;
 x9 = 0.5w; y9 = 0.49tate+dt;
 z10=(0.5w,0.49tate-0.5dt);
@@ -316,7 +316,7 @@ endfor;
 v16:=currentpicture;
 endchar;
 
-beginchar(17, width, height, depth); % ¼·Åû
+beginchar(17, width, height, depth); % ä¸ƒç­’
 tate:=h-d; dr:=0.1w; dm:=0.95; Waku(h,w,d);
 x9 = 0.5w; y9 = 0.48tate;
 z10=(x9,0.82tate);
@@ -338,7 +338,7 @@ endfor;
 v17:=currentpicture;
 endchar;
 
-beginchar(18, width, height, depth); % È¬Åû
+beginchar(18, width, height, depth); % å…«ç­’
 tate:=h-d; dr:=0.1w; dm:=0.95;
 Waku(h,w,d);
 x9 = 0.5w; y9 = 0.5tate;
@@ -360,7 +360,7 @@ endfor;
 v18:=currentpicture;
 endchar;
 
-beginchar(19, width, height, depth); % ¶åÅû
+beginchar(19, width, height, depth); % ä¹ç­’
 tate:=h-d; dr:=0.1w; Waku(h,w,d); z9=(0.5w,0.5tate); dm:=0.9;
 z10=z9+(-dm*1.45dr*2,0); z11=z9+(dm*1.45dr*2,0);
 for i=9 upto 11:
@@ -381,7 +381,7 @@ endfor;
 v19:=currentpicture;
 endchar;
 
-beginchar(20, width, height, depth); % ÀÖ¸àèß
+beginchar(20, width, height, depth); % èµ¤ä¼è¬
 drawwuwan(h,w,d,h-d,0.1w);
 cullit;
 pickup pencircle scaled 0.02w;
@@ -393,11 +393,11 @@ Waku(h,w,d);
 v20:=currentpicture;
 endchar;
 
-beginchar(21, width, height, depth); % °ìèß
+beginchar(21, width, height, depth); % ä¸€è¬
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w; TenThousand(9,dr);
-% °Ê²¼¡Ö°ì¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œä¸€ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.75dr,130); penpos68(0.55dr,135); penpos69(0.55dr,140);
 penpos70(1.2dr,145);
 z67=(0.22w,0.88tate); z68=z67+(2.1dr,0.1dr); z69=z68+(dr,0.05dr);
@@ -407,11 +407,11 @@ penlabels(range 67 thru 70);
 v21:=currentpicture;
 endchar;
 
-beginchar(22, width, height, depth); % Æóèß
+beginchar(22, width, height, depth); % äºŒè¬
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w; TenThousand(9,dr);
-% °Ê²¼¡ÖÆó¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€ŒäºŒã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.75dr,135); penpos68(0.55dr,135); penpos69(0.55dr,135);
 penpos70(0.9dr,135); penpos71(0.75dr,130); penpos72(0.5dr,130); 
 penpos73(0.5dr,130); penpos74(0.95dr,125); 
@@ -424,11 +424,11 @@ penlabels(range 67 thru 74);
 v22:=currentpicture;
 endchar;
 
-beginchar(23, width, height, depth); % »°èß
+beginchar(23, width, height, depth); % ä¸‰è¬
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w; TenThousand(9,dr);
-% °Ê²¼¡Ö»°¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œä¸‰ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.75dr,135); penpos68(0.55dr,135); penpos69(0.55dr,135);
 penpos70(0.8dr,135); penpos71(0.7dr,140); penpos72(0.5dr,140); 
 penpos73(0.5dr,135); penpos74(0.75dr,135); penpos75(0.75dr,145); 
@@ -444,12 +444,12 @@ penlabels(range 67 thru 78);
 v23:=currentpicture;
 endchar;
 
-beginchar(24, width, height, depth); % »Íèß
+beginchar(24, width, height, depth); % å››è¬
 tate:=h-d; dr:=0.1w; Waku(h, w, d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
-% °Ê²¼¡Ö»Í¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œå››ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.4dr,135); penpos68(0.5dr,225); penpos69(0.55dr,225);
 penpos70(0.45dr,115); penpos71(0.45dr,115); penpos72(0.5dr,60);
 penpos73(0.65dr,30); penpos74(0.75dr,5); penpos75(0.75dr,-5);
@@ -477,18 +477,18 @@ penlabels(range 67 thru 89);
 v24:=currentpicture;
 endchar;
 
-beginchar(25, width, height, depth); % ¸àèß
+beginchar(25, width, height, depth); % ä¼è¬
 drawwuwan(h,w,d,h-d,0.1w);
 Waku(h,w,d);
 v25:=currentpicture;
 endchar;
 
-beginchar(26, width, height, depth); % Ï»èß
+beginchar(26, width, height, depth); % å…­è¬
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
-% °Ê²¼¡ÖÏ»¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œå…­ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(dr,-15); penpos68(0.55dr,-15); penpos69(0.45dr,0);
 penpos70(0.6dr,135); penpos71(0.4dr,135); penpos72(0.4dr,135);
 penpos73(0.65dr,135); penpos74(0.7dr,150); penpos75(0.35dr,165);
@@ -505,12 +505,12 @@ penlabels(range 67 thru 80);
 v26:=currentpicture;
 endchar;
 
-beginchar(27, width, height, depth); % ¼·èß
+beginchar(27, width, height, depth); % ä¸ƒè¬
 tate:=h-d; dr:=0.1w; Waku(h, w, d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
-% °Ê²¼¡Ö¼·¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œä¸ƒã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.45dr,145); penpos68(0.35dr,145); penpos69(0.35dr,145);
 penpos70(0.7dr,145); penpos71(dr,155); penpos72(0.7dr,155);
 penpos73(0.55dr,155); penpos74(0.45dr,155); penpos75(0.4dr,180);
@@ -527,12 +527,12 @@ penlabels(range 67 thru 79);
 v27:=currentpicture;
 endchar;
 
-beginchar(28, width, height, depth); % È¬èß
+beginchar(28, width, height, depth); % å…«è¬
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
-% °Ê²¼¡ÖÈ¬¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œå…«ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.65dr,135); penpos68(0.45dr,150); penpos69(0.05dr,150);
 penpos70(0.6dr,45); penpos71(0.5dr,45); penpos72(0.5dr,60);
 penpos73(0.05dr,70); penpos74(0.3dr,65);
@@ -545,13 +545,13 @@ penlabels(range 67 thru 74);
 v28:=currentpicture;
 endchar;
 
-beginchar(29, width, height, depth); % ¶åèß
+beginchar(29, width, height, depth); % ä¹è¬
 tate:=h-d; dr:=0.1w;
 Waku(h, w, d);
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
-% °Ê²¼¡Ö¶å¡×¤Î»ú¡£»²¾ÈÅÀ¤ÎÈÖ¹æ¤Ï67ÈÖ¤«¤é¡£
+% ä»¥ä¸‹ã€Œä¹ã€ã®å­—ã€‚å‚ç…§ç‚¹ã®ç•ªå·ã¯67ç•ªã‹ã‚‰ã€‚
 penpos67(0.8dr,160); penpos68(0.65dr,160); penpos69(0.4dr,145);
 penpos70(0.2dr,130); penpos71(eps,90); penpos72(0.5dr,135);
 penpos73(0.35dr,135); penpos76(0.23dr,135); penpos74(0.35dr,135); 
@@ -580,7 +580,7 @@ penlabels(range 67 thru 86);
 v29:=currentpicture;
 endchar;
 
-beginchar(30, width, height, depth); % Ç×¤ÎÎ¢ÃÏ¡£°ÅÜÊ¤Î»ş¤Ë¤Ç¤â»È¤Ã¤Æ¤¯¤À¤µ¤¤¡£
+beginchar(30, width, height, depth); % ç‰Œã®è£åœ°ã€‚æš—æ§“ã®æ™‚ã«ã§ã‚‚ä½¿ã£ã¦ãã ã•ã„ã€‚
 picture vura;
 begingroup
 save p,r,dr,i;
@@ -610,7 +610,7 @@ draw p0;
 v30:=currentpicture;
 endgroup endchar;
 
-beginchar(31, width, height, depth); % Åì
+beginchar(31, width, height, depth); % æ±
 tate:=h-d; dr:=0.1w; Waku(h,w,d);
 penpos9(0.25dr,145); penpos10(0.2dr,145); penpos11(0.2dr,145);
 penpos12(0.35dr,135); penpos13(0.45dr,155); penpos14(0.4dr,155);
@@ -674,7 +674,7 @@ penlabels(range 9 thru 46);
 v31:=currentpicture;
 endchar;
 
-beginchar(32, width, height, depth); % Æî
+beginchar(32, width, height, depth); % å—
 tate:=h-d; r1:=0.1w;
 Waku(h,w,d);
 penpos9(0.08w,155); penpos10(0.05w,155); penpos11(0.03w,155); 
@@ -746,7 +746,7 @@ penlabels(range 1 thru 50);
 v32:=currentpicture;
 endchar;
 
-beginchar(33, width, height, depth); % À¾
+beginchar(33, width, height, depth); % è¥¿
 tate:=h-d; dr:=0.1w; pickup pencircle scaled dr; Waku(h,w,d);
 penpos9(0.3dr,135); penpos10(0.45dr,135); penpos11(1.1dr,150);
 penpos15(0.6dr,125); penpos16(0.35dr,160); penpos17(0.3dr,125);
@@ -786,7 +786,7 @@ penlabels(range 9 thru 36);
 v33:=currentpicture;
 endchar;
 
-beginchar(34, width, height, depth); % ËÌ
+beginchar(34, width, height, depth); % åŒ—
 dr:=0.1w; tate:=h-d;
 pickup pencircle scaled dr;
 Waku(h, w, d);
@@ -834,12 +834,12 @@ penlabels(range 9 thru 38);
 v34:=currentpicture;
 endchar;
 
-beginchar(35, width, height, depth); % ÇòÈÄ 
+beginchar(35, width, height, depth); % ç™½æ¿ 
 Waku(h,w,d);
 v35:=currentpicture;
 endchar;
 
-beginchar(36, width, height, depth); % ÎĞÈ¯
+beginchar(36, width, height, depth); % ç·‘ç™º
 tate:=h-d; r1:=0.1w;
 Waku(h, w, d);
 penpos9(0.05w,135); penpos10(0.05w,140); penpos11(0.05w,155);
@@ -941,7 +941,7 @@ penlabels(range 1 thru 67);
 v36:=currentpicture;
 endchar;
 
-beginchar(37, width, height, depth); % ¹ÈÃæ
+beginchar(37, width, height, depth); % ç´…ä¸­
 dr:=0.1w; tate:=h-d; pickup pencircle scaled dr; Waku(h,w,d);
 penpos9(0,0); penpos10(0.5dr,0); penpos11(0.9dr,0);
 penpos12(0.6dr,-20); penpos13(0.45dr,-20); penpos14(0.4dr,-20);
@@ -969,7 +969,7 @@ penlabels(range 9 thru 18, range 31 thru 44);
 v37:=currentpicture;
 endchar;
 
-% -90ÅÙ²óÅ¾¤·¤¿Ç×¡£¥ê¡¼¥Á¤ä¥Á¡¼¡¦¥İ¥ó¤ÎÉ½¸½ÍÑ¤Ë»È¤¨¤ë¤«¤â¡£
+% -90åº¦å›è»¢ã—ãŸç‰Œã€‚ãƒªãƒ¼ãƒã‚„ãƒãƒ¼ãƒ»ãƒãƒ³ã®è¡¨ç¾ç”¨ã«ä½¿ãˆã‚‹ã‹ã‚‚ã€‚
 begingroup
 save i;
 for i = 0 upto 37:
@@ -979,6 +979,6 @@ for i = 0 upto 37:
 endfor;
 endgroup;
 
-% ²ÖÇ×ÍÑ¥Õ¥¡¥¤¥ë¤Î include¡£
+% èŠ±ç‰Œç”¨ãƒ•ã‚¡ã‚¤ãƒ«ã® includeã€‚
 %% input pieflower.mf
 end;

@@ -1,10 +1,10 @@
 % piemacro.mf August 10,1996 Takayuki Yamaizumi
-% 10 point ÍÑËã¿ıÇ×¤Î¥Ş¥¯¥í¡£
+% 10 point ç”¨éº»é›€ç‰Œã®ãƒã‚¯ãƒ­ã€‚
 
-%% Ê£¿ô¤ÎÇ×¤Ë´Ø·¸¤¹¤ë¥Ş¥¯¥í¤ÎÄêµÁ¡£
+%% è¤‡æ•°ã®ç‰Œã«é–¢ä¿‚ã™ã‚‹ãƒã‚¯ãƒ­ã®å®šç¾©ã€‚
 def Waku(expr h, w, d) =   
-	% ³°ÏÈ¡£¤³¤ì¤Ç¡¢z1 .. z8 ¤¬¼«Æ°Åª¤Ë¤È¤é¤ì¤Æ¤·¤Ş¤¦¤³¤È¤ËÃí°Õ¡£ 
-r := 0.9pt; % ¤³¤ì¤âÀäÂĞÅª¤ÊÄ¹¤µ¤Î»ØÄê¤¸¤ã¤Ê¤¤¤Ç¤¹¡£
+	% å¤–æ ã€‚ã“ã‚Œã§ã€z1 .. z8 ãŒè‡ªå‹•çš„ã«ã¨ã‚‰ã‚Œã¦ã—ã¾ã†ã“ã¨ã«æ³¨æ„ã€‚ 
+r := 0.9pt; % ã“ã‚Œã‚‚çµ¶å¯¾çš„ãªé•·ã•ã®æŒ‡å®šã˜ã‚ƒãªã„ã§ã™ã€‚
 pickup pencircle scaled 0.2pt;
 lft x1 = 0; x1 + x4 = w; x8 = x1; x4 = x5;
 bot y7 = -d; y7 + y2 = h-d; y6 = y7; y2 = y3;
@@ -16,7 +16,7 @@ draw z8--z1{z1-z8}..{z3-z2}z2--z3{z3-z2}..{z5-z4}z4--z5{z5-z4}..{z7-z6}z6--z7{z7
 penlabels(range 1 thru 8);
 enddef;
 
-def erpincircle(expr z, r) =    % ÆóÅû¤Î¡ÖÅû¡×
+def erpincircle(expr z, r) =    % äºŒç­’ã®ã€Œç­’ã€
 begingroup
 save i, p;
 path p[];
@@ -48,25 +48,25 @@ endfor;
 endgroup enddef;
 
 def smallpin(expr z, r, ioff) =
-% Åû»Ò¤Î¡ÖÅû¡×¡£scalable ¤Ç¼Ö¼´¤Î³ÑÅÙ¤ÏÊÑ¹¹¤Ç¤­¤ë¤è¤¦¤Ë¤Ê¤Ã¤Æ¤¤¤ë¡£
+% ç­’å­ã®ã€Œç­’ã€ã€‚scalable ã§è»Šè»¸ã®è§’åº¦ã¯å¤‰æ›´ã§ãã‚‹ã‚ˆã†ã«ãªã£ã¦ã„ã‚‹ã€‚
 outersmallpin(z,r,ioff);
 innersmallpin(z,r,ioff);
 enddef; 
 
 def outersmallpin(expr z,r,ioff) =
-% Åû»Ò¤Î¡ÖÅû¡×¤Î³°Â¦¡£scalable ¤Ç¼Ö¼´¤Î³ÑÅÙ¤ÏÊÑ¹¹¤Ç¤­¤ë¤è¤¦¤Ë¤Ê¤Ã¤Æ¤¤¤ë¡£
+% ç­’å­ã®ã€Œç­’ã€ã®å¤–å´ã€‚scalable ã§è»Šè»¸ã®è§’åº¦ã¯å¤‰æ›´ã§ãã‚‹ã‚ˆã†ã«ãªã£ã¦ã„ã‚‹ã€‚
 pickup pencircle scaled 0.3r;
 draw fullcircle scaled 2.9r shifted z;
 enddef;
 
 def deletering(expr z,r) =
-% Åû»Ò¤Î¡ÖÅû¡×¤Î³°Â¦¤Î±ß¤Î¤¹¤°ÆâÉô¤ò¾Ãµî¤¹¤ë¡£
+% ç­’å­ã®ã€Œç­’ã€ã®å¤–å´ã®å††ã®ã™ãå†…éƒ¨ã‚’æ¶ˆå»ã™ã‚‹ã€‚
 pickup pencircle scaled 0.175r;
 undraw fullcircle scaled 2.475r shifted z;
 enddef;
 
 def innersmallpin(expr z, r, ioff) =
-% Åû»Ò¤Î¡ÖÅû¡×¤ÎÆâÂ¦Éô¡£scalable ¤Ç¼Ö¼´¤Î³ÑÅÙ¤ÏÊÑ¹¹¤Ç¤­¤ë¤è¤¦¤Ë¤Ê¤Ã¤Æ¤¤¤ë¡£
+% ç­’å­ã®ã€Œç­’ã€ã®å†…å´éƒ¨ã€‚scalable ã§è»Šè»¸ã®è§’åº¦ã¯å¤‰æ›´ã§ãã‚‹ã‚ˆã†ã«ãªã£ã¦ã„ã‚‹ã€‚
 begingroup
 save i, p;
 path p[];
@@ -82,18 +82,18 @@ for i = 0 upto 4:
 endfor;
 endgroup enddef; 
 
-def harai(suffix a, b, c) = % Ê¸»ú¤Î¤Ï¤é¤¤¡£
+def harai(suffix a, b, c) = % æ–‡å­—ã®ã¯ã‚‰ã„ã€‚
 filldraw z[a]r..z[b]r..z[c]r & z[c]r--z[c]l & 
          z[c]l..z[b]l..z[a]l & z[a]l--z[a]r--cycle;
 enddef;
-def tome(suffix a, b, c, d) = % Ê¸»ú¤Î¤È¤á¡£
+def tome(suffix a, b, c, d) = % æ–‡å­—ã®ã¨ã‚ã€‚
 filldraw z[a]r..z[b]r..z[c]r..z[d]r & z[d]r--z[d]l &
 	 z[d]l..z[c]l..z[b]l..z[a]l & z[a]l--z[a]r--cycle;
 enddef;
 
-def TenThousand(suffix n)(expr dr) = % èß»ÒÍÑ¤Î¡Öèß¡×¤Î»ú¡£
-% ¤³¤Î macro ¤ò»È¤¦¤È¡¢´ğ½àÅÀ°Ê³°¤Ë z[n+1]..z[n+57] ¤Î57ÅÀ¤¬
-% ¼«Æ°Åª¤Ë»È¤ï¤ì¤ë¡£
+def TenThousand(suffix n)(expr dr) = % è¬å­ç”¨ã®ã€Œè¬ã€ã®å­—ã€‚
+% ã“ã® macro ã‚’ä½¿ã†ã¨ã€åŸºæº–ç‚¹ä»¥å¤–ã« z[n+1]..z[n+57] ã®57ç‚¹ãŒ
+% è‡ªå‹•çš„ã«ä½¿ã‚ã‚Œã‚‹ã€‚
 penpos[n+1](0.5dr,145); penpos[n+2](0.45dr,145); penpos[n+3](0.35dr,145);
 penpos[n+4](0.3dr,145); penpos[n+5](0.5dr,145); penpos[n+6](0.45dr,145);
 penpos[n+7](0.35dr,145); penpos[n+8](0.3dr,145); penpos[n+9](0.45dr,145);
@@ -177,9 +177,9 @@ filldraw z[n+47]l..z[n+48]l..z[n+49]l..z[n+50]l..z[n+51]l..z[n+52]l..z[n+53]l..{
 penlabels(range n+1 thru n+57);
 enddef;
 
-def chikuwa(expr z,center,n,dr,psize,degr) = % º÷»Ò¤Î¾å¤ÈÃæ±û¤È²¼¤Ë¤Ä¤¤¤Æ¤¤¤ëÎØ¡£
-% n = 0 ¤Ê¤é draw
-% n = 1 ¤Ê¤é filldraw ¤¹¤ë¡£
+def chikuwa(expr z,center,n,dr,psize,degr) = % ç´¢å­ã®ä¸Šã¨ä¸­å¤®ã¨ä¸‹ã«ã¤ã„ã¦ã„ã‚‹è¼ªã€‚
+% n = 0 ãªã‚‰ draw
+% n = 1 ãªã‚‰ filldraw ã™ã‚‹ã€‚
 begingroup
 save p;
 path p[];
@@ -195,8 +195,8 @@ else:
 fi
 endgroup enddef;
 
-def banboo(expr z,dr,degr,dh) = % º÷»Ò¤Î¡Öº÷¡×
-% dh ¤Ç¹â¤µ¤ò»ØÄê¡£
+def banboo(expr z,dr,degr,dh) = % ç´¢å­ã®ã€Œç´¢ã€
+% dh ã§é«˜ã•ã‚’æŒ‡å®šã€‚
 begingroup
 save p;
 path p[];
@@ -213,7 +213,7 @@ chikuwa(z,z,0,dr,0.3dr,degr);
 cullit;
 endgroup enddef;
 
-def makesupin(expr h,w,d,dr,tate) = % »ÍÅû¡¢¸ŞÅûÍÑ¥Ş¥¯¥í¡£
+def makesupin(expr h,w,d,dr,tate) = % å››ç­’ã€äº”ç­’ç”¨ãƒã‚¯ãƒ­ã€‚
 x9 = 0.5w; y9 = 0.5tate;
 x10 = x9 - 0.16w; y10 = y9 + 0.33tate;
 z11 = 2z9 - z10;
@@ -222,7 +222,7 @@ smallpin(z10,0.95dr,36); smallpin(z11,0.95dr,36);
 smallpin(z12,0.95dr,36); smallpin(z13,0.95dr,36);
 enddef;
 
-def makechisou(expr h,w,d,dr,tate) = % ¼·º÷¡¢¶åº÷ÍÑ¥Ş¥¯¥í¡£
+def makechisou(expr h,w,d,dr,tate) = % ä¸ƒç´¢ã€ä¹ç´¢ç”¨ãƒã‚¯ãƒ­ã€‚
 begingroup;
 save i;
 pickup pencircle scaled dr; Waku(h,w,d);
@@ -238,8 +238,8 @@ endfor;
 endgroup enddef;
 
 def ungray (expr sx,sy,fx,fy,d) = 
-% ÅÀ¤òÀµ»°³Ñ·Á¤ÎÄºÅÀ¾å¤ËÊÂ¤Ù¤ë¤³¤È¤Ç³¥¿§¤Ã¤İ¤¯¸«¤»¤ë¡£
-% sx,sy,fx,fy,d ¤ÇÄ¹Êı·ÁÎÎ°è¤ò¡¢d ¤Ç´Ö³Ö¤ò¤½¤ì¤¾¤ì»ØÄê¡£
+% ç‚¹ã‚’æ­£ä¸‰è§’å½¢ã®é ‚ç‚¹ä¸Šã«ä¸¦ã¹ã‚‹ã“ã¨ã§ç°è‰²ã£ã½ãè¦‹ã›ã‚‹ã€‚
+% sx,sy,fx,fy,d ã§é•·æ–¹å½¢é ˜åŸŸã‚’ã€d ã§é–“éš”ã‚’ãã‚Œãã‚ŒæŒ‡å®šã€‚
 begingroup
    save t,g;
    t = d * sind 60;
@@ -251,12 +251,12 @@ begingroup
    endfor
 endgroup enddef;
 
-def drawwuwan(expr h,w,d,tate,dr) = % ¡Ö¸àèß¡×¤ÎÊ¸»ú¤òÉÁ¤¯¡£
-x9 = 0.5w; y9 = 0.3tate; % ¡ÖÅÄ¡×¤ÎÉôÊ¬¤ÎÃæ¿´¡£
+def drawwuwan(expr h,w,d,tate,dr) = % ã€Œä¼è¬ã€ã®æ–‡å­—ã‚’æãã€‚
+x9 = 0.5w; y9 = 0.3tate; % ã€Œç”°ã€ã®éƒ¨åˆ†ã®ä¸­å¿ƒã€‚
 pickup pencircle scaled 0.02w;
 TenThousand(9,dr);
 penlabels(range 1 thru 9);
-% °Ê²¼¡Ö¸à¡×¤Î»ú¡£
+% ä»¥ä¸‹ã€Œä¼ã€ã®å­—ã€‚
 penpos67(0.6dr,125); penpos68(0.2dr,125); penpos69(0,125);
 penpos70(0.3dr,170); penpos71(0.3dr,180); penpos72(0.27dr,170);
 penpos74(0.5dr,145); penpos75(0.33dr,145); penpos76(0.33dr,145); 
@@ -294,11 +294,11 @@ tome(88,89,90,91);
 penlabels(range 67 thru 91);
 enddef;
 
-def drawwupin(expr h,w,d,tate,dr) = % ¡Ö¸ŞÅû¡×¤Î¼ÖÎØ¤òÉÁ¤¯¡£
+def drawwupin(expr h,w,d,tate,dr) = % ã€Œäº”ç­’ã€ã®è»Šè¼ªã‚’æãã€‚
 makesupin(h,w,d,dr,tate); smallpin(z9,0.95dr,36);
 enddef;
 
-def drawwusou(expr h,w,d,tate,dr) = % ¡Ö¸Şº÷¡×¤Îº÷¤òÉÁ¤¯¡£
+def drawwusou(expr h,w,d,tate,dr) = % ã€Œäº”ç´¢ã€ã®ç´¢ã‚’æãã€‚
 begingroup
 save dw,dh;
 pickup pencircle scaled dr;
