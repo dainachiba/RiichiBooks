@@ -1,0 +1,30 @@
+dist: bionic
+language: minimal
+branches:
+  only:
+  - master
+  - translation-pl
+before_install:
+- sudo apt-get update
+- sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-luatex texlive-lang-polish
+  texlive-lang-japanese texlive-fonts-recommended tex-gyre tipa
+jobs:
+  include:
+  - stage: build
+    script:
+    - TEXMFHOME=./texmf platex RiichiBook1.tex
+    - TEXMFHOME=./texmf platex RiichiBook1.tex
+    - TEXMFHOME=./texmf dvipdfmx RiichiBook1.dvi
+before_deploy:
+- git tag -f ${TRAVIS_BRANCH}-latest
+deploy:
+  provider: releases
+  api_key:
+    secure: WbLA7p9Zpb373ACBLESDJpdgq7BNarjt/TdJ9j0Dx88wwNmUFkLZ0LUUahHimuPLy4CP2Cnw1VeavSbP6JZLxWBbRn3iPqDVVDsXAAPMOy+HpBoVkLrYP1ZH2Hw4PfH0ga5hN/OGIc3Riq5VhARItJ+X8nD0AMqxRH+nAZWjXEb2frKc365xBYRdniNgQJSuUjThdBoNIRFvgJEIMWfYmNc2UFbQ831jhqbxpdhHVZWP6HARyZi8D6nOUgJsfFXo7USXcp1CvdYDser9xFSdPa0rnJVWxKQKSbi+SGvAkglOgjhaMkrAg1usIJHss4gckLOT587AokQcoKHw04ovEdHBL4gNM46SlHoSfUu0nlR+G5uCdJ+CuITUtqQaJoU+5rVia2s3ZrSCn7tvMrWCpM+7LJBUnmVP0ddjdTRL+ov4uvtIL3+qWWGtuIjLNAsOjGuBRnK5Vk/CSdp3NmIrNc/X4ELAhrRYQaivq1zxdTv6SFuw37uliesRFXLjsnCKhck+fo4Nk9T819yB6Pcm/PbI0RcEUJqw1lzFfyr8Vqtio/l8QJbXYwraObYFlTGEOYTJtciDNP/fR87tlQEN4Ijb1wtcQA8W5coxUH+uINbsa9dSLoq7/yQsRuhqbjLKcSL1SVCZ2FhT+3f+7vxy1Cz8TZOH0BdqfBI3upcxkW8=
+  file: RiichiBook1.pdf
+  on:
+    repo: riichi/RiichiBooks
+    all_branches: true
+  skip_cleanup: true
+  overwrite: true
+
